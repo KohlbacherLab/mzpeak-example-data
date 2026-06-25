@@ -1,0 +1,32 @@
+# mzpeak-example-data — vendor-raw dataset manifest (drives build_data.sh `vendor` mode).
+# The mzML / imzML / sdrf tiles are reconstructed by scripts/fetch-*.sh (curated URLs); this
+# manifest covers the VENDOR-RAW tiles. Columns are TAB-separated:
+#   tile          data/<tile> subdir lives under here
+#   dir           dataset directory under the tile
+#   accession     public accession (cite this)
+#   repo          PRIDE | MassIVE | MetaboLights | Zenodo
+#   files         ';'-separated DIRECT download URLs, or '-' = no stable direct URL (fetch manually
+#                 by accession from `repo` into data/<tile>/<dir>/, see docs/CORPUS.md)
+#   unpack        zip | none      (zip = unzip in place after download)
+#   convert_input path under data/<tile>/<dir>/ to feed mzpeak-convert
+#   flags         extra mzpeak-convert flags (e.g. --via-msconvert); '-' = none
+#   notes
+tile	dir	accession	repo	files	unpack	convert_input	flags	notes
+vendor-agilent-sciex/sciex	PXD078909	PXD078909	PRIDE	https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/05/PXD078909/SW_F2_2-2.wiff;https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/05/PXD078909/SW_F2_2-2.wiff.scan	none	SW_F2_2-2.wiff	--via-msconvert	SCIEX TripleTOF 5600 SWATH (smallest SWATH pair)
+vendor-waters	PXD073666	PXD073666	PRIDE	https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/04/PXD073666/20250628_cpB_100000ms_03.raw.zip	zip	20250628_cpB_100000ms_03.raw	--via-msconvert	Waters Synapt TWIMS (.raw dir)
+tof-grid-examples	PXD041903	PXD041903	PRIDE	https://ftp.pride.ebi.ac.uk/pride/data/archive/2025/05/PXD041903/20190423_Alex7.d.zip	zip	20190423_Alex7.d	--via-msconvert	Agilent Q-TOF profile .d (smallest)
+raw-bench	thermo-ltq-orbitrap-velos-PXD000001	PXD000001	PRIDE	https://ftp.pride.ebi.ac.uk/pride/data/archive/2012/03/PXD000001/TMT_Erwinia_1uLSike_Top10HCD_isol2_45stepped_60min_01-20141210.raw	none	TMT_Erwinia_1uLSike_Top10HCD_isol2_45stepped_60min_01-20141210.raw	-	Thermo LTQ Orbitrap Velos (.raw converts cross-platform, needs .NET)
+vendor-agilent-sciex/agilent	PXD041315	PXD041315	PRIDE	-	zip	LMVCS24HC.d	--via-msconvert	Agilent 6545 Q-TOF; per-run zip LMV_CS_24_h.zip — fetch by accession
+vendor-bruker-baf	MTBLS18	MTBLS18	MetaboLights	-	none	LTI225-41-3neg_1-D,5_01_24321.d	-	Bruker BAF .d (folder on MetaboLights FILES); native reader needs baf2sql_c + TIMSDATA_LIB_DIR
+tof-grid-examples	PXD011326	PXD011326	PRIDE	-	none	VD_170826_SWATH_6600_PD_15.wiff	--via-msconvert	SCIEX TripleTOF 6600 SWATH (two-file)
+tof-grid-examples	PXD071869	PXD071869	PRIDE	-	none	08_SWATH_1E_1H.wiff	--via-msconvert	SCIEX TripleTOF 6600 dual-window SWATH (wiff+scan+wiff2)
+tof-grid-examples	MSV000090684	MSV000090684	MassIVE	-	none	11410_DGCR8_CBF_BR2_BioID_20181022_TOF6600_SWATH.wiff	--via-msconvert	SCIEX TripleTOF 6600 BioID-SWATH (~5.4 GB)
+tof-grid-examples	MSV000090136	MSV000090136	MassIVE	-	none	17_16_hpr56_ko_YMR295C_4444_-0.04.wiff	--via-msconvert	SCIEX TripleTOF 6600 yeast SWATH
+tof-grid-examples	MSV000093587	MSV000093587	MassIVE	-	none	Sample049.wiff	--via-msconvert	TripleTOF SWATH
+tof-grid-examples	PXD059108	PXD059108	PRIDE	-	zip	lysate_000008.d	--via-msconvert	Agilent Q-TOF profile .d (largest, ~3.9 GB)
+tof-grid-examples	PXD059765	PXD059765	PRIDE	-	zip	CON1_2.d	--via-msconvert	Agilent Q-TOF profile .d
+raw-bench	thermo-fusion-lumos-PXD008952	PXD008952	PRIDE	-	none	01_CPTAC_TMTS1-NCI7_P_JHUZ_20170509_LUMOS.raw	-	Thermo Orbitrap Fusion Lumos (.raw)
+raw-bench	thermo-astral-MSV000100943	MSV000100943	MassIVE	-	none	20240912_WFB_exp01_magnet_5_0.raw	-	Thermo Orbitrap Astral DIA (~16 GB)
+raw-bench	thermo-ltq-ft-ultra-MTBLS3512	MTBLS3512	MetaboLights	-	none	mtab_BIOS_CRAM1620_1_072617_34.RAW	-	Thermo LTQ-FT Ultra FT-ICR
+raw-bench	thermo-ltq-xl-PXD059878	PXD059878	PRIDE	-	none	2013_30_Amrutha_050713_1.raw	-	Thermo LTQ XL ion trap
+raw-bench	bruker-timstof-MSV000101607	MSV000101607	MassIVE	-	none	SBA415.d	-	Bruker timsTOF Pro PASEF (.d, TDF — pure-Rust reader)

@@ -1,0 +1,11 @@
+{
+  "CORSRules": [
+    {
+      "AllowedOrigins": ["https://okohlbacher.github.io"],
+      "AllowedMethods": ["GET", "HEAD"],
+      "AllowedHeaders": ["Range"],
+      "ExposeHeaders": ["Content-Range", "Accept-Ranges", "Content-Length"],
+      "MaxAgeSeconds": 3600
+    }
+  ]
+}

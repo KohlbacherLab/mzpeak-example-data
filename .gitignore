@@ -1,0 +1,51 @@
+# ── mzpeak-example-data: describe, don't store ───────────────────────────────
+# This repo commits ONLY descriptions, manifests and scripts. Every heavy data
+# artifact is reconstructed by ./build_data.sh and must never be committed.
+
+# Raw vendor acquisitions (files AND directories)
+*.raw
+*.RAW
+*.d/
+*.wiff
+*.wiff.scan
+*.wiff2
+*.lcd
+*.baf
+analysis.baf*
+*.tdf
+*.tdf_bin
+*.tsf
+*.tsf_bin
+
+# Open formats + converted output
+*.mzML
+*.mzML.gz
+*.mzml
+*.imzML
+*.imzml
+*.ibd
+*.mzpeak
+
+# Optical / imaging side files
+*.tif
+*.tiff
+*.svs
+
+# Bulk archives + build/work dirs
+*.zip
+*.gz
+*.tar
+.build/
+out/
+target/
+node_modules/
+
+# Cruft
+.DS_Store
+*.log
+*.tmp
+*.swp
+
+# Keep: README.md, results.tsv, manifests, cors.json, scripts/** — tracked explicitly.
+!*.md
+!**/results.tsv
