@@ -111,8 +111,16 @@ vendor_tile(){  # <tile>  — process all manifest rows whose 'tile' matches
       if [ "$files" = "-" ]; then
         say "  MANUAL: download $accession into data/$tile/$dir/ from $(source_page "$repo" "$accession")"; N_MANUAL+=1
       else
-        local u urls; IFS=';' read -ra urls <<< "$files"
-        for u in "${urls[@]}"; do dl "$u" "$dest/$(basename "${u%%\?*}")"; done
+        local u urls name; IFS=';' read -ra urls <<< "$files"
+        for u in "${urls[@]}"; do
+          case "$u" in
+            # MassIVE ProteoSAFe download URLs carry the real filename in the file= query param
+            # (the URL path basename is just "DownloadResultFile"), so derive the name from file=.
+            *DownloadResultFile*file=*) name="$(basename "${u##*file=}")" ;;
+            *) name="$(basename "${u%%\?*}")" ;;
+          esac
+          dl "$u" "$dest/$name"
+        done
         if [ "$unpack" = zip ]; then
           local z; for z in "$dest"/*.zip; do [ -e "$z" ] && ( cd "$dest" && unzip -o -q "$z" && rm -f "$z" ); done
         fi
