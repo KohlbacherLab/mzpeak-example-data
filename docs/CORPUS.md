@@ -74,7 +74,7 @@ data** (not publicly downloadable) are flagged explicitly.
 |---|---|---|---|--:|---|
 | TripleTOF 5600 | `.wiff` + `.wiff.scan` | PRIDE **PXD078909** | `SW_F2_2-2` — **SWATH-MS** zebrafish quantitative proteomics (smallest SWATH pair) | 352 MB (`.wiff` 15 MB + `.wiff.scan` 331 MB) | PRIDE FTP: `https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/05/PXD078909/SW_F2_2-2.wiff` + `…/SW_F2_2-2.wiff.scan` · DOI 10.6019/PXD078909 |
 | TripleTOF 6600 | `.wiff` + `.wiff.scan` + `.wiff2` | PRIDE **PXD071869** | `08_SWATH_1E_1H` — dual-window SWATH/DIA (TOF-grid candidate) | ~2.4 GB | PRIDE: https://www.ebi.ac.uk/pride/archive/projects/PXD071869 |
-| TripleTOF 6600 | `.wiff` + `.wiff.scan` | PRIDE **PXD011326** | `VD_170826_SWATH_6600_PD_15` — classic two-file SWATH | ~2.6 GB | PRIDE: https://www.ebi.ac.uk/pride/archive/projects/PXD011326 |
+| TripleTOF 6600 | `.wiff` + `.wiff.scan` | PRIDE **PXD011326** | `VD_170826_SWATH_6600_PD_15 (build_data fetches the equivalent run VD_170826_SWATH_6600_PD_01)` — classic two-file SWATH | ~2.6 GB | PRIDE: https://www.ebi.ac.uk/pride/archive/projects/PXD011326 |
 | TripleTOF 6600 | `.wiff` + `.wiff.scan` | MassIVE **MSV000090684** | `11410_DGCR8_CBF_BR2_BioID_20181022_TOF6600_SWATH` — large BioID-SWATH | ~5.4 GB | MassIVE: https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=MSV000090684 |
 | TripleTOF 6600 | `.wiff` + `.wiff.scan` | MassIVE **MSV000090136** | `17_16_hpr56_ko_YMR295C_4444_-0.04` — yeast proteome SWATH | ~2.2 GB | MassIVE: https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=MSV000090136 |
 | TripleTOF | `.wiff` + `.wiff.scan` | MassIVE **MSV000093587** | `Sample049` — TripleTOF SWATH | ~1.8 GB | MassIVE: https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=MSV000093587 |
@@ -90,8 +90,8 @@ data** (not publicly downloadable) are flagged explicitly.
 |---|---|---|---|--:|---|
 | 6545 Q-TOF LC/MS | `.d` (profile) | PRIDE **PXD041315** | `LMVCS24HC.d` — shotgun proteomics (*C. elegans* / *Cronobacter sakazakii* infection); full `.d` with `MSProfile.bin` (profile) + `MSPeak.bin` (centroid) + `MSScan.bin` | 617 MB | PRIDE: https://www.ebi.ac.uk/pride/archive/projects/PXD041315 (DOI 10.6019/PXD041315); deposited as per-run `.zip` (`LMV_CS_24_h.zip`) |
 | Q-TOF | `.d.zip` (profile) | PRIDE **PXD041903** | `20190423_Alex7.d.zip` → `…/AcqData/MSProfile.bin` — smallest Agilent profile-grid `.d` (vendor-CI sample) | 422 MB | PRIDE FTP: `https://ftp.pride.ebi.ac.uk/pride/data/archive/2025/05/PXD041903/20190423_Alex7.d.zip` (unzip in place) |
-| Q-TOF | `.d.zip` (profile) | PRIDE **PXD059108** | `lysate_000008.d.zip` — largest Agilent run | ~3.9 GB | PRIDE: https://www.ebi.ac.uk/pride/archive/projects/PXD059108 |
-| Q-TOF | `.d.zip` (profile) | PRIDE **PXD059765** | `CON1_2.d.zip` | ~1.2 GB | PRIDE: https://www.ebi.ac.uk/pride/archive/projects/PXD059765 |
+| Q-TOF | `.d.zip` (profile) | PRIDE **PXD059108** | `den_yeast_5ug_MS2_3.d.zip` (the Agilent profile run build_data fetches; `lysate_000008.d.zip` is an alternative in the same study) — largest Agilent run | ~3.9 GB | PRIDE: https://www.ebi.ac.uk/pride/archive/projects/PXD059108 |
+| Q-TOF | `.d.zip` (profile) | PRIDE **PXD059765** | `CON1_1.d.zip` (the run build_data fetches; `CON1_2` is an equivalent in the same study) | ~1.2 GB | PRIDE: https://www.ebi.ac.uk/pride/archive/projects/PXD059765 |
 | 6490 Triple Quad (QqQ) | mzML | PRIDE **PXD041762** | `REC-2349_P2_F1.mzML` — QqQ / **SRM** (dir slug `agilent-6490-triplequad`) | 5.5 MB | PRIDE: https://www.ebi.ac.uk/pride/archive/projects/PXD041762 |
 | 6490 Triple Quad (dMRM) | mzML | Zenodo 18502866 | `MRM-standmix-5.mzML` — **chromatogram-only** dMRM (0 spectra, 138 chromatograms; dir slug `agilent-qtof` is a misnomer) | 2.4 MB | Zenodo record 18502866 |
 | 6560 IM-QTOF (DTIMS) | mzML | Zenodo 18481720 | `CEMS_10ppm.mzML` — drift-tube ion mobility (**DTIMS**) | 3.4 MB | Zenodo record 18481720 |

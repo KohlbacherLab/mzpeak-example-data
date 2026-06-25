@@ -80,6 +80,16 @@ convert_glob(){  # <tile> <find-name-pattern>
 }
 
 # ── per-repo fetch for the vendor-raw manifest ───────────────────────────────────
+source_page(){  # <repo> <accession>  → the dataset landing page (for MANUAL rows)
+  case "$1" in
+    PRIDE)        echo "https://www.ebi.ac.uk/pride/archive/projects/$2" ;;
+    MassIVE)      echo "https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=$2" ;;
+    MetaboLights) echo "https://www.ebi.ac.uk/metabolights/$2" ;;
+    Zenodo)       echo "https://zenodo.org/records/$2" ;;
+    *)            echo "(see docs/CORPUS.md)" ;;
+  esac
+}
+
 dl(){  # <url> <dest>   resume-capable; skip if present
   local url="$1" dest="$2"
   [ -s "$dest" ] && { say "  exists $(basename "$dest")"; return 0; }
@@ -99,7 +109,7 @@ vendor_tile(){  # <tile>  — process all manifest rows whose 'tile' matches
     say "$tile/$dir  ($accession, $repo)"
     if [ "$SKIP_FETCH" != 1 ]; then
       if [ "$files" = "-" ]; then
-        say "  MANUAL fetch $accession from $repo into data/$tile/$dir/ (see docs/CORPUS.md)"; N_MANUAL+=1
+        say "  MANUAL: download $accession into data/$tile/$dir/ from $(source_page "$repo" "$accession")"; N_MANUAL+=1
       else
         local u urls; IFS=';' read -ra urls <<< "$files"
         for u in "${urls[@]}"; do dl "$u" "$dest/$(basename "${u%%\?*}")"; done
@@ -108,8 +118,16 @@ vendor_tile(){  # <tile>  — process all manifest rows whose 'tile' matches
         fi
       fi
     fi
-    [ "$cinput" = "-" ] && continue
-    convert_one "$dest/$cinput" "${flags:--}"
+    # locate the unit to convert: a named file, or autodetect the *.d/*.raw/*.wiff in the dir
+    case "$cinput" in
+      -) continue ;;
+      auto)
+        local unit
+        unit="$(find "$dest" -maxdepth 1 \( -iname '*.d' -o -iname '*.raw' -o -iname '*.wiff' \) 2>/dev/null | sort | head -1)"
+        if [ -n "$unit" ]; then convert_one "$unit" "${flags:--}"
+        elif [ "$files" != "-" ]; then say "  no *.d/*.raw/*.wiff unit in data/$tile/$dir/ after unpack"; fi ;;
+      *) convert_one "$dest/$cinput" "${flags:--}" ;;
+    esac
   done < "$MANIFEST"
 }
 
@@ -132,8 +150,10 @@ for tile in $TILES; do
         say "  Seed data/pwiz-examples/ from the ProteoWizard 'Reader_*_Test.data' fixtures, then re-run."
         N_MANUAL+=1
       fi ;;
-    raw-bench|raw-replacements|tof-grid-examples|vendor-agilent-sciex|vendor-waters|vendor-bruker-baf)
+    raw-bench|tof-grid-examples|vendor-agilent-sciex|vendor-waters|vendor-bruker-baf)
       vendor_tile "$tile" ;;
+    raw-replacements|demo)
+      say "  '$tile' is documented but not auto-built — see data/$tile/README.md" ;;
     *) say "  unknown tile '$tile' — skipping" ;;
   esac
 done

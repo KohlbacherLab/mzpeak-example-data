@@ -46,6 +46,7 @@ node_modules/
 *.tmp
 *.swp
 
-# Keep: README.md, results.tsv, manifests, cors.json, scripts/** — tracked explicitly.
-!*.md
-!**/results.tsv
+# Tracked files (README.md, results.tsv, manifests, cors.json, scripts/**) match none of the
+# patterns above, so they are committed without needing a negation. Note: a file placed INSIDE an
+# ignored unit dir (e.g. a `*.d/`) cannot be un-ignored — git won't descend into an ignored dir —
+# so never put tracked files under a data-unit path.

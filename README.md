@@ -73,8 +73,8 @@ missing `.mzpeak` outputs are (re)built. It locates `mzpeak-convert` via
 ```
 
 Conformance validation is intentionally out of scope here — validate rebuilt
-archives with the independent [`mzpeak-validate`](https://github.com/okohlbacher/mzPeakConverter)
-tool.
+archives with the independent [`mzPeakValidator`](https://github.com/okohlbacher/mzPeakValidator)
+(`mzpeak-validate`) tool.
 
 Every dataset's provenance — accession, originating repository, exact files and
 download URL — is in **[`docs/CORPUS.md`](docs/CORPUS.md)**. Per-tile `README.md`
