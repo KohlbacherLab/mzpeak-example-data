@@ -4,7 +4,7 @@
 collection `imzML_AP_SMALDI.zip`.
 **Record:** https://zenodo.org/records/10084132
 **ZIP:** https://zenodo.org/api/records/10084132/files/imzML_AP_SMALDI.zip/content
-**Reconstructed by:** `scripts/fetch-imzml-examples.sh` (this directory is git-ignored).
+**Reconstructed by:** `scripts/fetch-examples.sh imzml-examples` (this directory is git-ignored).
 
 AP-SMALDI mouse urinary bladder acquisition. **Same specimen family as PRIDE PXD001283** — the
 file bytes here are identical to `../PXD001283-HR2MSI-urinary-bladder`, redeposited on Zenodo.

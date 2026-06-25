@@ -7,7 +7,7 @@ transform ion cyclotron resonance), ultra-high resolution. In-file cvParams: `LT
 **Source:** MetaboLights **MTBLS3512** (Sargasso Sea dissolved-organic-matter, HPLC-FT-ICR-MS/MS).
 **URL:** https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS3512/FILES/mtab_BIOS_CRAM1620_1_072617_34.mzML
 **License:** EMBL-EBI / MetaboLights open-access · public, no login.
-**Reconstructed by:** `scripts/fetch-mzml-examples.sh` (this directory is git-ignored).
+**Reconstructed by:** `scripts/fetch-examples.sh mzML-examples` (this directory is git-ignored).
 
 ## Files
 

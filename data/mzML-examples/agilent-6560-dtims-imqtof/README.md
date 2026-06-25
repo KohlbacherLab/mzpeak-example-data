@@ -8,7 +8,7 @@ the mobility dimension survives in the mzML.
 **Source:** Zenodo **18481720** ("CE-MS test data set").
 **URL:** https://zenodo.org/api/records/18481720/files/CEMS_10ppm.mzML/content
 **License:** CC-BY-4.0 · public, no login.
-**Reconstructed by:** `scripts/fetch-mzml-examples.sh` (this directory is git-ignored).
+**Reconstructed by:** `scripts/fetch-examples.sh mzML-examples` (this directory is git-ignored).
 
 ## Files
 

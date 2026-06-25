@@ -1,0 +1,139 @@
+ABI/Reader_ABI_Test.data/7600ZenoTOFMSMS_EAD_TestData-S1.mzML
+ABI/Reader_ABI_Test.data/Enolase_repeats_AQv1.4.2-20070918_En_04-srmSpectra.mzML
+ABI/Reader_ABI_Test.data/Enolase_repeats_AQv1.4.2-20070918_en_01.mzML
+ABI/Reader_ABI_Test.data/Enolase_repeats_AQv1.4.2-20070918_en_02.mzML
+ABI/Reader_ABI_Test.data/Enolase_repeats_AQv1.4.2-20070918_en_03.mzML
+ABI/Reader_ABI_Test.data/Enolase_repeats_AQv1.4.2-20070918_en_04.mzML
+ABI/Reader_ABI_Test.data/Enolase_repeats_AQv1.4.2-20070918_en_05.mzML
+ABI/Reader_ABI_Test.data/Enolase_repeats_AQv1.4.2-20070918_en_06.mzML
+ABI/Reader_ABI_Test.data/Enolase_repeats_AQv1.4.2-20070918_en_07.mzML
+ABI/Reader_ABI_Test.data/Enolase_repeats_AQv1.4.2-20070918_en_08.mzML
+ABI/Reader_ABI_Test.data/Enolase_repeats_AQv1.4.2-20070918_en_09.mzML
+ABI/Reader_ABI_Test.data/Enolase_repeats_AQv1.4.2-20070918_en_10.mzML
+ABI/Reader_ABI_Test.data/PressureTrace1-6500SysSuit1269-globalChromatogramsAreMs1Only.mzML
+ABI/Reader_ABI_Test.data/PressureTrace1-6500SysSuit1269.mzML
+ABI/Reader_ABI_Test.data/swath.api-sample-centroid.mzML
+Agilent/Reader_Agilent_Test.data/GFb_4Scan_TimeSegs_1530_100ng-combineIMS-globalChromatogramsAreMs1Only.mzML
+Agilent/Reader_Agilent_Test.data/GFb_4Scan_TimeSegs_1530_100ng.mzML
+Agilent/Reader_Agilent_Test.data/ImsSynthAllIons-combineIMS-globalChromatogramsAreMs1Only.mzML
+Agilent/Reader_Agilent_Test.data/ImsSynthAllIons-combineIMS.mzML
+Agilent/Reader_Agilent_Test.data/ImsSynthAllIons-ignoreZeros-combineIMS-mzMobilityFilter.mzML
+Agilent/Reader_Agilent_Test.data/ImsSynthAllIons-ignoreZeros-combineIMS.mzML
+Agilent/Reader_Agilent_Test.data/ImsSynthAllIons.mzML
+Agilent/Reader_Agilent_Test.data/ImsSynthCCS-combineIMS.mzML
+Agilent/Reader_Agilent_Test.data/ImsSynthCCS-ignoreZeros-combineIMS-mzMobilityFilter.mzML
+Agilent/Reader_Agilent_Test.data/ImsSynthCCS-ignoreZeros-combineIMS.mzML
+Agilent/Reader_Agilent_Test.data/ImsSynthCCS.mzML
+Agilent/Reader_Agilent_Test.data/ImsSynth_Chrom-combineIMS.mzML
+Agilent/Reader_Agilent_Test.data/ImsSynth_Chrom-ignoreZeros-combineIMS-mzMobilityFilter.mzML
+Agilent/Reader_Agilent_Test.data/ImsSynth_Chrom-ignoreZeros-combineIMS.mzML
+Agilent/Reader_Agilent_Test.data/ImsSynth_Chrom.mzML
+Agilent/Reader_Agilent_Test.data/MRM Neg C5.mzML
+Agilent/Reader_Agilent_Test.data/RS080806_APCI_PIscan_CE35.mzML
+Agilent/Reader_Agilent_Test.data/RS080806_NL_448.2_001.mzML
+Agilent/Reader_Agilent_Test.data/RS080906_MMI_PIscan_CE35_250ms.mzML
+Agilent/Reader_Agilent_Test.data/TOFsulfasMS4GHzDualMode+DADSpectra+UVSignal272-NoProfile.mzML
+Agilent/Reader_Agilent_Test.data/Thyrxox 5 TS Diff Scan B.mzML
+Agilent/Reader_Agilent_Test.data/reserpine-MS2sim-010.mzML
+Bruker/Reader_Bruker_Test.data/100 fmol BSA.mzML
+Bruker/Reader_Bruker_Test.data/20percLaser_100fold_1_0_H6_MS-ms1-centroid.mzML
+Bruker/Reader_Bruker_Test.data/20percLaser_100fold_1_0_H6_MS-ms2-centroid.mzML
+Bruker/Reader_Bruker_Test.data/20percLaser_100fold_1_0_H6_MS.mzML
+Bruker/Reader_Bruker_Test.data/CsI_Pos_0_G1_000003.mzML
+Bruker/Reader_Bruker_Test.data/Hela_QC_PASEF_Slot1-first-6-frames-combineIMS-centroid.mzML
+Bruker/Reader_Bruker_Test.data/Hela_QC_PASEF_Slot1-first-6-frames-combineIMS-ms1-centroid.mzML
+Bruker/Reader_Bruker_Test.data/Hela_QC_PASEF_Slot1-first-6-frames-combineIMS-ms2-centroid.mzML
+Bruker/Reader_Bruker_Test.data/Hela_QC_PASEF_Slot1-first-6-frames-globalChromatogramsAreMs1Only.mzML
+Bruker/Reader_Bruker_Test.data/Hela_QC_PASEF_Slot1-first-6-frames-ms1-centroid.mzML
+Bruker/Reader_Bruker_Test.data/Hela_QC_PASEF_Slot1-first-6-frames-ms2-centroid.mzML
+Bruker/Reader_Bruker_Test.data/Hela_QC_PASEF_Slot1-first-6-frames-ms2-noMsMsWithoutPrecursor-centroid.mzML
+Bruker/Reader_Bruker_Test.data/Hela_QC_PASEF_Slot1-first-6-frames.mzML
+Bruker/Reader_Bruker_Test.data/Sample_1-A,1_01_985.mzML
+Bruker/Reader_Bruker_Test.data/ThyroglobMRM000003-combineIMS-centroid.mzML
+Bruker/Reader_Bruker_Test.data/ThyroglobMRM000003-combineIMS-ms1-centroid.mzML
+Bruker/Reader_Bruker_Test.data/ThyroglobMRM000003-combineIMS-ms2-centroid.mzML
+Bruker/Reader_Bruker_Test.data/ThyroglobMRM000003-ms1-centroid.mzML
+Bruker/Reader_Bruker_Test.data/ThyroglobMRM000003-ms2-centroid.mzML
+Bruker/Reader_Bruker_Test.data/ThyroglobMRM000003.mzML
+Bruker/Reader_Bruker_Test.data/diaPASEF-ms2-noMsMsWithoutPrecursor-centroid-mzMobilityFilter.mzML
+Bruker/Reader_Bruker_Test.data/timsTOF_autoMSMS_Urine_50s_neg-ms1-centroid.mzML
+Bruker/Reader_Bruker_Test.data/timsTOF_autoMSMS_Urine_50s_neg-ms2-centroid.mzML
+Bruker/Reader_Bruker_Test.data/timsTOF_autoMSMS_Urine_50s_neg.mzML
+Mobilion/Reader_Mobilion_Test.data/2024-02-16-16.02.20-CCS Calibration_02-combineIMS.mzML
+Mobilion/Reader_Mobilion_Test.data/2024-02-16-16.02.20-CCS Calibration_02-ignoreZeros-combineIMS.mzML
+Mobilion/Reader_Mobilion_Test.data/2024-02-16-16.02.20-CCS Calibration_02-ignoreZeros.mzML
+Mobilion/Reader_Mobilion_Test.data/2024-02-16-16.02.20-CCS Calibration_02.mzML
+Mobilion/Reader_Mobilion_Test.data/ExampleTuneMix_binned5-centroid-cwt.mzML
+Mobilion/Reader_Mobilion_Test.data/ExampleTuneMix_binned5-combineIMS-centroid-cwt.mzML
+Mobilion/Reader_Mobilion_Test.data/ExampleTuneMix_binned5.mzML
+Shimadzu/Reader_Shimadzu_Test.data/10nmol_Negative_MS_ID_ON_055-centroid-globalChromatogramsAreMs1Only.mzML
+Shimadzu/Reader_Shimadzu_Test.data/10nmol_Negative_MS_ID_ON_055-centroid.mzML
+Shimadzu/Reader_Shimadzu_Test.data/10nmol_Negative_MS_ID_ON_055.mzML
+Shimadzu/Reader_Shimadzu_Test.data/20140312_六mix_column_1 (scheduled) 一个试-centroid.mzML
+Shimadzu/Reader_Shimadzu_Test.data/20140312_六mix_column_1 (scheduled) 一个试-srmSpectra-centroid.mzML
+Shimadzu/Reader_Shimadzu_Test.data/20140312_六mix_column_1 (scheduled) 一个试.mzML
+Thermo/Reader_Thermo_Test.data/090701-LTQVelos-unittest-01-centroid-globalChromatogramsAreMs1Only.mzML
+Thermo/Reader_Thermo_Test.data/090701-LTQVelos-unittest-01-centroid.mzML
+Thermo/Reader_Thermo_Test.data/090701-LTQVelos-unittest-01.mzML
+Thermo/Reader_Thermo_Test.data/BSA-FT-ETD-centroid.mzML
+Thermo/Reader_Thermo_Test.data/BSA-FT-ETD.mzML
+Thermo/Reader_Thermo_Test.data/BSA-FT-HCD-centroid.mzML
+Thermo/Reader_Thermo_Test.data/BSA-FT-HCD.mzML
+Thermo/Reader_Thermo_Test.data/FT-HCD-MSX-centroid.mzML
+Thermo/Reader_Thermo_Test.data/FT-HCD-MSX.mzML
+Thermo/Reader_Thermo_Test.data/IT-HCD-SPS-centroid.mzML
+Thermo/Reader_Thermo_Test.data/IT-HCD-SPS.mzML
+Thermo/Reader_Thermo_Test.data/IsolationMzOffset-ReportedMassOffset-centroid.mzML
+Thermo/Reader_Thermo_Test.data/IsolationMzOffset-ReportedMassOffset.mzML
+Thermo/Reader_Thermo_Test.data/source_cid_test_3scans-centroid.mzML
+Thermo/Reader_Thermo_Test.data/source_cid_test_3scans.mzML
+UNIFI/Reader_UNIFI_Test.data/08Mar17_HDMSe_25fmolMix1_01_1_A,1_1-centroid-cwt.mzML
+UNIFI/Reader_UNIFI_Test.data/08Mar17_HDMSe_25fmolMix1_01_1_A,1_1-combineIMS-centroid-cwt.mzML
+UNIFI/Reader_UNIFI_Test.data/08Mar17_HDMSe_25fmolMix1_01_1_A,1_1-combineIMS.mzML
+UNIFI/Reader_UNIFI_Test.data/08Mar17_HDMSe_25fmolMix1_01_1_A,1_1.mzML
+UNIFI/Reader_UNIFI_Test.data/08Mar17_MSe_25fmolMix1_01_1_A,1_1-centroid-cwt.mzML
+UNIFI/Reader_UNIFI_Test.data/08Mar17_MSe_25fmolMix1_01_1_A,1_1.mzML
+UNIFI/Reader_UNIFI_Test.data/20181027 XZ blk_2_A,1_1-centroid-cwt.mzML
+UNIFI/Reader_UNIFI_Test.data/20181027 XZ blk_2_A,1_1.mzML
+UNIFI/Reader_UNIFI_Test.data/310811_037_1_23_1-centroid-cwt.mzML
+UNIFI/Reader_UNIFI_Test.data/310811_037_1_23_1.mzML
+UNIFI/Reader_UNIFI_Test.data/Hazell_Data_00004_1.mzML
+UNIFI/Reader_UNIFI_Test.data/Hi3_ClpB_MSe_01_1_D,1_1-centroid-cwt.mzML
+UNIFI/Reader_UNIFI_Test.data/Hi3_ClpB_MSe_01_1_D,1_1.mzML
+UNIFI/Reader_UNIFI_Test.data/QC Vion IMSen190118_2_A,1_6-centroid-cwt.mzML
+UNIFI/Reader_UNIFI_Test.data/QC Vion IMSen190118_2_A,1_6-combineIMS-centroid-cwt.mzML
+UNIFI/Reader_UNIFI_Test.data/QC Vion IMSen190118_2_A,1_6-combineIMS.mzML
+UNIFI/Reader_UNIFI_Test.data/QC Vion IMSen190118_2_A,1_6.mzML
+UNIFI/Reader_UNIFI_Test.data/Sample 1_1-centroid.mzML
+UNIFI/Reader_UNIFI_Test.data/Sample 1_1.mzML
+Waters/Reader_Waters_Test.data/091204_NFDM_008.mzML
+Waters/Reader_Waters_Test.data/160109_Mix1_calcurve_070.mzML
+Waters/Reader_Waters_Test.data/ATEHLSTLSEK_LM_684.3469-ddaProcessing.mzML
+Waters/Reader_Waters_Test.data/ATEHLSTLSEK_LM_684.3469.mzML
+Waters/Reader_Waters_Test.data/ATEHLSTLSEK_LM_785.8426.mzML
+Waters/Reader_Waters_Test.data/ATEHLSTLSEK_profile-centroid.mzML
+Waters/Reader_Waters_Test.data/ATEHLSTLSEK_profile.mzML
+Waters/Reader_Waters_Test.data/DDA_IsolationWindow-ddaProcessing.mzML
+Waters/Reader_Waters_Test.data/DDA_IsolationWindow.mzML
+Waters/Reader_Waters_Test.data/HDDDA_Short_noLM-centroid-cwt.mzML
+Waters/Reader_Waters_Test.data/HDDDA_Short_noLM-combineIMS-centroid-cwt-ignoreCalibrationScans.mzML
+Waters/Reader_Waters_Test.data/HDDDA_Short_noLM-combineIMS-centroid-cwt.mzML
+Waters/Reader_Waters_Test.data/HDDDA_Short_noLM-combineIMS-mzMobilityFilter.mzML
+Waters/Reader_Waters_Test.data/HDDDA_Short_noLM-combineIMS.mzML
+Waters/Reader_Waters_Test.data/HDDDA_Short_noLM-globalChromatogramsAreMs1Only.mzML
+Waters/Reader_Waters_Test.data/HDDDA_Short_noLM.mzML
+Waters/Reader_Waters_Test.data/HDMRM_Short_noLM-combineIMS-mzMobilityFilter.mzML
+Waters/Reader_Waters_Test.data/HDMRM_Short_noLM-combineIMS.mzML
+Waters/Reader_Waters_Test.data/HDMRM_Short_noLM-globalChromatogramsAreMs1Only.mzML
+Waters/Reader_Waters_Test.data/HDMRM_Short_noLM.mzML
+Waters/Reader_Waters_Test.data/HDMSe_Short_noLM-combineIMS-mzMobilityFilter.mzML
+Waters/Reader_Waters_Test.data/HDMSe_Short_noLM-combineIMS.mzML
+Waters/Reader_Waters_Test.data/HDMSe_Short_noLM.mzML
+Waters/Reader_Waters_Test.data/MSe_Short-globalChromatogramsAreMs1Only.mzML
+Waters/Reader_Waters_Test.data/MSe_Short.mzML
+Waters/Reader_Waters_Test.data/Minimal_DDA-ddaProcessing.mzML
+Waters/Reader_Waters_Test.data/Minimal_DDA.mzML
+Waters/Reader_Waters_Test.data/QC_LCMS2-2_23_268-1-1.mzML
+Waters/Reader_Waters_Test.data/SONAR_Short-combineIMS-mzMobilityFilter.mzML
+Waters/Reader_Waters_Test.data/SONAR_Short-combineIMS.mzML
+Waters/Reader_Waters_Test.data/SONAR_Short.mzML

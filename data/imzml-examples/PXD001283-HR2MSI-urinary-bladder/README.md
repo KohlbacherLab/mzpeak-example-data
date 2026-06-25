@@ -4,7 +4,7 @@
 the project's reference real-world dataset.
 **Project page:** https://www.ebi.ac.uk/pride/archive/projects/PXD001283
 **Base dir:** https://ftp.pride.ebi.ac.uk/pride/data/archive/2014/11/PXD001283/
-**Reconstructed by:** `scripts/fetch-imzml-examples.sh` (this directory is git-ignored).
+**Reconstructed by:** `scripts/fetch-examples.sh imzml-examples` (this directory is git-ignored).
 
 ## Files
 

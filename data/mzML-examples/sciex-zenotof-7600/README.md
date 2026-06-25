@@ -8,7 +8,7 @@ PSI-MS CV term coverage.
 **Source:** MassIVE **MSV000095995** (ZenoTOF 7600 top-down reference dataset).
 **URL:** https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000095995/ccms_peak/20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.mzML&forceDownload=true
 **License:** CC0 1.0 (doi:10.25345/C51R6NC1Z) · public, no login.
-**Reconstructed by:** `scripts/fetch-mzml-examples.sh` (this directory is git-ignored).
+**Reconstructed by:** `scripts/fetch-examples.sh mzML-examples` (this directory is git-ignored).
 
 ## Files
 

@@ -4,7 +4,7 @@
 collection `imzML_LTP.zip`.
 **Record:** https://zenodo.org/records/10084132
 **ZIP:** https://zenodo.org/api/records/10084132/files/imzML_LTP.zip/content
-**Reconstructed by:** `scripts/fetch-imzml-examples.sh` (this directory is git-ignored).
+**Reconstructed by:** `scripts/fetch-examples.sh imzml-examples` (this directory is git-ignored).
 
 Low-temperature-plasma (LTP) mass spectrometry imaging of a chilli sample. Files live under
 `imzML_LTP/`.

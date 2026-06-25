@@ -3,7 +3,7 @@
 **Instrument:** Bruker micrOTOF-Q II (QTOF).
 **Source:** MetaboLights study **MTBLS520**.
 **URL:** https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS520/FILES/neg_01_Fistax_1-A,2_01_5715.mzML
-**Reconstructed by:** `scripts/fetch-mzml-examples.sh` (this directory is git-ignored).
+**Reconstructed by:** `scripts/fetch-examples.sh mzML-examples` (this directory is git-ignored).
 
 ## Files
 

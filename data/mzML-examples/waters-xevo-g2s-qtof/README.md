@@ -7,7 +7,7 @@ sub-model — **G2-XS** is the model named by the MetaboLights MTBLS1129 record.
 preserve the StackIT S3 layout (and the shared `sdrf-examples/MTBLS1129` fixture slug).
 **Source:** MetaboLights study **MTBLS1129**.
 **URL:** https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS1129/FILES/QC01.mzML
-**Reconstructed by:** `scripts/fetch-mzml-examples.sh` (this directory is git-ignored).
+**Reconstructed by:** `scripts/fetch-examples.sh mzML-examples` (this directory is git-ignored).
 
 ## Files
 

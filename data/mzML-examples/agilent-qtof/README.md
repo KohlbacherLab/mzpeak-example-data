@@ -9,7 +9,7 @@ not a Q-TOF** — the name predates the metadata check and is kept to preserve t
 (the obvious correct name `agilent-6490-triplequad` is already used by a separate PXD041762 entry).
 **Source:** Zenodo record **18502866**.
 **URL:** https://zenodo.org/api/records/18502866/files/MRM-standmix-5.mzML/content
-**Reconstructed by:** `scripts/fetch-mzml-examples.sh` (this directory is git-ignored).
+**Reconstructed by:** `scripts/fetch-examples.sh mzML-examples` (this directory is git-ignored).
 
 A useful edge case: **0 spectra, 138 chromatograms** — exercises the writer's chromatogram facet.
 

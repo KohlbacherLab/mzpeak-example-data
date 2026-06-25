@@ -7,7 +7,7 @@ HILIC metabolite profiling. Native Bruker **BAF** → mzML. (The PSI-MS CV group
 **Source:** MetaboLights **MTBLS12824** (exercise-trained human muscle), **HILIC** assay.
 **URL:** https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS12824/FILES/21P0055_Tissue_Georges_NEG_N_01_17471.mzML
 **License:** EMBL-EBI / MetaboLights open-access · public, no login.
-**Reconstructed by:** `scripts/fetch-mzml-examples.sh` (this directory is git-ignored).
+**Reconstructed by:** `scripts/fetch-examples.sh mzML-examples` (this directory is git-ignored).
 
 ## Files
 

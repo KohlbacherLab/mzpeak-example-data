@@ -8,7 +8,7 @@ nativeID handling.
 **Source:** MetaboLights **MTBLS11550** (Wolfberry tea metabolite changes), GC-MS assay.
 **URL:** https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS11550/FILES/DERIVED_FILES/GC/EFWS-1.mzML
 **License:** EMBL-EBI / MetaboLights open-access · public, no login.
-**Reconstructed by:** `scripts/fetch-mzml-examples.sh` (this directory is git-ignored).
+**Reconstructed by:** `scripts/fetch-examples.sh mzML-examples` (this directory is git-ignored).
 
 ## Files
 

@@ -7,7 +7,7 @@ trap`, with no Orbitrap/FT analyzer present.
 **Source:** PRIDE / ProteomeXchange **PXD059878** (KAT5/PC4 acetylation & DNA repair).
 **URL:** https://ftp.pride.ebi.ac.uk/pride/data/archive/2025/10/PXD059878/2013_30_Amrutha_050713_1.mzML
 **License:** ProteomeXchange open-access · public, no login.
-**Reconstructed by:** `scripts/fetch-mzml-examples.sh` (this directory is git-ignored).
+**Reconstructed by:** `scripts/fetch-examples.sh mzML-examples` (this directory is git-ignored).
 
 ## Files
 

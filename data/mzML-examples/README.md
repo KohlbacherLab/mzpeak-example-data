@@ -40,7 +40,7 @@ Total: ~10.0 GB · 18 instrument directories · 18 `.mzML` files (core 9 + exten
 ## Reconstruct on demand
 
 ```bash
-bash scripts/fetch-mzml-examples.sh
+bash scripts/fetch-examples.sh mzML-examples
 ```
 
 Idempotent (skips files already present), downloads smallest-first. PRIDE / Zenodo / EBI-FTP

@@ -30,7 +30,8 @@ missing `.mzpeak` outputs are (re)built. It locates `mzpeak-convert` via
 ### Requirements
 
 - `bash`, `curl`, `unzip`, `git`, and a Rust toolchain (≥1.87) — or a prebuilt
-  `mzpeak-convert` on `$PATH`/`$MZPEAK_CONVERT`.
+  `mzpeak-convert` on `$PATH`/`$MZPEAK_CONVERT`. `python3` is needed for the
+  `pwiz-examples` tile (UTF-8-safe URL encoding of its file list).
 - Thermo `.raw` conversion additionally needs a **.NET 8+** runtime.
 - **Vendor raw with no cross-platform reader** (SCIEX `.wiff`, Agilent `.d`,
   Waters `.raw`, Bruker `.d`-BAF) only converts on **Windows/Linux** with the
@@ -48,7 +49,8 @@ missing `.mzpeak` outputs are (re)built. It locates `mzpeak-convert` via
 ├── docs/
 │   └── CORPUS.md          # the canonical inventory: every dataset, accession + download URL
 ├── manifest/
-│   └── datasets.tsv       # machine-readable inventory for the vendor-raw tiles (drives build_data.sh)
+│   ├── datasets.tsv       # machine-readable inventory for the vendor-raw tiles (drives build_data.sh)
+│   └── pwiz-files.txt     # list of ProteoWizard test mzML paths (fetched from the public mirror)
 ├── data/                  # MIRRORS the archive hierarchy — README.md per tile, NO binaries
 │   ├── mzML-examples/     #   non-imaging mzML, one dir per instrument
 │   ├── imzml-examples/    #   MS-imaging imzML (+ ibd, optical TIFF)
@@ -63,9 +65,7 @@ missing `.mzpeak` outputs are (re)built. It locates `mzpeak-convert` via
 │   ├── vendor-bruker-baf/ #   Bruker BAF .d
 │   └── demo/              #   one showcase .mzpeak for the website/viewer
 └── scripts/
-    ├── fetch-mzml-examples.sh    # per-tile downloaders (curated, idempotent)
-    ├── fetch-imzml-examples.sh
-    ├── fetch-sdrf-examples.sh
+    ├── fetch-examples.sh         # unified downloader: mzML / imzml / sdrf / pwiz (curated, idempotent)
     ├── make-s3-index.py          # build index.html + subpages from the live bucket
     ├── make-ratio-plots.py       # per-category compression-ratio plots
     ├── push-index-stackit.sh     # rebuild index.html + deploy to S3

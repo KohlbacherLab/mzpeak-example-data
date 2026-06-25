@@ -4,7 +4,7 @@
 collection `imzML_LA-ESI.zip`.
 **Record:** https://zenodo.org/records/10084132
 **ZIP:** https://zenodo.org/api/records/10084132/files/imzML_LA-ESI.zip/content
-**Reconstructed by:** `scripts/fetch-imzml-examples.sh` (this directory is git-ignored).
+**Reconstructed by:** `scripts/fetch-examples.sh imzml-examples` (this directory is git-ignored).
 
 Laser-ablation electrospray-ionisation (LA-ESI) imaging of an *Arabidopsis thaliana* leaf
 (negative mode). Files live under `imzML_LA-ESI/`.

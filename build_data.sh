@@ -140,24 +140,18 @@ vendor_tile(){  # <tile>  — process all manifest rows whose 'tile' matches
 }
 
 # ── drivers ──────────────────────────────────────────────────────────────────────
-run_fetch_script(){ [ "$SKIP_FETCH" = 1 ] && return 0; say "fetch $1"; bash "$ROOT/scripts/$2"; }
+# Open-format tiles (mzML/imzml/sdrf/pwiz) are fetched by the unified scripts/fetch-examples.sh.
+run_fetch(){ [ "$SKIP_FETCH" = 1 ] && return 0; say "fetch $1"; bash "$ROOT/scripts/fetch-examples.sh" "$1" || say "  some $1 downloads failed (see log above)"; }
 
 ensure_converter
 for tile in $TILES; do
   echo "──────────────────────────────────────────────────────────────────────"
   say "TILE: $tile"
   case "$tile" in
-    mzML-examples)   run_fetch_script "$tile" fetch-mzml-examples.sh;  convert_glob "$tile" '*.mzML' ;;
-    imzml-examples)  run_fetch_script "$tile" fetch-imzml-examples.sh; convert_glob "$tile" '*.imzML' ;;
-    sdrf-examples)   run_fetch_script "$tile" fetch-sdrf-examples.sh;  convert_glob "$tile" '*.mzML' ;;
-    pwiz-examples)
-      if [ -d "$ROOT/data/pwiz-examples" ] && find "$ROOT/data/pwiz-examples" -iname '*.mzML' -print -quit | grep -q .; then
-        convert_glob "$tile" '*.mzML'
-      else
-        say "  pwiz-examples source = ProteoWizard test corpus — not auto-fetched."
-        say "  Seed data/pwiz-examples/ from the ProteoWizard 'Reader_*_Test.data' fixtures, then re-run."
-        N_MANUAL+=1
-      fi ;;
+    mzML-examples)   run_fetch "$tile"; convert_glob "$tile" '*.mzML' ;;
+    imzml-examples)  run_fetch "$tile"; convert_glob "$tile" '*.imzML' ;;
+    sdrf-examples)   run_fetch "$tile"; convert_glob "$tile" '*.mzML' ;;
+    pwiz-examples)   run_fetch "$tile"; convert_glob "$tile" '*.mzML' ;;
     raw-bench|tof-grid-examples|vendor-agilent-sciex|vendor-waters|vendor-bruker-baf)
       vendor_tile "$tile" ;;
     raw-replacements|demo)

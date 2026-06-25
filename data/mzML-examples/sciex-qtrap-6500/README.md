@@ -8,7 +8,7 @@ second, vendor-independent **SRM-chromatogram** example via the SCIEX/ABI conver
 biotherapeutics).
 **URL:** https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/02/PXD066465/Drug_substance_3_scheduled_MRM.mzML
 **License:** CC0 · public, no login.
-**Reconstructed by:** `scripts/fetch-mzml-examples.sh` (this directory is git-ignored).
+**Reconstructed by:** `scripts/fetch-examples.sh mzML-examples` (this directory is git-ignored).
 
 ## Files
 

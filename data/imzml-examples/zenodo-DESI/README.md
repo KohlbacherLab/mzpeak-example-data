@@ -4,7 +4,7 @@
 collection `imzML_DESI.zip`.
 **Record:** https://zenodo.org/records/10084132
 **ZIP:** https://zenodo.org/api/records/10084132/files/imzML_DESI.zip/content
-**Reconstructed by:** `scripts/fetch-imzml-examples.sh` (this directory is git-ignored).
+**Reconstructed by:** `scripts/fetch-examples.sh imzml-examples` (this directory is git-ignored).
 
 Desorption electrospray ionisation (DESI) imaging — **7 separate colorectal-adenoma sections**,
 each in its own folder under `imzML_DESI/ColAd_Individual/`. Every section is a

@@ -3,7 +3,7 @@
 **Instrument:** Thermo Q Exactive Plus (Orbitrap).
 **Source:** Zenodo record **17549994** (HMP2 / IBD).
 **URL:** https://zenodo.org/api/records/17549994/files/160920_SM-AKTWT_509.mzML/content
-**Reconstructed by:** `scripts/fetch-mzml-examples.sh` (this directory is git-ignored).
+**Reconstructed by:** `scripts/fetch-examples.sh mzML-examples` (this directory is git-ignored).
 
 ## Files
 

@@ -8,7 +8,7 @@ chromatograms** in the corpus — exercises the writer's chromatogram path rathe
 **Source:** PRIDE / ProteomeXchange **PXD041762** (acute → post-COVID-19 proteomics).
 **URL:** https://ftp.pride.ebi.ac.uk/pride/data/archive/2024/01/PXD041762/REC-2349_P2_F1.mzML
 **License:** CC0 · public, no login.
-**Reconstructed by:** `scripts/fetch-mzml-examples.sh` (this directory is git-ignored).
+**Reconstructed by:** `scripts/fetch-examples.sh mzML-examples` (this directory is git-ignored).
 
 ## Files
 

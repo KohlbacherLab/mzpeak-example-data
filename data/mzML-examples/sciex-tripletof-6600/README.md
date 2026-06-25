@@ -3,7 +3,7 @@
 **Instrument:** Sciex TripleTOF 6600.
 **Source:** Zenodo record **17416537**.
 **URL:** https://zenodo.org/api/records/17416537/files/12_80.mzML/content
-**Reconstructed by:** `scripts/fetch-mzml-examples.sh` (this directory is git-ignored).
+**Reconstructed by:** `scripts/fetch-examples.sh mzML-examples` (this directory is git-ignored).
 
 ## Files
 

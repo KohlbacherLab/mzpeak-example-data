@@ -6,13 +6,13 @@ Glioblastoma."*
 **Record:** https://zenodo.org/records/18187395
 **License:** CC-BY-4.0 (fully open, no login).
 **Download pattern:** `https://zenodo.org/api/records/18187395/files/<SECTION>.zip/content`
-**Reconstructed by:** `scripts/fetch-imzml-examples.sh` (this directory is git-ignored).
+**Reconstructed by:** `scripts/fetch-examples.sh imzml-examples` (this directory is git-ignored).
 
 The one openly downloadable imzML bundle we found that ships **two optical images of distinct
 modalities per section** — the fixture for the ≥2-optical-image extension path. The Zenodo record
 holds **29 per-section ZIPs** (20 `Train`, 9 `Test`); the fetch script pulls only the smallest by
 default (`24_Test_P15_r2`, ~248 MB ZIP). Add more with
-`GBM_SECTIONS="24_Test_P15_r2 16_Train_P10_r2" bash scripts/fetch-imzml-examples.sh`.
+`GBM_SECTIONS="24_Test_P15_r2 16_Train_P10_r2" bash scripts/fetch-examples.sh imzml-examples`.
 
 Each section ZIP has **no section-name parent inside it**, so the fetch script nests it under
 `<SECTION>/`. Per-section layout:

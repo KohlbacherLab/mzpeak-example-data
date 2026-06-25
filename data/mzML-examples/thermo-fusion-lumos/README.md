@@ -3,7 +3,7 @@
 **Instrument:** Thermo Orbitrap Fusion Lumos.
 **Source:** PRIDE / ProteomeXchange **PXD008952** (CPTAC TMT).
 **URL:** https://ftp.pride.ebi.ac.uk/pride/data/archive/2018/05/PXD008952/01_CPTAC_TMTS1-NCI7_P_JHUZ_20170509_LUMOS.mzML
-**Reconstructed by:** `scripts/fetch-mzml-examples.sh` (this directory is git-ignored).
+**Reconstructed by:** `scripts/fetch-examples.sh mzML-examples` (this directory is git-ignored).
 
 ## Files
 

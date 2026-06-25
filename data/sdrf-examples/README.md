@@ -1,8 +1,8 @@
 # SDRF example files
 
 Curated SDRF files for the SDRF↔mzPeak integration work (backlog 999.5). **This directory is
-git-ignored.** Tracked record: `docs/CORPUS.md` + `scripts/fetch-sdrf-examples.sh`
-(`bash scripts/fetch-sdrf-examples.sh` to rebuild).
+git-ignored.** Tracked record: `docs/CORPUS.md` + `scripts/fetch-examples.sh sdrf-examples`
+(`bash scripts/fetch-examples.sh sdrf-examples` to rebuild).
 
 | Directory | File | Rows | Labels | Pairs with |
 |---|---|--:|---|---|

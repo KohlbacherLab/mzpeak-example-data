@@ -6,7 +6,7 @@ conversion path, in-file `MS: Shimadzu instrument model` cvParam.
 **Source:** MetaboLights **MTBLS13204** (*Fucus* seaweed phytochemical profiling).
 **URL:** https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS13204/FILES/DERIVED_FILES/Blind_P1_pos_012.mzML
 **License:** CC0 1.0 · public, no login.
-**Reconstructed by:** `scripts/fetch-mzml-examples.sh` (this directory is git-ignored).
+**Reconstructed by:** `scripts/fetch-examples.sh mzML-examples` (this directory is git-ignored).
 
 ## Files
 
