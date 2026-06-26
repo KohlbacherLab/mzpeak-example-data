@@ -32,6 +32,32 @@ declare -i N_OK=0 N_SKIP=0 N_FAIL=0 N_MANUAL=0
 say(){ printf '[%s] %s\n' "$(date +%H:%M:%S)" "$*"; }
 need(){ command -v "$1" >/dev/null || { echo "ERROR: '$1' not found on PATH" >&2; exit 1; }; }
 
+# Preflight the toolchain needed to BUILD mzpeak-convert from source (skipped when a prebuilt
+# binary is supplied). Catches the common fresh-Linux gaps in one shot: a C/C++ toolchain +
+# libstdc++ (the `-lstdc++` link error), cmake (a native dep builds with it), and a recent
+# rustup Rust — the distro `rustc`/`cargo` are too old and shadow rustup.
+preflight_build_toolchain(){
+  local missing=()
+  # cc + c++ (g++) ⇒ build-essential; cmake ⇒ a -sys crate; git/cargo ⇒ clone+build.
+  for t in git cargo cc c++ cmake; do command -v "$t" >/dev/null || missing+=("$t"); done
+  if [ "${#missing[@]}" -gt 0 ]; then
+    echo "ERROR: missing build prerequisites: ${missing[*]}" >&2
+    echo "  Debian/Ubuntu:  sudo apt-get install -y build-essential cmake curl unzip git" >&2
+    echo "  Rust must come from rustup (the apt rustc/cargo are too old for this build):" >&2
+    echo "    sudo apt-get remove -y rustc cargo   # only if a distro Rust was installed" >&2
+    echo "    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh && . \"\$HOME/.cargo/env\"" >&2
+    echo "  Or skip building: point MZPEAK_CONVERT at a prebuilt mzpeak-convert." >&2
+    exit 1
+  fi
+  # Rust >= 1.87 (edition/MSRV). sort -V: if 1.87.0 is the smaller of the two, cargo is new enough.
+  local v; v="$(cargo --version 2>/dev/null | awk '{print $2}')"
+  if [ -n "$v" ] && [ "$(printf '1.87.0\n%s\n' "$v" | sort -V | head -1)" != "1.87.0" ]; then
+    echo "ERROR: Rust $v is too old; need >= 1.87. Install via rustup and 'rustup update'." >&2
+    echo "  (Ubuntu's apt 'rustc' is the usual culprit — remove it and use rustup.)" >&2
+    exit 1
+  fi
+}
+
 need curl; need unzip
 
 # ── locate or build mzpeak-convert ──────────────────────────────────────────────
@@ -43,7 +69,7 @@ ensure_converter(){
   else
     local b="$ROOT/.build/mzPeakConverter/target/release/mzpeak-convert"
     if [ ! -x "$b" ]; then
-      need git; need cargo
+      preflight_build_toolchain
       say "building mzpeak-convert (clone + cargo build --release)…"
       [ -d "$ROOT/.build/mzPeakConverter" ] || \
         git clone --depth 1 https://github.com/okohlbacher/mzPeakConverter.git "$ROOT/.build/mzPeakConverter"

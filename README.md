@@ -29,9 +29,18 @@ missing `.mzpeak` outputs are (re)built. It locates `mzpeak-convert` via
 
 ### Requirements
 
-- `bash`, `curl`, `unzip`, `git`, and a Rust toolchain (≥1.87) — or a prebuilt
-  `mzpeak-convert` on `$PATH`/`$MZPEAK_CONVERT`. `python3` is needed for the
-  `pwiz-examples` tile (UTF-8-safe URL encoding of its file list).
+- `bash`, `curl`, `unzip`, `git`. `python3` is needed for the `pwiz-examples`
+  tile (UTF-8-safe URL encoding of its file list).
+- **To build `mzpeak-convert` from source** (skipped if you point `$MZPEAK_CONVERT`
+  at a prebuilt binary): a **C/C++ toolchain incl. `libstdc++`**, **`cmake`**, and
+  **Rust ≥ 1.87 from [rustup](https://rustup.rs)**.
+  - Debian/Ubuntu: `sudo apt-get install -y build-essential cmake curl unzip git`,
+    then install Rust via rustup.
+  - ⚠️ Use **rustup**, not the distro `rustc`/`cargo` (apt) — they're too old for
+    this build and shadow rustup. If a distro Rust is present, remove it first:
+    `sudo apt-get remove -y rustc cargo`.
+  - `build_data.sh` preflights all of the above and prints these exact commands if
+    anything is missing (it catches the `-lstdc++` link error and the stale-rustc trap).
 - Thermo `.raw` conversion additionally needs a **.NET 8+** runtime.
 - **Vendor raw with no cross-platform reader** (SCIEX `.wiff`, Agilent `.d`,
   Waters `.raw`, Bruker `.d`-BAF) only converts on **Windows/Linux** with the
