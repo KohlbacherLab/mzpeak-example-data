@@ -10,6 +10,12 @@ ok=0; fail=0; mism=0
 fsize(){ [ -f "$1" ] && { stat -f%z "$1" 2>/dev/null || stat -c%s "$1" 2>/dev/null || wc -c <"$1" | tr -d ' '; } || echo 0; }
 # remote size via HEAD (works for http(s) and ftp); empty if the server doesn't report it
 rsize(){ curl -fsSLI "$1" 2>/dev/null | awk 'tolower($1)=="content-length:"{v=$2} END{gsub(/\r/,"",v); print v+0}'; }
+# collision-free local filename for a unit part: if two part URLs share a basename (iProX lists
+# DISTINCT files D-239.wiff under different IPX sub-accessions), prefix the parent path segment so
+# neither overwrites the other. Uses the $parts array of the current unit.
+partname(){ local u="$1" base n=0 p; base="$(basename "${u%%\?*}")"
+  for p in ${parts[@]+"${parts[@]}"}; do [ "$(basename "${p%%\?*}")" = "$base" ] && n=$((n+1)); done
+  if [ "$n" -gt 1 ]; then printf '%s_%s' "$(basename "$(dirname "${u%%\?*}")")" "$base"; else printf '%s' "$base"; fi; }
 
 while IFS=$'\t' read -r acc repo vendor unit exp urls; do
   [ "${acc#\#}" != "$acc" ] && continue; [ "$acc" = "accession" ] && continue; [ -z "$acc" ] && continue
@@ -17,7 +23,7 @@ while IFS=$'\t' read -r acc repo vendor unit exp urls; do
   say "$acc ($repo, $vendor) — $unit  exp=$(awk "BEGIN{printf \"%.1f\",$exp/1e6}")MB"
   IFS=';' read -ra parts <<< "$urls"
   for u in ${parts[@]+"${parts[@]}"}; do
-    f="$dest/$(basename "${u%%\?*}")"
+    f="$dest/$(partname "$u")"
     rem="$(rsize "$u")"
     # idempotent skip when the server reports a size (http(s)); ftp:// rarely does, so we also handle
     # the "already complete" curl exit codes below.
@@ -32,7 +38,7 @@ while IFS=$'\t' read -r acc repo vendor unit exp urls; do
     esac
   done
   # verify: sum local bytes of the unit's parts vs expected (when known)
-  got=$(for u in ${parts[@]+"${parts[@]}"}; do fsize "$dest/$(basename "${u%%\?*}")"; done | awk '{s+=$1} END{print s+0}')
+  got=$(for u in ${parts[@]+"${parts[@]}"}; do fsize "$dest/$(partname "$u")"; done | awk '{s+=$1} END{print s+0}')
   if [ "$exp" -gt 0 ] 2>/dev/null && [ "$got" -ne "$exp" ]; then say "  SIZE MISMATCH got=$got exp=$exp"; mism=$((mism+1))
   else say "  ok ($got bytes)"; ok=$((ok+1)); fi
 done < "$MAN"
