@@ -66,3 +66,10 @@ Range, so they re-download whole on each attempt — let them finish in one go.
 - A committed tiny smoke-test fixture also lives at `tests/fixtures/mzml/tiny.pwiz.1.1.mzML`.
 
 Full provenance + direct URLs: [`docs/CORPUS.md`](../../docs/CORPUS.md).
+
+## General MS demonstrators (2026-06-25)
+
+A 21-dataset broad-vendor showcase to extend this tile is catalogued in
+[`../../manifest/general-ms-demonstrators.tsv`](../../manifest/general-ms-demonstrators.tsv)
+(provenance in [`../../docs/CORPUS.md`](../../docs/CORPUS.md) → General MS demonstrators). Direct
+download URLs are pending resolution from the listed accession pages.

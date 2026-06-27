@@ -59,6 +59,7 @@ missing `.mzpeak` outputs are (re)built. It locates `mzpeak-convert` via
 │   └── CORPUS.md          # the canonical inventory: every dataset, accession + download URL
 ├── manifest/
 │   ├── datasets.tsv       # machine-readable inventory for the vendor-raw tiles (drives build_data.sh)
+│   ├── general-ms-demonstrators.tsv  # curated General MS broad-vendor showcase (accessions + DOIs)
 │   └── pwiz-files.txt     # list of ProteoWizard test mzML paths (fetched from the public mirror)
 ├── data/                  # MIRRORS the archive hierarchy — README.md per tile, NO binaries
 │   ├── mzML-examples/     #   non-imaging mzML, one dir per instrument

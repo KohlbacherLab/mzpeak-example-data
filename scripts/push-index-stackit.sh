@@ -31,6 +31,7 @@ AWS=(aws --profile "$PROFILE" --endpoint-url "$EP")
 say(){ echo "[$(date +%H:%M:%S)] $*"; }
 
 command -v aws >/dev/null || { echo "ERROR: aws CLI not found (brew install awscli)" >&2; exit 1; }
+command -v python3 >/dev/null || { echo "ERROR: python3 not found (needed by make-s3-index.py)" >&2; exit 1; }
 mkdir -p out "$OUT"
 
 # 1) list the live bucket  ->  2) generate the multi-page site

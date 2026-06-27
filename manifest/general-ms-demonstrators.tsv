@@ -1,0 +1,25 @@
+# General MS (mzML-examples / 'General MS Data' subset) demonstrators — added 2026-06-25.
+# Curated broad-vendor showcase (vendor RAW available). Direct file URLs are TBD; fetch each
+# from its accession page below, then convert with the listed reader. Columns TAB-separated.
+make	model	accession	repo	technology	reader	page_url	publication
+Agilent	5977B MSD	MTBLS11742	MetaboLights	flux GC-MS	--via-msconvert (.d)	https://www.ebi.ac.uk/metabolights/MTBLS11742	https://doi.org/10.1038/s41586-025-08635-6
+Agilent	6490 Triple Quadrupole LC/MS	MTBLS243	MetaboLights	dMRM	--via-msconvert (.d)	https://www.ebi.ac.uk/metabolights/MTBLS243	https://doi.org/10.1155/2015/543541
+Agilent	6560 Q-TOF LC/MS	MSV000090203	MassIVE	lipidomics	--via-msconvert (.d)	https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=MSV000090203	https://doi.org/10.1159/000526959
+Bruker	impact HD	PXD076861	PRIDE	native MS	--via-msconvert (.d)	https://www.ebi.ac.uk/pride/archive/projects/PXD076861	https://doi.org/10.1038/s41467-026-73842-2
+Bruker	micrOTOF II	MSV000084273	MassIVE	secreted proteins	--via-msconvert (.d)	https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=MSV000084273	https://doi.org/10.1016/j.jhep.2020.11.018
+Bruker	timsTOF HF	PXD059079	PRIDE	single cell	native .d TDF	https://www.ebi.ac.uk/pride/archive/projects/PXD059079	https://doi.org/10.1016/j.mcpro.2025.100949
+Bruker	timsTOF Pro 2	MSV000099123	MassIVE	proteomics	native .d TDF	https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=MSV000099123	https://doi.org/10.1158/1541-7786.MCR-25-1153
+Bruker	timsTOF Pro 2	MSV000092457	MassIVE	metabolome	native .d TDF	https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=MSV000092457	https://doi.org/10.1021/acs.jproteome.3c00224
+SCIEX	QTRAP 6500+	PXD022801	PRIDE	metabolome	--via-msconvert (.wiff)	https://www.ebi.ac.uk/pride/archive/projects/PXD022801	https://doi.org/10.1021/acs.jproteome.0c00786
+SCIEX	TripleTOF 6600	PXD065872	PRIDE	SWATH	--via-msconvert (.wiff)	https://www.ebi.ac.uk/pride/archive/projects/PXD065872	https://doi.org/10.1016/j.bbagen.2026.130953
+SCIEX	ZenoTOF 7600	PXD053710	PRIDE	zSWATH	--via-msconvert (.wiff)	https://www.ebi.ac.uk/pride/archive/projects/PXD053710	https://doi.org/10.1111/pai.70224
+Shimadzu	LCMS-9030	MTBLS5861	MetaboLights	lipidomics	--via-msconvert (.lcd)	https://www.ebi.ac.uk/metabolights/MTBLS5861	https://doi.org/10.1038/s42004-022-00778-1
+Shimadzu	LCMS-IT-TOF	MTBLS432	MetaboLights	metabolome	--via-msconvert (.lcd)	https://www.ebi.ac.uk/metabolights/MTBLS432	https://doi.org/10.1038/s41598-017-08732-1
+Thermo	Ascend	PXD059079	PRIDE	single cell	native .raw (.NET)	https://www.ebi.ac.uk/pride/archive/projects/PXD059079	https://doi.org/10.1016/j.mcpro.2025.100949
+Thermo	Astral	PXD054015	PRIDE	DIA	native .raw (.NET)	https://www.ebi.ac.uk/pride/archive/projects/PXD054015	https://doi.org/10.1021/acs.jproteome.4c00384
+Thermo	Astral	PXD076001	PRIDE	DIA	native .raw (.NET)	https://www.ebi.ac.uk/pride/archive/projects/PXD076001	https://doi.org/10.1016/j.cell.2026.04.034
+Thermo	Astral	MSV000096674	MassIVE	DDA-TMT	native .raw (.NET)	https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=MSV000096674	https://doi.org/10.1016/j.mcpro.2025.100968
+Thermo	Eclipse	PXD045201	PRIDE	top-down	native .raw (.NET)	https://www.ebi.ac.uk/pride/archive/projects/PXD045201	https://doi.org/10.1126/science.aaz5284
+Waters	Synapt G2-Si	PXD059353	PRIDE	HDX MS^E	--via-msconvert (.raw)	https://www.ebi.ac.uk/pride/archive/projects/PXD059353	https://doi.org/10.1038/s41467-025-66926-y
+Waters	Synapt XS HDMS	PXD073126	PRIDE	HDDDA	--via-msconvert (.raw)	https://www.ebi.ac.uk/pride/archive/projects/PXD073126	https://doi.org/10.1128/jb.00096-26
+Waters	Xevo TQ-S	PXD004410	PRIDE	QconCAT	--via-msconvert (.raw)	https://www.ebi.ac.uk/pride/archive/projects/PXD004410	https://doi.org/10.1074/mcp.m115.054288

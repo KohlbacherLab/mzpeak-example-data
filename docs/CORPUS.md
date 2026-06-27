@@ -188,3 +188,73 @@ the project object store (`https://object.storage.eu01.onstackit.cloud/v09/...`,
 - imzML imaging: `data/imzml-examples/` (one dir per source/modality).
 - Host e2e corpus index: `mzPeakConverter/tests/corpus.tsv`.
 - Vendor-CI download manifest (exact URLs): `mzPeakConverter/tools/vendor_ci_manifest.tsv`.
+
+---
+
+## General MS demonstrators (added 2026-06-25)
+
+A curated broad-vendor showcase for the **General MS Data** subset
+(`mzML-examples` / slug `mass-spec`) — 21 public datasets spanning Agilent, Bruker, SCIEX,
+Shimadzu, Thermo, and Waters, with vendor RAW available. Machine-readable list:
+[`manifest/general-ms-demonstrators.tsv`](../manifest/general-ms-demonstrators.tsv)
+(make · model · accession · repo · technology · reader · page URL · publication DOI).
+
+Direct per-file download URLs are **not yet resolved** — fetch each from its accession page,
+then convert with the listed reader (Thermo/Bruker-timsTOF convert cross-platform; SCIEX /
+Agilent / Waters / Shimadzu via `--via-msconvert` or the Windows native readers).
+
+| Make | Model | Accession | Repo | Technology | Reader | Publication |
+|---|---|---|---|---|---|---|
+| Agilent | 5977B MSD | **MTBLS11742** | MetaboLights | flux GC-MS | --via-msconvert (.d) | [doi:10.1038/s41586-025-08635-6](https://doi.org/10.1038/s41586-025-08635-6) |
+| Agilent | 6490 Triple Quadrupole LC/MS | **MTBLS243** | MetaboLights | dMRM | --via-msconvert (.d) | [doi:10.1155/2015/543541](https://doi.org/10.1155/2015/543541) |
+| Agilent | 6560 Q-TOF LC/MS | **MSV000090203** | MassIVE | lipidomics | --via-msconvert (.d) | [doi:10.1159/000526959](https://doi.org/10.1159/000526959) |
+| Bruker | impact HD | **PXD076861** | PRIDE | native MS | --via-msconvert (.d) | [doi:10.1038/s41467-026-73842-2](https://doi.org/10.1038/s41467-026-73842-2) |
+| Bruker | micrOTOF II | **MSV000084273** | MassIVE | secreted proteins | --via-msconvert (.d) | [doi:10.1016/j.jhep.2020.11.018](https://doi.org/10.1016/j.jhep.2020.11.018) |
+| Bruker | timsTOF HF | **PXD059079** | PRIDE | single cell | native .d TDF | [doi:10.1016/j.mcpro.2025.100949](https://doi.org/10.1016/j.mcpro.2025.100949) |
+| Bruker | timsTOF Pro 2 | **MSV000099123** | MassIVE | proteomics | native .d TDF | [doi:10.1158/1541-7786.MCR-25-1153](https://doi.org/10.1158/1541-7786.MCR-25-1153) |
+| Bruker | timsTOF Pro 2 | **MSV000092457** | MassIVE | metabolome | native .d TDF | [doi:10.1021/acs.jproteome.3c00224](https://doi.org/10.1021/acs.jproteome.3c00224) |
+| SCIEX | QTRAP 6500+ | **PXD022801** | PRIDE | metabolome | --via-msconvert (.wiff) | [doi:10.1021/acs.jproteome.0c00786](https://doi.org/10.1021/acs.jproteome.0c00786) |
+| SCIEX | TripleTOF 6600 | **PXD065872** | PRIDE | SWATH | --via-msconvert (.wiff) | [doi:10.1016/j.bbagen.2026.130953](https://doi.org/10.1016/j.bbagen.2026.130953) |
+| SCIEX | ZenoTOF 7600 | **PXD053710** | PRIDE | zSWATH | --via-msconvert (.wiff) | [doi:10.1111/pai.70224](https://doi.org/10.1111/pai.70224) |
+| Shimadzu | LCMS-9030 | **MTBLS5861** | MetaboLights | lipidomics | --via-msconvert (.lcd) | [doi:10.1038/s42004-022-00778-1](https://doi.org/10.1038/s42004-022-00778-1) |
+| Shimadzu | LCMS-IT-TOF | **MTBLS432** | MetaboLights | metabolome | --via-msconvert (.lcd) | [doi:10.1038/s41598-017-08732-1](https://doi.org/10.1038/s41598-017-08732-1) |
+| Thermo | Ascend | **PXD059079** | PRIDE | single cell | native .raw (.NET) | [doi:10.1016/j.mcpro.2025.100949](https://doi.org/10.1016/j.mcpro.2025.100949) |
+| Thermo | Astral | **PXD054015** | PRIDE | DIA | native .raw (.NET) | [doi:10.1021/acs.jproteome.4c00384](https://doi.org/10.1021/acs.jproteome.4c00384) |
+| Thermo | Astral | **PXD076001** | PRIDE | DIA | native .raw (.NET) | [doi:10.1016/j.cell.2026.04.034](https://doi.org/10.1016/j.cell.2026.04.034) |
+| Thermo | Astral | **MSV000096674** | MassIVE | DDA-TMT | native .raw (.NET) | [doi:10.1016/j.mcpro.2025.100968](https://doi.org/10.1016/j.mcpro.2025.100968) |
+| Thermo | Eclipse | **PXD045201** | PRIDE | top-down | native .raw (.NET) | [doi:10.1126/science.aaz5284](https://doi.org/10.1126/science.aaz5284) |
+| Waters | Synapt G2-Si | **PXD059353** | PRIDE | HDX MS^E | --via-msconvert (.raw) | [doi:10.1038/s41467-025-66926-y](https://doi.org/10.1038/s41467-025-66926-y) |
+| Waters | Synapt XS HDMS | **PXD073126** | PRIDE | HDDDA | --via-msconvert (.raw) | [doi:10.1128/jb.00096-26](https://doi.org/10.1128/jb.00096-26) |
+| Waters | Xevo TQ-S | **PXD004410** | PRIDE | QconCAT | --via-msconvert (.raw) | [doi:10.1074/mcp.m115.054288](https://doi.org/10.1074/mcp.m115.054288) |
+
+---
+
+## Known mislabeled / broken corpus entries (audited 2026-06-27)
+
+Verified by **file content**, not path names (see the annotation-issues handoff). Consumers and
+content-based routers should rely on bytes, not the directory's vendor label.
+
+- **`raw-replacements/*-sub__*` are all Thermo.** Every `bruker-*`/`sciex-*`/`waters-*`-named
+  `*-sub__*` dir actually holds **Thermo** data (`.raw` files with the `Finnigan` `01 A1` header;
+  `local.mzML` produced by ThermoRawFileParser). Filenames give the real instrument
+  (`…_Ascend_…`, `…_Elite_…`). `PXD000320` (PNNL `QC_Shew`, a Thermo QC set) is replicated under
+  three different vendor labels. These are **Thermo placeholder substitutes** for the named
+  vendors' unavailable data — treat the *content* as Thermo.
+- **Empty/broken (removed locally; do not re-publish without re-fetch):**
+  `tof-grid-examples/MSV000084856/Au010-VOC1-D1.D` — an Agilent `.d` skeleton (subdir tree, **0 data
+  files**; `MSProfile.bin` empty/absent — the `.bin` 500'd on download, already noted under "Not
+  obtained"). And `raw-replacements/impact-ii-{inten32,real}-PXD071586` — now hold only a 0-byte
+  `dl.log`. **Not a failed download:** both held a valid ~556 MB `bruker-impact-ii-PXD071586.mzpeak`
+  that **passed validation through 2026-06-24**, then was emptied; the converted artifact was removed
+  (re-fetchable from PRIDE **PXD071586**), not "never completed."
+- **Wrapper `.d` (label correct):** `…/raw/SBA415_Try.d` has no `analysis.tdf` at its top level —
+  the real acquisition `SBA415(1) Try_…_8271.d` is nested one level down. The corpus harness
+  (`tools/corpus_full.sh`, commit `0e5af0c`) **descends a single-child wrapper `.d`** and classifies
+  by markers; naive "`.d` without tdf ⇒ Agilent" routers must do the same.
+- **DESI `*-centroid.imzML` are invalid UTF-8 (real issue, handled in the converter).** All 7 declare
+  `encoding="ISO-8859-1"` (the standard imzML template — every imzML in the corpus declares it) **and
+  each contains one Latin-1 byte `0xE0` (`à`) in `<sourceFile name="à">`**, so they are **not valid
+  UTF-8** and panic a strict UTF-8 reader (mzdata 0.65.2). `mzpeak-convert` transcodes legacy
+  ISO-8859-1 → UTF-8 before reading (commit `1cf067c`); an upstream mzdata fix is filed (backlog #8).
+  (An earlier note here wrongly called these "pure ASCII" — that was a BSD-`grep`-`\x` artifact; the
+  `0xE0` byte is real and confirmed by `iconv -f UTF-8` rejecting all 7.)

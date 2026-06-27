@@ -38,8 +38,11 @@ need(){ command -v "$1" >/dev/null || { echo "ERROR: '$1' not found on PATH" >&2
 # rustup Rust — the distro `rustc`/`cargo` are too old and shadow rustup.
 preflight_build_toolchain(){
   local missing=()
-  # cc + c++ (g++) ⇒ build-essential; cmake ⇒ a -sys crate; git/cargo ⇒ clone+build.
-  for t in git cargo cc c++ cmake; do command -v "$t" >/dev/null || missing+=("$t"); done
+  # On Windows (Git-Bash/MSYS/Cygwin) Rust builds with the MSVC toolchain (link.exe), not cc/g++,
+  # so only require cmake there; on Linux/macOS/WSL require the full C/C++ toolchain.
+  local need_cc=("cc" "c++")
+  case "$(uname -s 2>/dev/null)" in MINGW*|MSYS*|CYGWIN*) need_cc=() ;; esac
+  for t in git cargo cmake ${need_cc[@]+"${need_cc[@]}"}; do command -v "$t" >/dev/null || missing+=("$t"); done
   if [ "${#missing[@]}" -gt 0 ]; then
     echo "ERROR: missing build prerequisites: ${missing[*]}" >&2
     echo "  Debian/Ubuntu:  sudo apt-get install -y build-essential cmake curl unzip git" >&2
@@ -138,11 +141,11 @@ vendor_tile(){  # <tile>  — process all manifest rows whose 'tile' matches
         say "  MANUAL: download $accession into data/$tile/$dir/ from $(source_page "$repo" "$accession")"; N_MANUAL+=1
       else
         local u urls name; IFS=';' read -ra urls <<< "$files"
-        for u in "${urls[@]}"; do
+        for u in ${urls[@]+"${urls[@]}"}; do
           case "$u" in
             # MassIVE ProteoSAFe download URLs carry the real filename in the file= query param
             # (the URL path basename is just "DownloadResultFile"), so derive the name from file=.
-            *DownloadResultFile*file=*) name="$(basename "${u##*file=}")" ;;
+            *DownloadResultFile*file=*) name="$(basename "${u##*file=}")"; name="${name%%&*}" ;;
             *) name="$(basename "${u%%\?*}")" ;;
           esac
           dl "$u" "$dest/$name"
