@@ -74,6 +74,15 @@ SUBSETS = OrderedDict([
              "microTOF-Q BAF run (PXD059108); and two Agilent QTOF deposits (PXD059765 · PXD041903) that are "
              "centroid-only at source and so carry RAW without a profile conversion. Each dataset names its "
              "accession; all are openly licensed public deposits.")),
+    ("general-ms", dict(slug="general-ms", title="General MS Demonstrators (raw)", icon="\U0001F9F0", accent="#9a6700",
+        blurb="Native vendor raw for the broad General-MS demonstrator set (Agilent, Bruker, SCIEX, Shimadzu, "
+              "Thermo, Waters) — hosted here as direct conversion inputs; one representative unit per dataset.", imaging=False,
+        prov="<b>Provenance.</b> Openly published runs from <b>PRIDE</b>, <b>iProX</b>, <b>jPOST</b> and "
+             "<b>MetaboLights</b> spanning six instrument vendors — Thermo Orbitrap (incl. Astral), Bruker "
+             "timsTOF, SCIEX ZenoTOF / QTRAP / TripleTOF SWATH, Waters, Shimadzu and Agilent. Each dataset's "
+             "accession and the resolved per-file source URLs are recorded in "
+             "<code>manifest/general-ms-demonstrators.tsv</code> and <code>manifest/general-ms-files.tsv</code>; "
+             "the smallest representative unit per dataset is kept.")),
 ])
 DEFAULT_META = dict(slug=None, title=None, icon="\U0001F4E6", accent="#57606a", blurb="", prov="", imaging=False)
 
