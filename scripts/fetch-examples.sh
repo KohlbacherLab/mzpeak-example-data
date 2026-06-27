@@ -100,13 +100,12 @@ fetch_imzml() {
   done
 }
 
-# ── sdrf-examples — SDRF/ISA study-design files (+ a matched TMT mzML) ───────────────────────────
+# ── sdrf-examples — SDRF/ISA study-design files ──────────────────────────────────────────────────
 fetch_sdrf() {
   local B="$ROOT/data/sdrf-examples"; mkdir -p "$B"; cd "$B"
   echo "== sdrf-examples =="
   dl "https://raw.githubusercontent.com/bigbio/proteomics-sample-metadata/master/annotated-projects/MTBLS1129/MTBLS1129.sdrf.tsv" "MTBLS1129/MTBLS1129.sdrf.tsv"
   dl "https://raw.githubusercontent.com/bigbio/sdrf-annotated-datasets/main/datasets/PXD011799/PXD011799.sdrf.tsv"                 "PXD011799/PXD011799.sdrf.tsv"
-  dl "https://ftp.pride.ebi.ac.uk/pride/data/archive/2019/10/PXD011799/20170131_Lumos_RSLC4_Maurer_Hartl_UW_MFPL_TiO2_TMT_fr8.mzML" "PXD011799/20170131_Lumos_RSLC4_Maurer_Hartl_UW_MFPL_TiO2_TMT_fr8.mzML"
 }
 
 # ── pwiz-examples — ProteoWizard vendor-reader test mzML ─────────────────────────────────────────
