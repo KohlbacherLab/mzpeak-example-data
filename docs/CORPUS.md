@@ -247,7 +247,6 @@ resolved URLs: [`manifest/ims-demonstrators.tsv`](../manifest/ims-demonstrators.
 | cyclic IMS | Waters SELECT SERIES Cyclic | PXD072107 | PRIDE | *manifest-only — single 57 GB file* |
 | FAIMS | Thermo Orbitrap Exploris 480 | PXD079445 | PRIDE | `240617_SAR186_A1_EVs.raw` (1.4 GB) |
 | FAIMS | Thermo Orbitrap Fusion Lumos | PXD079072 | PRIDE | `Xinyi3.raw` (1.3 GB) |
-| SLIM | Mobilion (Agilent 6546 front-end) | MSV000099577 | MassIVE | `…200S-updated.mbi` (0.4 GB) |
 | TIMS + FAIMS | Bruker timsTOF HT + Thermo Ascend | PXD059079 | PRIDE | `TimsTOF_HT_NCI7_Dilution.zip` (18 GB) + `FAIMS_Ascend_DIA_NCI7_Dilution.zip` (1.5 GB) — *moved from general-ms* |
 | TIMS | Bruker timsTOF Pro (SBA415) | *moved* | — | existing `.d` + mzML + mzPeak |
 | TIMS | Bruker timsTOF (SBA415) | *moved* | — | existing `.d` + mzPeak |

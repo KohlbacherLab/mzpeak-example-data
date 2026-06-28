@@ -6,7 +6,6 @@ PXD077098	PRIDE	Waters Synapt	TWIMS	10424803454	https://ftp.pride.ebi.ac.uk/prid
 PXD052561	PRIDE	Waters SELECT SERIES Cyclic IMS	cyclic-IMS	601123417	https://ftp.pride.ebi.ac.uk/pride/data/archive/2024/09/PXD052561/20231129_NM4_Xevo_MSe.raw.zip
 PXD079445	PRIDE	Thermo Orbitrap Exploris 480 +FAIMS	FAIMS	1370476595	https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/06/PXD079445/240617_SAR186_A1_EVs.raw
 PXD079072	PRIDE	Thermo Orbitrap Fusion Lumos +FAIMS	FAIMS	1274361062	https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/05/PXD079072/Xinyi3.raw
-MSV000099577	MassIVE	Mobilion SLIM (Agilent 6546)	SLIM	418759430	https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000099577/raw/c-2024-10-31 14.19.00-100ngHeLa_1irt_200S-updated.mbi&forceDownload=true
 #PXD072107	PRIDE	Waters SELECT SERIES Cyclic IMS	cyclic-IMS	57130000000	https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/06/PXD072107/061025_USP5_SDE2UBL_3s_1.raw.zip	# 57GB single file — manifest-only, fetch on demand
 PXD059079	PRIDE	Bruker timsTOF HT	TIMS	18180509414	https://ftp.pride.ebi.ac.uk/pride/data/archive/2025/03/PXD059079/TimsTOF_HT_NCI7_Dilution.zip
 PXD059079	PRIDE	Thermo Orbitrap Ascend +FAIMS	FAIMS	1537303300	https://ftp.pride.ebi.ac.uk/pride/data/archive/2025/03/PXD059079/FAIMS_Ascend_DIA_NCI7_Dilution.zip

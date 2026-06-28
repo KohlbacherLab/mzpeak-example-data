@@ -7,7 +7,6 @@ PXD052561	Waters SELECT SERIES Cyclic IMS	cyclic-IMS	PRIDE	new	top-down; 1 .raw.
 PXD072107	Waters SELECT SERIES Cyclic IMS	cyclic-IMS	PRIDE	manifest-only	single 57GB .raw.zip — fetch on demand
 PXD079445	Thermo Orbitrap Exploris 480 +FAIMS	FAIMS	PRIDE	new	1 .raw
 PXD079072	Thermo Orbitrap Fusion Lumos +FAIMS	FAIMS	PRIDE	new	1 .raw
-MSV000099577	Mobilion SLIM (Agilent 6546)	SLIM	MassIVE	new	PAMAF DIA; 1 .mbi
 bruker-timstof-pro	Bruker timsTOF Pro (SBA415)	TIMS	existing	moved	from mzML-examples; raw .d + mzML + mzpeak
 bruker-timstof-MSV000101607	Bruker timsTOF (SBA415)	TIMS	existing	moved	from raw-examples; raw .d + mzpeak
 agilent-6560-dtims-imqtof	Agilent 6560 (CEMS_10ppm)	DTIMS	existing	moved	from mzML-examples; mzML + mzpeak

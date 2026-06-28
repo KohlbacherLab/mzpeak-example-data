@@ -6,7 +6,6 @@ All ion-mobility–separated MS examples, across every IM technology and vendor:
 - **TWIMS** (Waters Synapt) and **cyclic IMS** (Waters SELECT SERIES)
 - **FAIMS** (Thermo Orbitrap + FAIMS Pro)
 - **DTIMS** (Agilent 6560 drift tube)
-- **SLIM** (Mobilion)
 
 Existing IM datasets were moved here from `mzML-examples` / `raw-examples`; the ProteoWizard
 vendor-reader IM fixtures remain in `pwiz-examples`. Catalog + per-file source URLs:
