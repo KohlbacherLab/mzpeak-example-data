@@ -229,6 +229,36 @@ Agilent / Waters / Shimadzu via `--via-msconvert` or the Windows native readers)
 
 ---
 
+## Ion Mobility (IMS) tile — `data/ims-examples/` (added 2026-06-28)
+
+A dedicated tile collecting **all ion-mobility examples** (slug `ims`) across every IM technology and
+vendor. Existing IM datasets were **moved here** out of `mzML-examples` / `raw-examples`
+(`bruker-timstof-pro`, `bruker-timstof-MSV000101607`, `agilent-6560-dtims-imqtof`); the ProteoWizard
+vendor-reader IM fixtures stay in `pwiz-examples`. Catalog +
+resolved URLs: [`manifest/ims-demonstrators.tsv`](../manifest/ims-demonstrators.tsv) /
+[`manifest/ims-files.tsv`](../manifest/ims-files.tsv); fetch with
+[`scripts/fetch-ims.sh`](../scripts/fetch-ims.sh). **≤ 2 raw files per study.**
+
+| IM type | vendor / instrument | accession | repo | raw fetched |
+|---|---|---|---|---|
+| TIMS | Bruker timsTOF SCP | PXD078573 | PRIDE | `…_F19_…9629.d.zip` (1.5 GB) |
+| TIMS | Bruker timsTOF Pro | PXD079300 | PRIDE | `25NP03340023_RD8_…d.zip` (2.6 GB) |
+| TIMS | Bruker timsTOF HT | PXD076703 | PRIDE | `…_GD7_1_2095.d.zip` (10.3 GB) |
+| TWIMS | Waters Synapt (HDX) | PXD077098 | PRIDE | `…Clicia_Milho_A1_B.raw.zip` (10.4 GB) |
+| cyclic IMS | Waters SELECT SERIES Cyclic | PXD052561 | PRIDE | `20231129_NM4_Xevo_MSe.raw.zip` (0.6 GB) |
+| cyclic IMS | Waters SELECT SERIES Cyclic | PXD072107 | PRIDE | *manifest-only — single 57 GB file* |
+| FAIMS | Thermo Orbitrap Exploris 480 | PXD079445 | PRIDE | `240617_SAR186_A1_EVs.raw` (1.4 GB) |
+| FAIMS | Thermo Orbitrap Fusion Lumos | PXD079072 | PRIDE | `Xinyi3.raw` (1.3 GB) |
+| SLIM | Mobilion (Agilent 6546 front-end) | MSV000099577 | MassIVE | `…200S-updated.mbi` (0.4 GB) |
+| TIMS | Bruker timsTOF Pro (SBA415) | *moved* | — | existing `.d` + mzML + mzPeak |
+| TIMS | Bruker timsTOF (SBA415) | *moved* | — | existing `.d` + mzPeak |
+| DTIMS | Agilent 6560 (CEMS_10ppm) | *moved* | — | existing mzML + mzPeak |
+
+Not found with a ≥ 100 MB raw on PRIDE/MassIVE: **Agilent 6560 DTIMS** (lives on MetaboLights /
+Metabolomics Workbench — the moved CEMS unit covers it) and **SCIEX SelexION/DMS**.
+
+---
+
 ## Known mislabeled / broken corpus entries (audited 2026-06-27)
 
 Verified by **file content**, not path names (see the annotation-issues handoff). Consumers and

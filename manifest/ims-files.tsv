@@ -1,0 +1,10 @@
+#accession	repo	vendor_instrument	im_type	exp_bytes	url
+PXD078573	PRIDE	Bruker timsTOF SCP	TIMS	1456635385	https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/05/PXD078573/20250305_AI_Rui_Xlink_F19_Slot1-28_1_9629.d.zip
+PXD079300	PRIDE	Bruker timsTOF Pro	TIMS	2610407992	https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/06/PXD079300/25NP03340023_RD8_1_27806.d.zip
+PXD076703	PRIDE	Bruker timsTOF HT	TIMS	10320223951	https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/06/PXD076703/20240726_HTnew_RSLC_AU25_Leitner_Martinez_MPL_MUW_MPLID24183_s19_98C_C_1_450ng_GD7_1_2095.d.zip
+PXD077098	PRIDE	Waters Synapt	TWIMS	10424803454	https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/05/PXD077098/2024_08_15_Clicia_Milho_A1_B.raw.zip
+PXD052561	PRIDE	Waters SELECT SERIES Cyclic IMS	cyclic-IMS	601123417	https://ftp.pride.ebi.ac.uk/pride/data/archive/2024/09/PXD052561/20231129_NM4_Xevo_MSe.raw.zip
+PXD079445	PRIDE	Thermo Orbitrap Exploris 480 +FAIMS	FAIMS	1370476595	https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/06/PXD079445/240617_SAR186_A1_EVs.raw
+PXD079072	PRIDE	Thermo Orbitrap Fusion Lumos +FAIMS	FAIMS	1274361062	https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/05/PXD079072/Xinyi3.raw
+MSV000099577	MassIVE	Mobilion SLIM (Agilent 6546)	SLIM	418759430	https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000099577/raw/c-2024-10-31 14.19.00-100ngHeLa_1irt_200S-updated.mbi&forceDownload=true
+#PXD072107	PRIDE	Waters SELECT SERIES Cyclic IMS	cyclic-IMS	57130000000	https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/06/PXD072107/061025_USP5_SDE2UBL_3s_1.raw.zip	# 57GB single file — manifest-only, fetch on demand

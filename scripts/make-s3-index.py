@@ -83,6 +83,16 @@ SUBSETS = OrderedDict([
              "accession and the resolved per-file source URLs are recorded in "
              "<code>manifest/general-ms-demonstrators.tsv</code> and <code>manifest/general-ms-files.tsv</code>; "
              "the smallest representative unit per dataset is kept.")),
+    ("ims-examples", dict(slug="ims", title="Ion Mobility (IMS)", icon="\U0001F300", accent="#0969da",
+        blurb="Ion-mobility&ndash;separated MS across every IM technology &mdash; Bruker timsTOF (TIMS/PASEF), "
+              "Waters Synapt (TWIMS) &amp; SELECT SERIES cyclic, Thermo FAIMS, Agilent 6560 drift-tube, and "
+              "Mobilion SLIM &mdash; with native vendor raw and mzPeak (carrying the ion-mobility array).", imaging=False,
+        prov="<b>Provenance.</b> Diverse-instrument IM datasets from <b>PRIDE</b> and <b>MassIVE</b>: Bruker "
+             "timsTOF SCP/Pro/HT (PASEF, PXD078573 / PXD079300 / PXD076703), Waters Synapt HDX (PXD077098) and "
+             "SELECT SERIES Cyclic IMS (PXD052561 / PXD072107), Thermo Orbitrap+FAIMS (PXD079445 / PXD079072), "
+             "Mobilion SLIM PAMAF (MSV000099577), plus the corpus's existing Bruker timsTOF Pro (SBA415) and "
+             "Agilent 6560 DTIMS (CEMS) units. Accessions and resolved per-file URLs in "
+             "<code>manifest/ims-demonstrators.tsv</code> / <code>manifest/ims-files.tsv</code>; ≤&thinsp;2 raw per study.")),
 ])
 DEFAULT_META = dict(slug=None, title=None, icon="\U0001F4E6", accent="#57606a", blurb="", prov="", imaging=False)
 
