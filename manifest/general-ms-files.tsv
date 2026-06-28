@@ -1,8 +1,6 @@
 # Resolved per-file download URLs for General MS demonstrators (added 2026-06-26).
 # accession<TAB>repo<TAB>vendor<TAB>unit<TAB>expected_bytes<TAB>part_urls(';'-separated)
 PXD076861	PRIDE	Bruker impact HD	NreB_PAS_DECONV.d.zip	226482825	https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/04/PXD076861/NreB_PAS_DECONV.d.zip
-PXD059079	PRIDE	Bruker timsTOF HF	TimsTOF_HT_NCI7_Dilution.zip	18180509414	https://ftp.pride.ebi.ac.uk/pride/data/archive/2025/03/PXD059079/TimsTOF_HT_NCI7_Dilution.zip
-PXD059079	PRIDE	Thermo Ascend	FAIMS_Ascend_DIA_NCI7_Dilution.zip	1537303300	https://ftp.pride.ebi.ac.uk/pride/data/archive/2025/03/PXD059079/FAIMS_Ascend_DIA_NCI7_Dilution.zip
 PXD045201	PRIDE	Thermo Eclipse	20200214_rmi049_75umPLRPS_Allen_CD3_F6_b.raw	167040777	https://ftp.pride.ebi.ac.uk/pride/data/archive/2023/09/PXD045201/20200214_rmi049_75umPLRPS_Allen_CD3_F6_b.raw
 PXD073126	PRIDE	Waters Synapt XS	250501_ZMM_KMI_sFtsk_2.raw.zip	1201956356	https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/05/PXD073126/250501_ZMM_KMI_sFtsk_2.raw.zip
 PXD065872	jPOST	SCIEX TripleTOF	241213_ozaki_brain_1_swath	3463135932	ftp://ftp.jpostdb.org/JPST003923/241213_Ozaki_Brain_1_SWATH.wiff;ftp://ftp.jpostdb.org/JPST003923/241213_Ozaki_Brain_1_SWATH.wiff.scan

@@ -11,3 +11,4 @@ MSV000099577	Mobilion SLIM (Agilent 6546)	SLIM	MassIVE	new	PAMAF DIA; 1 .mbi
 bruker-timstof-pro	Bruker timsTOF Pro (SBA415)	TIMS	existing	moved	from mzML-examples; raw .d + mzML + mzpeak
 bruker-timstof-MSV000101607	Bruker timsTOF (SBA415)	TIMS	existing	moved	from raw-examples; raw .d + mzpeak
 agilent-6560-dtims-imqtof	Agilent 6560 (CEMS_10ppm)	DTIMS	existing	moved	from mzML-examples; mzML + mzpeak
+PXD059079	Bruker timsTOF HT + Thermo Ascend +FAIMS	TIMS+FAIMS	PRIDE	moved	from general-ms; 2 raw zips (timsTOF 18GB + FAIMS 1.5GB)

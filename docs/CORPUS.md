@@ -194,8 +194,8 @@ the project object store (`https://object.storage.eu01.onstackit.cloud/v09/...`,
 ## General MS demonstrators (added 2026-06-25)
 
 A curated broad-vendor showcase for the **General MS Data** subset
-(`mzML-examples` / slug `mass-spec`) — 21 public datasets spanning Agilent, Bruker, SCIEX,
-Shimadzu, Thermo, and Waters, with vendor RAW available. Machine-readable list:
+(`mzML-examples` / slug `mass-spec`) — 20 public datasets spanning Agilent, Bruker, SCIEX,
+timsTOF HT + FAIMS-Ascend pair, was moved to the `ims-examples` tile). Machine-readable list:
 [`manifest/general-ms-demonstrators.tsv`](../manifest/general-ms-demonstrators.tsv)
 (make · model · accession · repo · technology · reader · page URL · publication DOI).
 
@@ -210,7 +210,6 @@ Agilent / Waters / Shimadzu via `--via-msconvert` or the Windows native readers)
 | Agilent | 6560 Q-TOF LC/MS | **MSV000090203** | MassIVE | lipidomics | --via-msconvert (.d) | [doi:10.1159/000526959](https://doi.org/10.1159/000526959) |
 | Bruker | impact HD | **PXD076861** | PRIDE | native MS | --via-msconvert (.d) | [doi:10.1038/s41467-026-73842-2](https://doi.org/10.1038/s41467-026-73842-2) |
 | Bruker | micrOTOF II | **MSV000084273** | MassIVE | secreted proteins | --via-msconvert (.d) | [doi:10.1016/j.jhep.2020.11.018](https://doi.org/10.1016/j.jhep.2020.11.018) |
-| Bruker | timsTOF HF | **PXD059079** | PRIDE | single cell | native .d TDF | [doi:10.1016/j.mcpro.2025.100949](https://doi.org/10.1016/j.mcpro.2025.100949) |
 | Bruker | timsTOF Pro 2 | **MSV000099123** | MassIVE | proteomics | native .d TDF | [doi:10.1158/1541-7786.MCR-25-1153](https://doi.org/10.1158/1541-7786.MCR-25-1153) |
 | Bruker | timsTOF Pro 2 | **MSV000092457** | MassIVE | metabolome | native .d TDF | [doi:10.1021/acs.jproteome.3c00224](https://doi.org/10.1021/acs.jproteome.3c00224) |
 | SCIEX | QTRAP 6500+ | **PXD022801** | PRIDE | metabolome | --via-msconvert (.wiff) | [doi:10.1021/acs.jproteome.0c00786](https://doi.org/10.1021/acs.jproteome.0c00786) |
@@ -218,7 +217,6 @@ Agilent / Waters / Shimadzu via `--via-msconvert` or the Windows native readers)
 | SCIEX | ZenoTOF 7600 | **PXD053710** | PRIDE | zSWATH | --via-msconvert (.wiff) | [doi:10.1111/pai.70224](https://doi.org/10.1111/pai.70224) |
 | Shimadzu | LCMS-9030 | **MTBLS5861** | MetaboLights | lipidomics | --via-msconvert (.lcd) | [doi:10.1038/s42004-022-00778-1](https://doi.org/10.1038/s42004-022-00778-1) |
 | Shimadzu | LCMS-IT-TOF | **MTBLS432** | MetaboLights | metabolome | --via-msconvert (.lcd) | [doi:10.1038/s41598-017-08732-1](https://doi.org/10.1038/s41598-017-08732-1) |
-| Thermo | Ascend | **PXD059079** | PRIDE | single cell | native .raw (.NET) | [doi:10.1016/j.mcpro.2025.100949](https://doi.org/10.1016/j.mcpro.2025.100949) |
 | Thermo | Astral | **PXD054015** | PRIDE | DIA | native .raw (.NET) | [doi:10.1021/acs.jproteome.4c00384](https://doi.org/10.1021/acs.jproteome.4c00384) |
 | Thermo | Astral | **PXD076001** | PRIDE | DIA | native .raw (.NET) | [doi:10.1016/j.cell.2026.04.034](https://doi.org/10.1016/j.cell.2026.04.034) |
 | Thermo | Astral | **MSV000096674** | MassIVE | DDA-TMT | native .raw (.NET) | [doi:10.1016/j.mcpro.2025.100968](https://doi.org/10.1016/j.mcpro.2025.100968) |
@@ -250,6 +248,7 @@ resolved URLs: [`manifest/ims-demonstrators.tsv`](../manifest/ims-demonstrators.
 | FAIMS | Thermo Orbitrap Exploris 480 | PXD079445 | PRIDE | `240617_SAR186_A1_EVs.raw` (1.4 GB) |
 | FAIMS | Thermo Orbitrap Fusion Lumos | PXD079072 | PRIDE | `Xinyi3.raw` (1.3 GB) |
 | SLIM | Mobilion (Agilent 6546 front-end) | MSV000099577 | MassIVE | `…200S-updated.mbi` (0.4 GB) |
+| TIMS + FAIMS | Bruker timsTOF HT + Thermo Ascend | PXD059079 | PRIDE | `TimsTOF_HT_NCI7_Dilution.zip` (18 GB) + `FAIMS_Ascend_DIA_NCI7_Dilution.zip` (1.5 GB) — *moved from general-ms* |
 | TIMS | Bruker timsTOF Pro (SBA415) | *moved* | — | existing `.d` + mzML + mzPeak |
 | TIMS | Bruker timsTOF (SBA415) | *moved* | — | existing `.d` + mzPeak |
 | DTIMS | Agilent 6560 (CEMS_10ppm) | *moved* | — | existing mzML + mzPeak |
