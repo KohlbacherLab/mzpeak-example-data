@@ -255,13 +255,20 @@ def viewer_links(key, imaging):
 
 # ---- read + bucket-organise -------------------------------------------------
 data = json.load(sys.stdin)
+# The tiles are FIXED: a top-level prefix is a real tile ONLY if it carries a `<prefix>/_catalog.md`
+# marker. Every other prefix on the bucket — box-convert staging, the mzpeak-only raw-*/vendor-* mirrors,
+# general-ms, anything new — is DISCARDED: no card, no subpage, not in the totals. This stops stray S3
+# prefixes from silently becoming "nonsense tiles".
+VALID_TILES = {k.split("/")[0] for k in (o["Key"] for o in data.get("Contents", [])) if k.endswith("/_catalog.md")}
 objs = []
 for o in data.get("Contents", []):
     k = o["Key"]
     if k in SELF_NAMES or (("/" not in k) and k.endswith(SELF_SUFFIX)):
         continue
+    if k.endswith("/_catalog.md"):          # the marker itself is metadata, never a listed file
+        continue
     top = k.split("/")[0]
-    if top in HIDE_PREFIXES:
+    if top not in VALID_TILES or top in HIDE_PREFIXES:
         continue
     objs.append((k, o["Size"]))
 objs.sort(key=lambda x: x[0])
