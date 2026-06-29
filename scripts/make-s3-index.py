@@ -218,6 +218,9 @@ def hs(n):
 PLOT_MIN_MB = 50                       # only datasets whose original input exceeds this are plotted
 _IMG_EXT = (".tif", ".tiff", ".png", ".jpg", ".jpeg", ".svs", ".bmp")
 _VENDOR_RAW_EXT = (".raw", ".wiff", ".wiff.scan", ".wiff2", ".tdf", ".tdf_bin", ".baf", ".yep", ".uimf")
+# Zipped vendor raw kept as a single object (Bruker `.d.zip`, Waters `.raw.zip`, SCIEX `.wiff.zip`, …)
+# also counts as raw — otherwise tiles that host their raw zipped (IMS, tof-grid) get raw_b = 0.
+_VENDOR_RAW_ZIP_RE = re.compile(r"\.(d|raw|wiff|wiff\.scan|wiff2|tdf|baf|yep|uimf)\.zip$")
 _META_EXT = (".md", ".csv", ".xml", ".xlsx", ".txt", ".json", ".orig-published-checksum", ".tsv")
 
 
@@ -235,7 +238,8 @@ def _kind(rel):
         return "mzml"
     if low.endswith(".ibd"):
         return "ibd"
-    if low.endswith(_VENDOR_RAW_EXT) or any(seg.endswith((".d", ".raw")) for seg in low.split("/")[:-1]):
+    if (low.endswith(_VENDOR_RAW_EXT) or _VENDOR_RAW_ZIP_RE.search(low)
+            or any(seg.endswith((".d", ".raw")) for seg in low.split("/")[:-1])):
         return "vraw"
     if low.endswith(_META_EXT):
         return "meta"
