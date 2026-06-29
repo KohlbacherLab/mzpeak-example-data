@@ -9,7 +9,7 @@ Reads `aws s3api list-objects-v2 ... --output json` on stdin and writes, into th
 Usage:  ... | make-s3-index.py <outdir>
 Stdlib only. Subset = top-level key prefix; dataset group = first two path levels.
 """
-import sys, os, json, html, re
+import sys, os, json, html, re, glob
 from urllib.parse import quote
 from collections import defaultdict, OrderedDict
 
@@ -147,6 +147,44 @@ DATASETS = {
     "UNIFI": "ProteoWizard <code>vendor_readers</code> · Waters UNIFI (API) reader files.",
     "Waters": "ProteoWizard <code>vendor_readers</code> · Waters (.raw / MassLynx) reader-regression files.",
 }
+
+# ── CANONICAL source of truth: `<tile>/_catalog.md` ───────────────────────────────────────────────
+# The corpus tiles are FIXED, each defined by a `_catalog.md` (YAML frontmatter slug/title/icon/accent/
+# imaging/order + a blurb paragraph + a provenance paragraph + a `## datasets` section of `### <name>`
+# descriptions). Build SUBSETS + DATASETS from those markers, REPLACING the literals above (which remain
+# only as a fallback when no catalogs are found). Edit the `_catalog.md` files — never these dicts.
+CATALOG_ROOT = os.environ.get("CATALOG_ROOT", os.path.expanduser("~/Claude/mzPeak/data"))
+
+def _load_catalogs(root):
+    subs, dsets = {}, {}
+    for cat in sorted(glob.glob(os.path.join(root, "*", "_catalog.md"))):
+        prefix = os.path.basename(os.path.dirname(cat))
+        m = re.match(r"^---\s*\n(.*?)\n---\s*\n(.*)$", open(cat, encoding="utf-8").read(), re.S)
+        if not m:
+            continue
+        fm = {}
+        for line in m.group(1).splitlines():
+            if ":" in line:
+                k, v = line.split(":", 1); fm[k.strip()] = v.strip()
+        intro, _, dsblock = m.group(2).partition("\n## datasets")
+        paras = [p.strip() for p in re.split(r"\n\s*\n", intro.strip()) if p.strip()]
+        subs[prefix] = dict(
+            slug=fm.get("slug") or prefix, title=fm.get("title") or prefix,
+            icon=fm.get("icon", "\U0001F4E6"), accent=fm.get("accent", "#57606a"),
+            imaging=str(fm.get("imaging", "false")).strip().lower() == "true",
+            blurb=paras[0] if paras else "", prov="\n\n".join(paras[1:]),
+            order=int(fm.get("order", "999") or "999"))
+        for dm in re.finditer(r"^###\s+(\S.*?)\s*\n(.*?)(?=\n###\s|\Z)", dsblock, re.S | re.M):
+            desc = dm.group(2).strip()
+            if desc:
+                dsets[dm.group(1).strip()] = desc
+    if subs:
+        return OrderedDict(sorted(subs.items(), key=lambda kv: kv[1]["order"])), dsets
+    return None
+
+_cat = _load_catalogs(CATALOG_ROOT)
+if _cat:
+    SUBSETS, DATASETS = _cat
 
 HIDE_PREFIXES = {"demo"}                    # legacy duplicate — fully dropped (no objects, no page)
 # UNLISTED: kept in the bucket AND given their own linkable subpage (e.g. pwiz.html), but excluded from
