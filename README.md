@@ -18,7 +18,7 @@ git clone https://github.com/kohlbacherlab/mzpeak-example-data.git
 cd mzpeak-example-data
 
 ./build_data.sh                 # download every dataset + convert to .mzpeak
-./build_data.sh mzML-examples   # just one tile
+./build_data.sh general-ms   # just one tile
 SKIP_CONVERT=1 ./build_data.sh  # download only, no conversion
 ```
 
@@ -62,7 +62,7 @@ missing `.mzpeak` outputs are (re)built. It locates `mzpeak-convert` via
 │   ├── general-ms-demonstrators.tsv  # curated General MS broad-vendor showcase (accessions + DOIs)
 │   └── pwiz-files.txt     # list of ProteoWizard test mzML paths (fetched from the public mirror)
 ├── data/                  # MIRRORS the archive hierarchy — README.md per tile, NO binaries
-│   ├── mzML-examples/     #   non-imaging mzML, one dir per instrument
+│   ├── general-ms/     #   non-imaging mzML, one dir per instrument
 │   ├── imzml-examples/    #   MS-imaging imzML (+ ibd, optical TIFF)
 │   ├── pwiz-examples/     #   ProteoWizard vendor-reader test data
 │   ├── sdrf-examples/     #   SDRF/ISA study-design files
@@ -95,7 +95,7 @@ scripts/sync-s3.sh --dry-run    # plan only, nothing transferred
 ```
 
 `make-s3-index.py` reads the dataset descriptions to render the landing page and
-per-category subpages (mass-spec / imaging / sdrf / pwiz-tests) with compression
+per-category subpages (general-ms / imaging / sdrf / pwiz-tests) with compression
 ratios. Public read is served by the bucket's root GetObject policy; `cors.json`
 allows Range requests from the website origin.
 

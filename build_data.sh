@@ -8,7 +8,7 @@
 #
 # Usage:
 #   ./build_data.sh                       # all tiles
-#   ./build_data.sh mzML-examples sdrf-examples
+#   ./build_data.sh general-ms sdrf-examples
 #   SKIP_CONVERT=1 ./build_data.sh        # download only
 #   SKIP_FETCH=1   ./build_data.sh        # convert already-downloaded inputs only
 #   MZPEAK_CONVERT=/path/to/mzpeak-convert ./build_data.sh   # use a prebuilt binary
@@ -22,7 +22,7 @@ cd "$ROOT" || exit 1
 
 # Tiles build_data.sh can reconstruct from public repos. demo (seeded from the imzml-examples
 # conversion) is documented but not auto-built.
-ALL_TILES="mzML-examples imzml-examples sdrf-examples pwiz-examples tof-grid-examples"
+ALL_TILES="general-ms imzml-examples sdrf-examples pwiz-examples tof-grid-examples"
 TILES="${*:-$ALL_TILES}"
 SKIP_FETCH="${SKIP_FETCH:-0}"
 SKIP_CONVERT="${SKIP_CONVERT:-0}"
@@ -177,7 +177,7 @@ for tile in $TILES; do
   echo "──────────────────────────────────────────────────────────────────────"
   say "TILE: $tile"
   case "$tile" in
-    mzML-examples)   run_fetch "$tile"; convert_glob "$tile" '*.mzML' ;;
+    general-ms)   run_fetch "$tile"; convert_glob "$tile" '*.mzML' ;;
     imzml-examples)  run_fetch "$tile"; convert_glob "$tile" '*.imzML' ;;
     sdrf-examples)   run_fetch "$tile"; convert_glob "$tile" '*.mzML' ;;
     pwiz-examples)   run_fetch "$tile"; convert_glob "$tile" '*.mzML' ;;

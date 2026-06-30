@@ -1,4 +1,4 @@
-# General MS (mzML-examples / 'General MS Data' subset) demonstrators — added 2026-06-25.
+# General MS (general-ms / 'General MS Data' subset) demonstrators — added 2026-06-25.
 # Curated broad-vendor showcase (vendor RAW available). Direct file URLs are TBD; fetch each
 # from its accession page below, then convert with the listed reader. Columns TAB-separated.
 make	model	accession	repo	technology	reader	page_url	publication

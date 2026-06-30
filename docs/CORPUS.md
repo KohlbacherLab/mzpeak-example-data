@@ -76,9 +76,9 @@ data** (not publicly downloadable) are flagged explicitly.
 | TripleTOF 6600 | `.wiff` + `.wiff.scan` | MassIVE **MSV000090684** | `11410_DGCR8_CBF_BR2_BioID_20181022_TOF6600_SWATH` — large BioID-SWATH | ~5.4 GB | MassIVE: https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=MSV000090684 |
 | TripleTOF 6600 | `.wiff` + `.wiff.scan` | MassIVE **MSV000090136** | `17_16_hpr56_ko_YMR295C_4444_-0.04` — yeast proteome SWATH | ~2.2 GB | MassIVE: https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=MSV000090136 |
 | TripleTOF | `.wiff` + `.wiff.scan` | MassIVE **MSV000093587** | `Sample049` — TripleTOF SWATH | ~1.8 GB | MassIVE: https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=MSV000093587 |
-| ZenoTOF 7600 | `.wiff` + `.wiff.scan` + `.wiff2` | MassIVE **MSV000095995** | `20240826_RNAseB_Reduced_50ngul_1ul_MRM_03` — RNAse B reduced, **MRM-HR / EAD** intact-protein LC-MS (`MS:1003293 "ZenoTOF 7600"`); CC0 (doi:10.25345/C51R6NC1Z) | 73 MB (wiff 2.1 MB + wiff.scan 69 MB + wiff2 2.4 MB) | MassIVE: `https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000095995/ccms_peak/20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.mzML&forceDownload=true` (mzML). **Native wiff triple** mirrored on object store: `https://object.storage.eu01.onstackit.cloud/v09/mzML-examples/sciex-zenotof-7600/20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.wiff` (+`.wiff.scan`, +`.wiff2`) |
+| ZenoTOF 7600 | `.wiff` + `.wiff.scan` + `.wiff2` | MassIVE **MSV000095995** | `20240826_RNAseB_Reduced_50ngul_1ul_MRM_03` — RNAse B reduced, **MRM-HR / EAD** intact-protein LC-MS (`MS:1003293 "ZenoTOF 7600"`); CC0 (doi:10.25345/C51R6NC1Z) | 73 MB (wiff 2.1 MB + wiff.scan 69 MB + wiff2 2.4 MB) | MassIVE: `https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000095995/ccms_peak/20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.mzML&forceDownload=true` (mzML). **Native wiff triple** mirrored on object store: `https://object.storage.eu01.onstackit.cloud/v09/general-ms/sciex-zenotof-7600/20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.wiff` (+`.wiff.scan`, +`.wiff2`) |
 | QTRAP 6500 (QqLIT) | mzML | PRIDE **PXD066465** | `Drug_substance_3_scheduled_MRM.mzML` — scheduled **MRM** | 3.1 MB | PRIDE: https://www.ebi.ac.uk/pride/archive/projects/PXD066465 |
-| TripleTOF 6600 | mzML | Zenodo 17416537 | `12_80.mzML` — TripleTOF reference mzML | 255 MB | Zenodo record 17416537 (mirror: `…/v09/mzML-examples/sciex-tripletof-6600/12_80.mzpeak`) |
+| TripleTOF 6600 | mzML | Zenodo 17416537 | `12_80.mzML` — TripleTOF reference mzML | 255 MB | Zenodo record 17416537 (mirror: `…/v09/general-ms/sciex-tripletof-6600/12_80.mzpeak`) |
 
 ---
 
@@ -107,10 +107,10 @@ data** (not publicly downloadable) are flagged explicitly.
 | Instrument / analyzer | Format | Accession | Description | Approx size | Where to obtain |
 |---|---|---|---|--:|---|
 | Synapt (TWIMS ion mobility) | `.raw` | PRIDE **PXD073666** | `20250628_cpB_100000ms_03.raw` — Waters Synapt TWIMS ion-mobility (`_FUNC*.DAT` directory); smallest per-run `.raw.zip` (vendor-CI sample) | ~290 MB | PRIDE FTP: `https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/04/PXD073666/20250628_cpB_100000ms_03.raw.zip` (unzip in place) |
-| Synapt G2-Si (HDMSE) | mzPeak (from `.raw`) | (Waters Synapt G2-Si HDMSE source) | `20181203_Capan2_1.mzpeak` — HDMS^E ion-mobility, Capan2 sample (converted artifact kept; source `.raw` not retained locally) | 494 MB (`.mzpeak`) | Local artifact `data/mzML-examples/waters-synapt-g2si-hdmse/`; Waters TWIMS `.raw` source (see PXD073666 for a re-fetchable TWIMS `.raw`) |
+| Synapt G2-Si (HDMSE) | mzPeak (from `.raw`) | (Waters Synapt G2-Si HDMSE source) | `20181203_Capan2_1.mzpeak` — HDMS^E ion-mobility, Capan2 sample (converted artifact kept; source `.raw` not retained locally) | 494 MB (`.mzpeak`) | Local artifact `data/general-ms/waters-synapt-g2si-hdmse/`; Waters TWIMS `.raw` source (see PXD073666 for a re-fetchable TWIMS `.raw`) |
 | (Waters UNIFI / Q-TOF, HDMSe) | mzML | object-store / pwiz test data | `08Mar17_HDMSe_25fmolMix1_01…` UNIFI `Reader_UNIFI_Test.data` — combineIMS / mobility-filter HDMSe variants (ProteoWizard reader test data) | small | Object store: `https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/UNIFI/…` (ProteoWizard `Reader_UNIFI_Test` / `Reader_Waters_Test` fixtures) |
 | Xevo G2-XS QTof | mzML | MetaboLights **MTBLS1129** | `QC01.mzML` — Waters Q-TOF (dir slug says G2-S; in-file model G2-XS) | 86 MB | MetaboLights: https://www.ebi.ac.uk/metabolights/MTBLS1129 |
-| (Waters PDA / UV) | mzML | (Waters LC-PDA) | `QC_LCMS2-2_23_268-1-1.mzML` — PDA/UV optical-detector channel test | small | Local `data/mzML-examples/waters-pda-uv/` |
+| (Waters PDA / UV) | mzML | (Waters LC-PDA) | `QC_LCMS2-2_23_268-1-1.mzML` — PDA/UV optical-detector channel test | small | Local `data/general-ms/waters-pda-uv/` |
 
 > **Known gap:** no *public mzML* preserves Waters TWIMS / Cyclic ion mobility with drift intact
 > (vendor `.raw` only). The PXD073666 `.raw` above is the re-fetchable TWIMS source for that path.
@@ -177,7 +177,7 @@ the project object store (`https://object.storage.eu01.onstackit.cloud/v09/...`,
 ### Notes on local layout
 
 - TOF grid (SWATH/DIA) raw corpus: `data/tof-grid-examples/` (dir names = accession).
-- mzML instrument sweep: `data/mzML-examples/` (one dir per instrument; per-dir READMEs
+- mzML instrument sweep: `data/general-ms/` (one dir per instrument; per-dir READMEs
   carry exact bytes + URLs).
 - imzML imaging: `data/imzml-examples/` (one dir per source/modality).
 - Host e2e corpus index: `mzPeakConverter/tests/corpus.tsv`.
@@ -188,7 +188,7 @@ the project object store (`https://object.storage.eu01.onstackit.cloud/v09/...`,
 ## General MS demonstrators (added 2026-06-25)
 
 A curated broad-vendor showcase for the **General MS Data** subset
-(`mzML-examples` / slug `mass-spec`) — 20 public datasets spanning Agilent, Bruker, SCIEX,
+(`general-ms` / slug `general-ms`) — 20 public datasets spanning Agilent, Bruker, SCIEX,
 timsTOF HT + FAIMS-Ascend pair, was moved to the `ims-examples` tile). Machine-readable list:
 [`manifest/general-ms-demonstrators.tsv`](../manifest/general-ms-demonstrators.tsv)
 (make · model · accession · repo · technology · reader · page URL · publication DOI).
@@ -224,7 +224,7 @@ Agilent / Waters / Shimadzu via `--via-msconvert` or the Windows native readers)
 ## Ion Mobility (IMS) tile — `data/ims-examples/` (added 2026-06-28)
 
 A dedicated tile collecting **all ion-mobility examples** (slug `ims`) across every IM technology and
-vendor. Existing IM datasets were **moved here** out of `mzML-examples`
+vendor. Existing IM datasets were **moved here** out of `general-ms`
 (`bruker-timstof-pro`, `bruker-timstof-MSV000101607`, `agilent-6560-dtims-imqtof`); the ProteoWizard
 vendor-reader IM fixtures stay in `pwiz-examples`. Catalog +
 resolved URLs: [`manifest/ims-demonstrators.tsv`](../manifest/ims-demonstrators.tsv) /

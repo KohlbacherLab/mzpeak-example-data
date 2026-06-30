@@ -21,7 +21,7 @@ missing or no category qualifies.
 import sys, os, csv
 
 PLOT_MIN_B = 50 * 1024 * 1024
-ACCENT = {"imaging": "#1a7f37", "mass-spec": "#1558d6", "sdrf": "#8250df", "pwiz": "#bc4c00"}
+ACCENT = {"imaging": "#1a7f37", "general-ms": "#1558d6", "sdrf": "#8250df", "pwiz": "#bc4c00"}
 DROP_SLUGS = {"pwiz"}                       # no vendor raw -> no raw-relative plot
 MODE_MISMATCH = {                           # centroided published mzML vs a PROFILE vendor raw, not re-convertible here
     "bruker-timstof-pro",                   # .d — Bruker SDK / msconvert (arm64-blocked)

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # fetch-examples.sh — unified downloader for the OPEN-FORMAT example tiles:
-#   mzML-examples · imzml-examples · sdrf-examples · pwiz-examples
+#   general-ms · imzml-examples · sdrf-examples · pwiz-examples
 # (The vendor-RAW tiles are driven from manifest/datasets.tsv by build_data.sh.)
 #
 # Idempotent: files already present (non-empty) are skipped. Curated URLs are verified against the
@@ -8,7 +8,7 @@
 # pwiz-examples additionally needs python3 (UTF-8-safe URL encoding of the file list).
 #
 #   bash scripts/fetch-examples.sh                 # all four tiles
-#   bash scripts/fetch-examples.sh mzML-examples   # one tile
+#   bash scripts/fetch-examples.sh general-ms   # one tile
 #
 # Exits non-zero if any download failed (count reported at the end).
 set -uo pipefail
@@ -29,10 +29,10 @@ dl() {
   echo "  FAIL  : $dest" >&2; rm -f "$dest"; FAILS=$((FAILS+1)); return 1
 }
 
-# ── mzML-examples — one .mzML per instrument (non-imaging sweep) ─────────────────────────────────
+# ── general-ms — one .mzML per instrument (non-imaging sweep) ─────────────────────────────────
 fetch_mzml() {
-  local B="$ROOT/data/mzML-examples"; mkdir -p "$B"; cd "$B"
-  echo "== mzML-examples =="
+  local B="$ROOT/data/general-ms"; mkdir -p "$B"; cd "$B"
+  echo "== general-ms =="
   dl "https://zenodo.org/api/records/18502866/files/MRM-standmix-5.mzML/content"                          "agilent-qtof/MRM-standmix-5.mzML"
   dl "https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS520/FILES/neg_01_Fistax_1-A,2_01_5715.mzML" "bruker-microtof-q2/neg_01_Fistax_1-A,2_01_5715.mzML"
   dl "https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS1129/FILES/QC01.mzML"          "waters-xevo-g2s-qtof/QC01.mzML"
@@ -139,12 +139,12 @@ PY
 
 # ── dispatch ─────────────────────────────────────────────────────────────────────────────────────
 case "${1:-all}" in
-  mzML-examples)  fetch_mzml ;;
+  general-ms)  fetch_mzml ;;
   imzml-examples) fetch_imzml ;;
   sdrf-examples)  fetch_sdrf ;;
   pwiz-examples)  fetch_pwiz ;;
   all)            fetch_mzml; fetch_imzml; fetch_sdrf; fetch_pwiz ;;
-  *) echo "usage: fetch-examples.sh [mzML-examples|imzml-examples|sdrf-examples|pwiz-examples|all]" >&2; exit 2 ;;
+  *) echo "usage: fetch-examples.sh [general-ms|imzml-examples|sdrf-examples|pwiz-examples|all]" >&2; exit 2 ;;
 esac
 
 echo

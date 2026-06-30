@@ -3,7 +3,7 @@
 
 Reads `aws s3api list-objects-v2 ... --output json` on stdin and writes, into the output dir:
     <outdir>/index.html        landing page (cards per example type + seamless nav)
-    <outdir>/<slug>.html       one subpage per example subset (imaging / mass-spec / sdrf / pwiz)
+    <outdir>/<slug>.html       one subpage per example subset (imaging / general-ms / sdrf / pwiz)
     <outdir>/README.md         flat markdown manifest (absolute public URLs)
 
 Usage:  ... | make-s3-index.py <outdir>
@@ -33,7 +33,7 @@ GITHUB = "https://github.com/kohlbacherlab/mzpeak-example-data"
 # Friendly metadata per top-level prefix (the "example subsets"). Unknown prefixes get a default card.
 # `blurb` = short card text; `prov` = provenance paragraph shown on the subset page (archives/accessions).
 SUBSETS = OrderedDict([
-    ("mzML-examples", dict(slug="mass-spec", title="General MS Data", icon="\U0001F4C8", accent="#1558d6",
+    ("general-ms", dict(slug="general-ms", title="General MS Data", icon="\U0001F4C8", accent="#1558d6",
         blurb="Non-imaging LC-/GC-MS instrument-vendor examples (Thermo, Bruker, SCIEX, Agilent, Shimadzu, "
               "Waters) — published mzML converted to mzPeak.", imaging=False,
         prov="<b>Provenance.</b> Openly published runs from <b>PRIDE</b>, <b>MetaboLights</b>, <b>MassIVE</b> "

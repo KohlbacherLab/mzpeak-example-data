@@ -17,7 +17,7 @@ B="${BUCKET:-v09}"
 PROFILE="${AWS_PROFILE:-stackit}"
 DRYRUN="${DRYRUN:-0}"; [ "${1:-}" = "--dry-run" ] && DRYRUN=1
 AWS=(aws --profile "$PROFILE" --endpoint-url "$EP")
-TILES=(imzml-examples mzML-examples pwiz-examples sdrf-examples)
+TILES=(imzml-examples general-ms pwiz-examples sdrf-examples)
 say(){ echo "[$(date +%H:%M:%S)] $*"; }
 
 command -v aws >/dev/null || { echo "ERROR: aws CLI not found (brew install awscli)" >&2; exit 1; }
