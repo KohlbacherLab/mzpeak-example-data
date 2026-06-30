@@ -3,167 +3,167 @@ tile: ims-examples
 title: Bruker timsTOF Pro
 description: MassIVE MSV000101607 · Bruker timsTOF Pro — PASEF / TIMS ion mobility (trapped-ion mobility frames).
 files:
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/column_setpoint.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/column_setpoint.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/column_setpoint.txt
   bytes: 2259397
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/column_temperature.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/column_temperature.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/column_temperature.txt
   bytes: 2259400
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/execution-log_2026-04-08_12-10-31-AM.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/execution-log_2026-04-08_12-10-31-AM.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/execution-log_2026-04-08_12-10-31-AM.txt
   bytes: 74246
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/flowsensor-a_flow.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/flowsensor-a_flow.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/flowsensor-a_flow.txt
   bytes: 811876
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/flowsensor-b_flow.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/flowsensor-b_flow.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/flowsensor-b_flow.txt
   bytes: 1334998
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-a_pressure.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-a_pressure.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-a_pressure.txt
   bytes: 477442
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-a_speed.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-a_speed.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-a_speed.txt
   bytes: 2203581
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-a_temperature.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-a_temperature.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-a_temperature.txt
   bytes: 226376
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-a_volume.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-a_volume.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-a_volume.txt
   bytes: 276348
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-b_pressure.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-b_pressure.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-b_pressure.txt
   bytes: 414225
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-b_speed.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-b_speed.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-b_speed.txt
   bytes: 2013535
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-b_temperature.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-b_temperature.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-b_temperature.txt
   bytes: 226376
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-b_volume.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-b_volume.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/pump-b_volume.txt
   bytes: 275528
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/sample-tray_temperature.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/sample-tray_temperature.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/sample-tray_temperature.txt
   bytes: 222861
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/setflow-a_setflow.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/setflow-a_setflow.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/setflow-a_setflow.txt
   bytes: 1991979
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/setflow-b_setflow.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/setflow-b_setflow.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/setflow-b_setflow.txt
   bytes: 1991939
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/solvent-a_composition.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/solvent-a_composition.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/solvent-a_composition.txt
   bytes: 2281699
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/solvent-b_composition.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/solvent-b_composition.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/solvent-b_composition.txt
   bytes: 2259742
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/system-info_2026-04-08_12-10-31-AM.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/system-info_2026-04-08_12-10-31-AM.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/system-info_2026-04-08_12-10-31-AM.txt
   bytes: 2386
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/system_activity.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/system_activity.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/system_activity.txt
   bytes: 278595
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/valve-a_angle.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/valve-a_angle.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/valve-a_angle.txt
   bytes: 2302969
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/valve-b_angle.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/valve-b_angle.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/valve-b_angle.txt
   bytes: 2314507
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/valve-i_angle.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/valve-i_angle.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/valve-i_angle.txt
   bytes: 226534
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/valve-t_angle.txt
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/valve-t_angle.txt
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/2026-04-08_00-10-35_Two-column-separation/valve-t_angle.txt
   bytes: 231760
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/InstrumentSetup.isset
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/InstrumentSetup.isset
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/InstrumentSetup.isset
   bytes: 3103
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/Maldi.method
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/Maldi.method
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/Maldi.method
   bytes: 2696
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08.m/Maldi.method
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08.m/Maldi.method
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08.m/Maldi.method
   bytes: 1347
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08.m/diaSettings.diasqlite
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08.m/diaSettings.diasqlite
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08.m/diaSettings.diasqlite
   bytes: 24576
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08.m/hystar.method
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08.m/hystar.method
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08.m/hystar.method
   bytes: 36991
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08.m/lock.file
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08.m/lock.file
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08.m/lock.file
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08.m/microTOFQImpacTemAcquisition.method
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08.m/microTOFQImpacTemAcquisition.method
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08.m/microTOFQImpacTemAcquisition.method
   bytes: 192651
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08.m/prmSettings.prmsqlite
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08.m/prmSettings.prmsqlite
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08.m/prmSettings.prmsqlite
   bytes: 36864
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08.m/submethods.xml
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08.m/submethods.xml
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08.m/submethods.xml
   bytes: 933
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08_1.m/Maldi.method
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08_1.m/Maldi.method
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08_1.m/Maldi.method
   bytes: 1347
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08_1.m/diaSettings.diasqlite
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08_1.m/diaSettings.diasqlite
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08_1.m/diaSettings.diasqlite
   bytes: 24576
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08_1.m/hystar.method
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08_1.m/hystar.method
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08_1.m/hystar.method
   bytes: 36991
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08_1.m/lock.file
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08_1.m/lock.file
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08_1.m/lock.file
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08_1.m/microTOFQImpacTemAcquisition.method
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08_1.m/microTOFQImpacTemAcquisition.method
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08_1.m/microTOFQImpacTemAcquisition.method
   bytes: 198229
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08_1.m/prmSettings.prmsqlite
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08_1.m/prmSettings.prmsqlite
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08_1.m/prmSettings.prmsqlite
   bytes: 36864
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08_1.m/submethods.xml
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08_1.m/submethods.xml
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/backup-2026-04-08_1.m/submethods.xml
   bytes: 939
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/desktop.ini
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/desktop.ini
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/desktop.ini
   bytes: 156
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/diaSettings.diasqlite
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/diaSettings.diasqlite
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/diaSettings.diasqlite
   bytes: 24576
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/hystar.method
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/hystar.method
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/hystar.method
   bytes: 36991
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/lock.file
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/lock.file
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/lock.file
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/microTOFQImpacTemAcquisition.method
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/microTOFQImpacTemAcquisition.method
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/microTOFQImpacTemAcquisition.method
   bytes: 196675
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/prmSettings.prmsqlite
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/prmSettings.prmsqlite
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/prmSettings.prmsqlite
   bytes: 45056
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/submethods.xml
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/submethods.xml
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/submethods.xml
   bytes: 1001
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/synchroSettings.syncsqlite
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/8270.m/synchroSettings.syncsqlite
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/8270.m/synchroSettings.syncsqlite
   bytes: 4096
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/HyStarMetadata.xml
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/HyStarMetadata.xml
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/HyStarMetadata.xml
   bytes: 113300
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/SampleInfo.xml
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/SampleInfo.xml
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/SampleInfo.xml
   bytes: 4898
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/analysis.tdf
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/analysis.tdf
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/analysis.tdf
   bytes: 163287040
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/analysis.tdf_bin
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/analysis.tdf_bin
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/analysis.tdf_bin
   bytes: 246816768
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/chromatography-data-pre.sqlite
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/chromatography-data-pre.sqlite
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/chromatography-data-pre.sqlite
   bytes: 114688
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/chromatography-data.sqlite
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/chromatography-data.sqlite
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/chromatography-data.sqlite
   bytes: 1548288
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/chromatography-data.sqlite-journal
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/chromatography-data.sqlite-journal
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/chromatography-data.sqlite-journal
-- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/desktop.ini
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/desktop.ini
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/desktop.ini
   bytes: 140
