@@ -1,6 +1,6 @@
 # ── mzpeak-example-data: describe, don't store ───────────────────────────────
 # This repo commits ONLY descriptions, manifests and scripts. Every heavy data
-# artifact is reconstructed by ./build_data.sh and must never be committed.
+# artifact is reconstructed by scripts/update.sh and must never be committed.
 
 # Raw vendor acquisitions (files AND directories)
 *.raw

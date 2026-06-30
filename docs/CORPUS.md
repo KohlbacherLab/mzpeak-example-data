@@ -72,7 +72,7 @@ data** (not publicly downloadable) are flagged explicitly.
 |---|---|---|---|--:|---|
 | TripleTOF 5600 | `.wiff` + `.wiff.scan` | PRIDE **PXD078909** | `SW_F2_2-2` — **SWATH-MS** zebrafish quantitative proteomics (smallest SWATH pair) | 352 MB (`.wiff` 15 MB + `.wiff.scan` 331 MB) | PRIDE FTP: `https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/05/PXD078909/SW_F2_2-2.wiff` + `…/SW_F2_2-2.wiff.scan` · DOI 10.6019/PXD078909 |
 | TripleTOF 6600 | `.wiff` + `.wiff.scan` + `.wiff2` | PRIDE **PXD071869** | `08_SWATH_1E_1H` — dual-window SWATH/DIA (TOF-grid candidate) | ~2.4 GB | PRIDE: https://www.ebi.ac.uk/pride/archive/projects/PXD071869 |
-| TripleTOF 6600 | `.wiff` + `.wiff.scan` | PRIDE **PXD011326** | `VD_170826_SWATH_6600_PD_15 (build_data fetches the equivalent run VD_170826_SWATH_6600_PD_01)` — classic two-file SWATH | ~2.6 GB | PRIDE: https://www.ebi.ac.uk/pride/archive/projects/PXD011326 |
+| TripleTOF 6600 | `.wiff` + `.wiff.scan` | PRIDE **PXD011326** | `VD_170826_SWATH_6600_PD_15 (we fetch the equivalent run VD_170826_SWATH_6600_PD_01)` — classic two-file SWATH | ~2.6 GB | PRIDE: https://www.ebi.ac.uk/pride/archive/projects/PXD011326 |
 | TripleTOF 6600 | `.wiff` + `.wiff.scan` | MassIVE **MSV000090684** | `11410_DGCR8_CBF_BR2_BioID_20181022_TOF6600_SWATH` — large BioID-SWATH | ~5.4 GB | MassIVE: https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=MSV000090684 |
 | TripleTOF 6600 | `.wiff` + `.wiff.scan` | MassIVE **MSV000090136** | `17_16_hpr56_ko_YMR295C_4444_-0.04` — yeast proteome SWATH | ~2.2 GB | MassIVE: https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=MSV000090136 |
 | TripleTOF | `.wiff` + `.wiff.scan` | MassIVE **MSV000093587** | `Sample049` — TripleTOF SWATH | ~1.8 GB | MassIVE: https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=MSV000093587 |
@@ -88,8 +88,8 @@ data** (not publicly downloadable) are flagged explicitly.
 |---|---|---|---|--:|---|
 | 6545 Q-TOF LC/MS | `.d` (profile) | PRIDE **PXD041315** | `LMVCS24HC.d` — shotgun proteomics (*C. elegans* / *Cronobacter sakazakii* infection); full `.d` with `MSProfile.bin` (profile) + `MSPeak.bin` (centroid) + `MSScan.bin` | 617 MB | PRIDE: https://www.ebi.ac.uk/pride/archive/projects/PXD041315 (DOI 10.6019/PXD041315); deposited as per-run `.zip` (`LMV_CS_24_h.zip`) |
 | Q-TOF | `.d.zip` (profile) | PRIDE **PXD041903** | `20190423_Alex7.d.zip` → `…/AcqData/MSProfile.bin` — smallest Agilent profile-grid `.d` (vendor-CI sample) | 422 MB | PRIDE FTP: `https://ftp.pride.ebi.ac.uk/pride/data/archive/2025/05/PXD041903/20190423_Alex7.d.zip` (unzip in place) |
-| Q-TOF | `.d.zip` (profile) | PRIDE **PXD059108** | `den_yeast_5ug_MS2_3.d.zip` (the Agilent profile run build_data fetches; `lysate_000008.d.zip` is an alternative in the same study) — largest Agilent run | ~3.9 GB | PRIDE: https://www.ebi.ac.uk/pride/archive/projects/PXD059108 |
-| Q-TOF | `.d.zip` (profile) | PRIDE **PXD059765** | `CON1_1.d.zip` (the run build_data fetches; `CON1_2` is an equivalent in the same study) | ~1.2 GB | PRIDE: https://www.ebi.ac.uk/pride/archive/projects/PXD059765 |
+| Q-TOF | `.d.zip` (profile) | PRIDE **PXD059108** | `den_yeast_5ug_MS2_3.d.zip` (the Agilent profile run we fetch; `lysate_000008.d.zip` is an alternative in the same study) — largest Agilent run | ~3.9 GB | PRIDE: https://www.ebi.ac.uk/pride/archive/projects/PXD059108 |
+| Q-TOF | `.d.zip` (profile) | PRIDE **PXD059765** | `CON1_1.d.zip` (the run we fetch; `CON1_2` is an equivalent in the same study) | ~1.2 GB | PRIDE: https://www.ebi.ac.uk/pride/archive/projects/PXD059765 |
 | 6490 Triple Quad (QqQ) | mzML | PRIDE **PXD041762** | `REC-2349_P2_F1.mzML` — QqQ / **SRM** (dir slug `agilent-6490-triplequad`) | 5.5 MB | PRIDE: https://www.ebi.ac.uk/pride/archive/projects/PXD041762 |
 | 6490 Triple Quad (dMRM) | mzML | Zenodo 18502866 | `MRM-standmix-5.mzML` — **chromatogram-only** dMRM (0 spectra, 138 chromatograms; dir slug `agilent-qtof` is a misnomer) | 2.4 MB | Zenodo record 18502866 |
 | 6560 IM-QTOF (DTIMS) | mzML | Zenodo 18481720 | `CEMS_10ppm.mzML` — drift-tube ion mobility (**DTIMS**) | 3.4 MB | Zenodo record 18481720 |
@@ -189,9 +189,8 @@ the project object store (`https://object.storage.eu01.onstackit.cloud/v09/...`,
 
 A curated broad-vendor showcase for the **General MS Data** subset
 (`general-ms` / slug `general-ms`) — 20 public datasets spanning Agilent, Bruker, SCIEX,
-timsTOF HT + FAIMS-Ascend pair, was moved to the `ims-examples` tile). Machine-readable list:
-[`manifest/general-ms-demonstrators.tsv`](../manifest/general-ms-demonstrators.tsv)
-(make · model · accession · repo · technology · reader · page URL · publication DOI).
+timsTOF HT + FAIMS-Ascend pair, was moved to the `ims-examples` tile). Each dataset is described by `data/general-ms/<id>/<id>.yaml`
+(id, title, description, file urls, optional convert) and rebuilt by `scripts/update.sh`.
 
 Direct per-file download URLs are **not yet resolved** — fetch each from its accession page,
 then convert with the listed reader (Thermo/Bruker-timsTOF convert cross-platform; SCIEX /
@@ -227,9 +226,8 @@ A dedicated tile collecting **all ion-mobility examples** (slug `ims`) across ev
 vendor. Existing IM datasets were **moved here** out of `general-ms`
 (`bruker-timstof-pro`, `bruker-timstof-MSV000101607`, `agilent-6560-dtims-imqtof`); the ProteoWizard
 vendor-reader IM fixtures stay in `pwiz-examples`. Catalog +
-resolved URLs: [`manifest/ims-demonstrators.tsv`](../manifest/ims-demonstrators.tsv) /
-[`manifest/ims-files.tsv`](../manifest/ims-files.tsv); fetch with
-[`scripts/fetch-ims.sh`](../scripts/fetch-ims.sh). **≤ 2 raw files per study.**
+each dataset is described by `data/ims-examples/<id>/<id>.yaml` and fetched by
+`scripts/update.sh`. **≤ 2 raw files per study.**
 
 | IM type | vendor / instrument | accession | repo | raw fetched |
 |---|---|---|---|---|
