@@ -1,0 +1,53 @@
+{
+  "id": "MSV000084273",
+  "tile": "general-ms",
+  "title": "Bruker micrOTOF II",
+  "description": "MassIVE · Bruker micrOTOF II — secreted-proteins metabolomics, native vendor raw `.d` (BAF). Broad-vendor demonstrator (raw only; one representative run).",
+  "files": [
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000084273/raw/DK-100119%20BD_1079-C_Hil_RB2_01_12082.d/12082.m/DataAnalysis.Method",
+      "path": "DK-100119 BD_1079-C_Hil_RB2_01_12082.d/12082.m/DataAnalysis.Method",
+      "bytes": 7902
+    },
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000084273/raw/DK-100119%20BD_1079-C_Hil_RB2_01_12082.d/12082.m/desktop.ini",
+      "path": "DK-100119 BD_1079-C_Hil_RB2_01_12082.d/12082.m/desktop.ini",
+      "bytes": 171
+    },
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000084273/raw/DK-100119%20BD_1079-C_Hil_RB2_01_12082.d/12082.m/hystar.method",
+      "path": "DK-100119 BD_1079-C_Hil_RB2_01_12082.d/12082.m/hystar.method",
+      "bytes": 7766
+    },
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000084273/raw/DK-100119%20BD_1079-C_Hil_RB2_01_12082.d/12082.m/lock.file",
+      "path": "DK-100119 BD_1079-C_Hil_RB2_01_12082.d/12082.m/lock.file",
+      "bytes": 0
+    },
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000084273/raw/DK-100119%20BD_1079-C_Hil_RB2_01_12082.d/12082.m/microTOFQAcquisition.method",
+      "path": "DK-100119 BD_1079-C_Hil_RB2_01_12082.d/12082.m/microTOFQAcquisition.method",
+      "bytes": 82878
+    },
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000084273/raw/DK-100119%20BD_1079-C_Hil_RB2_01_12082.d/12082.m/submethods.xml",
+      "path": "DK-100119 BD_1079-C_Hil_RB2_01_12082.d/12082.m/submethods.xml",
+      "bytes": 840
+    },
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000084273/raw/DK-100119%20BD_1079-C_Hil_RB2_01_12082.d/analysis.0.DataAnalysis.method",
+      "path": "DK-100119 BD_1079-C_Hil_RB2_01_12082.d/analysis.0.DataAnalysis.method",
+      "bytes": 7864
+    },
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000084273/raw/DK-100119%20BD_1079-C_Hil_RB2_01_12082.d/analysis.0.result_c",
+      "path": "DK-100119 BD_1079-C_Hil_RB2_01_12082.d/analysis.0.result_c",
+      "bytes": 375532
+    },
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000084273/raw/DK-100119%20BD_1079-C_Hil_RB2_01_12082.d/analysis.baf",
+      "path": "DK-100119 BD_1079-C_Hil_RB2_01_12082.d/analysis.baf",
+      "bytes": 558774825
+    }
+  ]
+}

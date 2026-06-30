@@ -1,0 +1,11 @@
+{
+  "id": "MSV000090136",
+  "tile": "tof-grid-examples",
+  "title": "SCIEX TripleTOF 6600 yeast SWATH",
+  "description": "SCIEX TripleTOF 6600 yeast SWATH",
+  "files": [],
+  "convert": {
+    "input": "auto",
+    "flags": "--via-msconvert"
+  }
+}

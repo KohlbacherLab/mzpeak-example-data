@@ -1,0 +1,13 @@
+{
+  "id": "MTBLS5861",
+  "tile": "general-ms",
+  "title": "Shimadzu LCMS-9030 Q-TOF",
+  "description": "MetaboLights · Shimadzu LCMS-9030 Q-TOF — lipidomics (OAD), native vendor raw `.lcd`. Broad-vendor demonstrator (raw only; one representative run).",
+  "files": [
+    {
+      "url": "https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS5861/FILES/RAW_FILES/HEK%20cell/OAD-Pos/HEK_PosOAD1.lcd",
+      "path": "HEK_PosOAD1.lcd",
+      "bytes": 63188992
+    }
+  ]
+}

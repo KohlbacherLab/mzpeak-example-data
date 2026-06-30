@@ -1,0 +1,12 @@
+{
+  "id": "thermo-qexactive-plus",
+  "tile": "general-ms",
+  "title": "Thermo Q Exactive Plus",
+  "description": "Zenodo 17549994 · Thermo Q Exactive Plus (IBDMDB teaching re-deposit).",
+  "files": [
+    {
+      "url": "https://zenodo.org/api/records/17549994/files/160920_SM-AKTWT_509.mzML/content",
+      "path": "160920_SM-AKTWT_509.mzML"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "MSV000093587",
+  "tile": "tof-grid-examples",
+  "title": "TripleTOF SWATH",
+  "description": "TripleTOF SWATH",
+  "files": [],
+  "convert": {
+    "input": "auto",
+    "flags": "--via-msconvert"
+  }
+}

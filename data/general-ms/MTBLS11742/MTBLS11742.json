@@ -1,0 +1,13 @@
+{
+  "id": "MTBLS11742",
+  "tile": "general-ms",
+  "title": "Agilent 5977B MSD",
+  "description": "MetaboLights · Agilent 5977B MSD — flux GC-MS, native vendor raw `.D` (doi:10.1038/s41586-025-08635-6). Broad-vendor demonstrator (raw only).",
+  "files": [
+    {
+      "url": "https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS11742/FILES/RAW_FILES/20201031%20ser3C13%20B12/blank1.D.zip",
+      "path": "blank1.D.zip",
+      "bytes": 1462406
+    }
+  ]
+}

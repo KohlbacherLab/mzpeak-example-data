@@ -1,0 +1,13 @@
+{
+  "id": "PXD052561",
+  "tile": "ims-examples",
+  "title": "PXD052561",
+  "description": "",
+  "files": [
+    {
+      "url": "https://ftp.pride.ebi.ac.uk/pride/data/archive/2024/09/PXD052561/20231129_NM4_Xevo_MSe.raw.zip",
+      "path": "20231129_NM4_Xevo_MSe.raw.zip",
+      "bytes": 601123417
+    }
+  ]
+}

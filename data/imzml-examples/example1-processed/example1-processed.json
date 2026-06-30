@@ -1,0 +1,16 @@
+{
+  "id": "example1-processed",
+  "tile": "imzml-examples",
+  "title": "canonical 3×3-pixel <b>processed</b> imzML",
+  "description": "ms-imaging.org Example 1 (Schramm et al. 2012) · canonical 3×3-pixel <b>processed</b> imzML.",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/beny/imzml/master/data/Example_Processed.imzML",
+      "path": "Example_Processed.imzML"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/beny/imzml/master/data/Example_Processed.ibd",
+      "path": "Example_Processed.ibd"
+    }
+  ]
+}

@@ -50,3 +50,8 @@ node_modules/
 # patterns above, so they are committed without needing a negation. Note: a file placed INSIDE an
 # ignored unit dir (e.g. a `*.d/`) cannot be un-ignored — git won't descend into an ignored dir —
 # so never put tracked files under a data-unit path.
+
+# Inside each dataset folder (data/<tile>/<dataset>/), commit ONLY its <id>.json
+# description -- never the downloaded/converted data (any format, incl .tsv/.csv).
+data/*/*/*
+!data/*/*/*.json

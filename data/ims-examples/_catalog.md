@@ -20,3 +20,27 @@ MassIVE MSV000101607 · Bruker timsTOF Pro — PASEF / TIMS ion mobility.
 
 ### bruker-timstof-MSV000101607
 MassIVE MSV000101607 · Bruker timsTOF Pro — PASEF / TIMS ion mobility (trapped-ion mobility frames).
+
+### PXD052561
+PXD052561.
+
+### PXD059079
+PXD059079.
+
+### PXD076703
+PXD076703.
+
+### PXD077098
+PXD077098.
+
+### PXD078573
+PXD078573.
+
+### PXD079072
+PXD079072.
+
+### PXD079300
+PXD079300.
+
+### PXD079445
+PXD079445.

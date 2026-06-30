@@ -1,0 +1,16 @@
+{
+  "id": "PXD065872",
+  "tile": "general-ms",
+  "title": "SCIEX TripleTOF 6600",
+  "description": "PRIDE / jPOST · SCIEX TripleTOF 6600 — SWATH/DIA, vendor raw `.wiff`. Broad-vendor demonstrator (raw only).",
+  "files": [
+    {
+      "url": "ftp://ftp.jpostdb.org/JPST003923/241213_Ozaki_Brain_1_SWATH.wiff",
+      "path": "241213_Ozaki_Brain_1_SWATH.wiff"
+    },
+    {
+      "url": "ftp://ftp.jpostdb.org/JPST003923/241213_Ozaki_Brain_1_SWATH.wiff.scan",
+      "path": "241213_Ozaki_Brain_1_SWATH.wiff.scan"
+    }
+  ]
+}

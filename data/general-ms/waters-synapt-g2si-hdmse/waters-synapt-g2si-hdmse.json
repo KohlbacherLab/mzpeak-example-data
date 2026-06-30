@@ -1,0 +1,7 @@
+{
+  "id": "waters-synapt-g2si-hdmse",
+  "tile": "general-ms",
+  "title": "Waters SYNAPT G2-Si HDMS",
+  "description": "MetaboLights MTBLS812 · Waters SYNAPT G2-Si HDMS — <b>HDMSe traveling-wave ion mobility</b> (TWIMS); LC-IMS-MS metabolomics of pancreatic-cancer cell lines (Drabik et al.). Per-spectrum drift time (MS:1002476) — the corpus's Waters ion-mobility exemplar, alongside Agilent DTIMS and Bruker timsTOF PASEF.",
+  "files": []
+}

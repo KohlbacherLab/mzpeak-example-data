@@ -1,0 +1,24 @@
+{
+  "id": "PXD022801",
+  "tile": "general-ms",
+  "title": "SCIEX QTRAP 6500+",
+  "description": "PRIDE / iProX · SCIEX QTRAP 6500+ — MRM metabolome, vendor raw `.wiff`. Broad-vendor demonstrator (raw only).",
+  "files": [
+    {
+      "url": "http://download.iprox.org/IPX0002633000/IPX0002633001/D-239.wiff",
+      "path": "IPX0002633001_D-239.wiff"
+    },
+    {
+      "url": "http://download.iprox.org/IPX0002633000/IPX0002633001/D-239.wiff.scan",
+      "path": "IPX0002633001_D-239.wiff.scan"
+    },
+    {
+      "url": "http://download.iprox.org/IPX0002633000/IPX0002633002/D-239.wiff",
+      "path": "IPX0002633002_D-239.wiff"
+    },
+    {
+      "url": "http://download.iprox.org/IPX0002633000/IPX0002633002/D-239.wiff.scan",
+      "path": "IPX0002633002_D-239.wiff.scan"
+    }
+  ]
+}

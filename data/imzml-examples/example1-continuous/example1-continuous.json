@@ -1,0 +1,16 @@
+{
+  "id": "example1-continuous",
+  "tile": "imzml-examples",
+  "title": "canonical 3×3-pixel <b>continuous</b> imzML",
+  "description": "ms-imaging.org Example 1 (Schramm et al. 2012) · canonical 3×3-pixel <b>continuous</b> imzML — the smallest valid file.",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/beny/imzml/master/data/Example_Continuous.imzML",
+      "path": "Example_Continuous.imzML"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/beny/imzml/master/data/Example_Continuous.ibd",
+      "path": "Example_Continuous.ibd"
+    }
+  ]
+}

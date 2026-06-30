@@ -1,0 +1,13 @@
+{
+  "id": "zenodo-DESI",
+  "tile": "imzml-examples",
+  "title": "DESI imaging of colorectal-adenoma tissue",
+  "description": "Zenodo 10084132 · DESI imaging of colorectal-adenoma tissue (7 sections / cores).",
+  "files": [
+    {
+      "url": "https://zenodo.org/api/records/10084132/files/imzML_DESI.zip/content",
+      "path": "imzML_DESI.zip",
+      "unpack": "zip"
+    }
+  ]
+}

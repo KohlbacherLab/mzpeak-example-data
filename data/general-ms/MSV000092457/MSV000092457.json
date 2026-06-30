@@ -1,0 +1,63 @@
+{
+  "id": "MSV000092457",
+  "tile": "general-ms",
+  "title": "Bruker timsTOF Pro 2",
+  "description": "MassIVE · Bruker timsTOF Pro 2 — metabolome, native vendor raw `.d` (TDF). Broad-vendor demonstrator (raw only; one representative run).",
+  "files": [
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000092457/raw/DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/13373.m/desktop.ini",
+      "path": "DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/13373.m/desktop.ini",
+      "bytes": 156
+    },
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000092457/raw/DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/13373.m/hystar.method",
+      "path": "DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/13373.m/hystar.method",
+      "bytes": 6824
+    },
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000092457/raw/DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/13373.m/lock.file",
+      "path": "DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/13373.m/lock.file",
+      "bytes": 0
+    },
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000092457/raw/DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/13373.m/microTOFQImpacTemAcquisition.method",
+      "path": "DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/13373.m/microTOFQImpacTemAcquisition.method",
+      "bytes": 130521
+    },
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000092457/raw/DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/13373.m/submethods.xml",
+      "path": "DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/13373.m/submethods.xml",
+      "bytes": 639
+    },
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000092457/raw/DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/SampleInfo.xml",
+      "path": "DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/SampleInfo.xml",
+      "bytes": 5056
+    },
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000092457/raw/DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/analysis.tdf",
+      "path": "DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/analysis.tdf",
+      "bytes": 68456448
+    },
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000092457/raw/DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/analysis.tdf_bin",
+      "path": "DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/analysis.tdf_bin",
+      "bytes": 1695895552
+    },
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000092457/raw/DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/chromatography-data-pre.sqlite",
+      "path": "DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/chromatography-data-pre.sqlite",
+      "bytes": 10240
+    },
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000092457/raw/DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/chromatography-data.sqlite",
+      "path": "DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/chromatography-data.sqlite",
+      "bytes": 442368
+    },
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000092457/raw/DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/chromatography-data.sqlite-journal",
+      "path": "DIrwin_spleen_macrophages_aged_b-thal_3133_S2-F12_1_13373.d/chromatography-data.sqlite-journal",
+      "bytes": 0
+    }
+  ]
+}

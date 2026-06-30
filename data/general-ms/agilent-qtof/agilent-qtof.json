@@ -1,0 +1,12 @@
+{
+  "id": "agilent-qtof",
+  "tile": "general-ms",
+  "title": "Agilent 6490 triple-quad dMRM standard mix",
+  "description": "Zenodo 18502866 · Agilent 6490 triple-quad dMRM standard mix (chromatogram-only). <i>Note: directory name is legacy; the instrument is a QqQ, not a Q-TOF.</i>",
+  "files": [
+    {
+      "url": "https://zenodo.org/api/records/18502866/files/MRM-standmix-5.mzML/content",
+      "path": "MRM-standmix-5.mzML"
+    }
+  ]
+}

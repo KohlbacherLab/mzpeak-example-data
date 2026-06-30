@@ -1,0 +1,13 @@
+{
+  "id": "PXD059353",
+  "tile": "general-ms",
+  "title": "Waters Synapt G2-Si",
+  "description": "PRIDE · Waters Synapt G2-Si — HDX MS<sup>E</sup>, vendor raw `.raw`. Broad-vendor demonstrator (raw only).",
+  "files": [
+    {
+      "url": "https://ftp.pride.ebi.ac.uk/pride/data/archive/2025/10/PXD059353/TD.zip",
+      "path": "TD.zip",
+      "bytes": 986112022
+    }
+  ]
+}

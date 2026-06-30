@@ -1,0 +1,12 @@
+{
+  "id": "thermo-orbitrap-astral",
+  "tile": "general-ms",
+  "title": "Thermo Orbitrap Astral",
+  "description": "MassIVE MSV000100943 · Thermo Orbitrap Astral — high-throughput DIA plasma proteomics (Coon lab 2025).",
+  "files": [
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000100943/ccms_peak/RAW/20240912_WFB_exp01_magnet_5_0.mzML&forceDownload=true",
+      "path": "20240912_WFB_exp01_magnet_5_0.mzML"
+    }
+  ]
+}

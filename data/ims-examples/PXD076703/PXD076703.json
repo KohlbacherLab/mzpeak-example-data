@@ -1,0 +1,13 @@
+{
+  "id": "PXD076703",
+  "tile": "ims-examples",
+  "title": "PXD076703",
+  "description": "",
+  "files": [
+    {
+      "url": "https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/06/PXD076703/20240726_HTnew_RSLC_AU25_Leitner_Martinez_MPL_MUW_MPLID24183_s19_98C_C_1_450ng_GD7_1_2095.d.zip",
+      "path": "20240726_HTnew_RSLC_AU25_Leitner_Martinez_MPL_MUW_MPLID24183_s19_98C_C_1_450ng_GD7_1_2095.d.zip",
+      "bytes": 10320223951
+    }
+  ]
+}

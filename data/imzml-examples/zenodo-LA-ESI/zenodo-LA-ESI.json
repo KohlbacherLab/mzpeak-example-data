@@ -1,0 +1,13 @@
+{
+  "id": "zenodo-LA-ESI",
+  "tile": "imzml-examples",
+  "title": "laser-ablation ESI of an <i>Arabidopsis</i> leaf + pre-ablation optical image",
+  "description": "Zenodo 10084132 · laser-ablation ESI of an <i>Arabidopsis</i> leaf + pre-ablation optical image.",
+  "files": [
+    {
+      "url": "https://zenodo.org/api/records/10084132/files/imzML_LA-ESI.zip/content",
+      "path": "imzML_LA-ESI.zip",
+      "unpack": "zip"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "MSV000095995",
+  "tile": "tof-grid-examples",
+  "title": "SCIEX ZenoTOF 7600 top-down RNase B",
+  "description": "SCIEX ZenoTOF 7600 top-down RNase B, MRM-HR (.wiff+.wiff.scan+.wiff2 from raw/); native SCIEX reader produces the uniform-m/z TOF grid",
+  "files": [
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000095995/raw/20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.wiff",
+      "path": "20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.wiff"
+    },
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000095995/raw/20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.wiff.scan",
+      "path": "20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.wiff.scan"
+    },
+    {
+      "url": "https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000095995/raw/20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.wiff2",
+      "path": "20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.wiff2"
+    }
+  ],
+  "convert": {
+    "input": "auto",
+    "flags": "--via-msconvert"
+  }
+}

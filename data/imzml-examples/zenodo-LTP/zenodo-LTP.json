@@ -1,0 +1,13 @@
+{
+  "id": "zenodo-LTP",
+  "tile": "imzml-examples",
+  "title": "low-temperature-plasma",
+  "description": "Zenodo 10084132 · low-temperature-plasma (LTP) MSI of a chilli sample.",
+  "files": [
+    {
+      "url": "https://zenodo.org/api/records/10084132/files/imzML_LTP.zip/content",
+      "path": "imzML_LTP.zip",
+      "unpack": "zip"
+    }
+  ]
+}

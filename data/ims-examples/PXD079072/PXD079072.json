@@ -1,0 +1,13 @@
+{
+  "id": "PXD079072",
+  "tile": "ims-examples",
+  "title": "PXD079072",
+  "description": "",
+  "files": [
+    {
+      "url": "https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/05/PXD079072/Xinyi3.raw",
+      "path": "Xinyi3.raw",
+      "bytes": 1274361062
+    }
+  ]
+}

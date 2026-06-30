@@ -1,0 +1,13 @@
+{
+  "id": "MTBLS432",
+  "tile": "general-ms",
+  "title": "Shimadzu LCMS-IT-TOF",
+  "description": "MetaboLights · Shimadzu LCMS-IT-TOF — metabolome, native vendor raw `.lcd`. Broad-vendor demonstrator (raw only).",
+  "files": [
+    {
+      "url": "https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS432/FILES/6-wk_HZ_CC_male_37_74__30min_pos-neg_100.lcd",
+      "path": "6-wk_HZ_CC_male_37_74__30min_pos-neg_100.lcd",
+      "bytes": 7389184
+    }
+  ]
+}

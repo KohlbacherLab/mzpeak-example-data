@@ -1,0 +1,12 @@
+{
+  "id": "thermo-ltq-xl-iontrap",
+  "tile": "general-ms",
+  "title": "Thermo LTQ XL",
+  "description": "PRIDE PXD059878 · Thermo LTQ XL — pure linear ion trap (PC4 acetylation; Agrawal et al. 2025).",
+  "files": [
+    {
+      "url": "https://ftp.pride.ebi.ac.uk/pride/data/archive/2025/10/PXD059878/2013_30_Amrutha_050713_1.mzML",
+      "path": "2013_30_Amrutha_050713_1.mzML"
+    }
+  ]
+}

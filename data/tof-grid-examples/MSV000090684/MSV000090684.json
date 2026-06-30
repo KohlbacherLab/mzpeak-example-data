@@ -1,0 +1,11 @@
+{
+  "id": "MSV000090684",
+  "tile": "tof-grid-examples",
+  "title": "SCIEX TripleTOF 6600 BioID-SWATH",
+  "description": "SCIEX TripleTOF 6600 BioID-SWATH (~5.4 GB)",
+  "files": [],
+  "convert": {
+    "input": "auto",
+    "flags": "--via-msconvert"
+  }
+}
