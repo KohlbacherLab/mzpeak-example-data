@@ -2,4 +2,7 @@ id: PXD009909
 tile: sdrf-examples
 title: <b>label-free</b> mouse retina proteome
 description: PRIDE PXD009909 · <b>label-free</b> mouse retina proteome (Orbitrap Fusion; Harman et al. 2018).
-files: []
+files:
+- url: https://raw.githubusercontent.com/bigbio/sdrf-annotated-datasets/main/datasets/PXD009909/PXD009909.sdrf.tsv
+  path: PXD009909.sdrf.tsv
+  bytes: 6768

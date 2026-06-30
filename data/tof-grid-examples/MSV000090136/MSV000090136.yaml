@@ -2,7 +2,11 @@ id: MSV000090136
 tile: tof-grid-examples
 title: SCIEX TripleTOF 6600 yeast SWATH
 description: SCIEX TripleTOF 6600 yeast SWATH
-files: []
+files:
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000090136/raw/plate14/73_67_hpr14_ko_YHL027W_RIM101_0.71.wiff
+  path: 73_67_hpr14_ko_YHL027W_RIM101_0.71.wiff
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000090136/raw/plate14/73_67_hpr14_ko_YHL027W_RIM101_0.71.wiff.scan
+  path: 73_67_hpr14_ko_YHL027W_RIM101_0.71.wiff.scan
 convert:
   input: auto
   flags: --via-msconvert

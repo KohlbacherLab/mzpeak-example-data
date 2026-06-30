@@ -2,4 +2,7 @@ id: PXD009465
 tile: sdrf-examples
 title: <b>TMT 6-plex</b> <i>Plasmodium falciparum</i> PfPK7 phosphoproteome
 description: PRIDE PXD009465 · <b>TMT 6-plex</b> <i>Plasmodium falciparum</i> PfPK7 phosphoproteome (LTQ Orbitrap Velos; Pease et al. 2018).
-files: []
+files:
+- url: https://raw.githubusercontent.com/bigbio/sdrf-annotated-datasets/main/datasets/PXD009465/PXD009465.sdrf.tsv
+  path: PXD009465.sdrf.tsv
+  bytes: 42428

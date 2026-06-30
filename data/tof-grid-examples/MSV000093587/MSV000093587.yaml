@@ -2,7 +2,11 @@ id: MSV000093587
 tile: tof-grid-examples
 title: TripleTOF SWATH
 description: TripleTOF SWATH
-files: []
+files:
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000093587/raw/Sample002.wiff
+  path: Sample002.wiff
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000093587/raw/Sample002.wiff.scan
+  path: Sample002.wiff.scan
 convert:
   input: auto
   flags: --via-msconvert

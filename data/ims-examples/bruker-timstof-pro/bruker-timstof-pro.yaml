@@ -2,4 +2,6 @@ id: bruker-timstof-pro
 tile: ims-examples
 title: Bruker timsTOF Pro
 description: MassIVE MSV000101607 · Bruker timsTOF Pro — PASEF / TIMS ion mobility.
-files: []
+files:
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/peak/SBA415.mzML
+  path: SBA415.mzML

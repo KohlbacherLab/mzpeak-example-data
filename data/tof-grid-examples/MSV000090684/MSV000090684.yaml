@@ -2,7 +2,11 @@ id: MSV000090684
 tile: tof-grid-examples
 title: SCIEX TripleTOF 6600 BioID-SWATH
 description: SCIEX TripleTOF 6600 BioID-SWATH (~5.4 GB)
-files: []
+files:
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000090684/raw/RAW/9611_NSMF_CBF_BR1_BioID_20180119_TOF6600_AS13_SWATH.wiff
+  path: 9611_NSMF_CBF_BR1_BioID_20180119_TOF6600_AS13_SWATH.wiff
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000090684/raw/RAW/9611_NSMF_CBF_BR1_BioID_20180119_TOF6600_AS13_SWATH.wiff.scan
+  path: 9611_NSMF_CBF_BR1_BioID_20180119_TOF6600_AS13_SWATH.wiff.scan
 convert:
   input: auto
   flags: --via-msconvert
