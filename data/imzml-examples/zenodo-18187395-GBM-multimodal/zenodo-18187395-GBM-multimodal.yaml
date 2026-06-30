@@ -1,0 +1,8 @@
+id: zenodo-18187395-GBM-multimodal
+tile: imzml-examples
+title: glioblastoma MALDI phenomics
+description: 'Zenodo 18187395 · glioblastoma MALDI phenomics — the multi-optical case: H&amp;E whole-slide (.svs) + bright-field (.tif) per section.'
+files:
+- url: https://zenodo.org/api/records/18187395/files/24_Test_P15_r2.zip/content
+  path: 24_Test_P15_r2.zip
+  unpack: zip

@@ -1,0 +1,43 @@
+id: UNIFI
+tile: pwiz-examples
+title: Waters UNIFI
+description: ProteoWizard <code>vendor_readers</code> · Waters UNIFI (API) reader files.
+files:
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/UNIFI/Reader_UNIFI_Test.data/08Mar17_HDMSe_25fmolMix1_01_1_A%2C1_1-centroid-cwt.mzML
+  path: UNIFI/Reader_UNIFI_Test.data/08Mar17_HDMSe_25fmolMix1_01_1_A,1_1-centroid-cwt.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/UNIFI/Reader_UNIFI_Test.data/08Mar17_HDMSe_25fmolMix1_01_1_A%2C1_1-combineIMS-centroid-cwt.mzML
+  path: UNIFI/Reader_UNIFI_Test.data/08Mar17_HDMSe_25fmolMix1_01_1_A,1_1-combineIMS-centroid-cwt.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/UNIFI/Reader_UNIFI_Test.data/08Mar17_HDMSe_25fmolMix1_01_1_A%2C1_1-combineIMS.mzML
+  path: UNIFI/Reader_UNIFI_Test.data/08Mar17_HDMSe_25fmolMix1_01_1_A,1_1-combineIMS.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/UNIFI/Reader_UNIFI_Test.data/08Mar17_HDMSe_25fmolMix1_01_1_A%2C1_1.mzML
+  path: UNIFI/Reader_UNIFI_Test.data/08Mar17_HDMSe_25fmolMix1_01_1_A,1_1.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/UNIFI/Reader_UNIFI_Test.data/08Mar17_MSe_25fmolMix1_01_1_A%2C1_1-centroid-cwt.mzML
+  path: UNIFI/Reader_UNIFI_Test.data/08Mar17_MSe_25fmolMix1_01_1_A,1_1-centroid-cwt.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/UNIFI/Reader_UNIFI_Test.data/08Mar17_MSe_25fmolMix1_01_1_A%2C1_1.mzML
+  path: UNIFI/Reader_UNIFI_Test.data/08Mar17_MSe_25fmolMix1_01_1_A,1_1.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/UNIFI/Reader_UNIFI_Test.data/20181027%20XZ%20blk_2_A%2C1_1-centroid-cwt.mzML
+  path: UNIFI/Reader_UNIFI_Test.data/20181027 XZ blk_2_A,1_1-centroid-cwt.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/UNIFI/Reader_UNIFI_Test.data/20181027%20XZ%20blk_2_A%2C1_1.mzML
+  path: UNIFI/Reader_UNIFI_Test.data/20181027 XZ blk_2_A,1_1.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/UNIFI/Reader_UNIFI_Test.data/310811_037_1_23_1-centroid-cwt.mzML
+  path: UNIFI/Reader_UNIFI_Test.data/310811_037_1_23_1-centroid-cwt.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/UNIFI/Reader_UNIFI_Test.data/310811_037_1_23_1.mzML
+  path: UNIFI/Reader_UNIFI_Test.data/310811_037_1_23_1.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/UNIFI/Reader_UNIFI_Test.data/Hazell_Data_00004_1.mzML
+  path: UNIFI/Reader_UNIFI_Test.data/Hazell_Data_00004_1.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/UNIFI/Reader_UNIFI_Test.data/Hi3_ClpB_MSe_01_1_D%2C1_1-centroid-cwt.mzML
+  path: UNIFI/Reader_UNIFI_Test.data/Hi3_ClpB_MSe_01_1_D,1_1-centroid-cwt.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/UNIFI/Reader_UNIFI_Test.data/Hi3_ClpB_MSe_01_1_D%2C1_1.mzML
+  path: UNIFI/Reader_UNIFI_Test.data/Hi3_ClpB_MSe_01_1_D,1_1.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/UNIFI/Reader_UNIFI_Test.data/QC%20Vion%20IMSen190118_2_A%2C1_6-centroid-cwt.mzML
+  path: UNIFI/Reader_UNIFI_Test.data/QC Vion IMSen190118_2_A,1_6-centroid-cwt.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/UNIFI/Reader_UNIFI_Test.data/QC%20Vion%20IMSen190118_2_A%2C1_6-combineIMS-centroid-cwt.mzML
+  path: UNIFI/Reader_UNIFI_Test.data/QC Vion IMSen190118_2_A,1_6-combineIMS-centroid-cwt.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/UNIFI/Reader_UNIFI_Test.data/QC%20Vion%20IMSen190118_2_A%2C1_6-combineIMS.mzML
+  path: UNIFI/Reader_UNIFI_Test.data/QC Vion IMSen190118_2_A,1_6-combineIMS.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/UNIFI/Reader_UNIFI_Test.data/QC%20Vion%20IMSen190118_2_A%2C1_6.mzML
+  path: UNIFI/Reader_UNIFI_Test.data/QC Vion IMSen190118_2_A,1_6.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/UNIFI/Reader_UNIFI_Test.data/Sample%201_1-centroid.mzML
+  path: UNIFI/Reader_UNIFI_Test.data/Sample 1_1-centroid.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/UNIFI/Reader_UNIFI_Test.data/Sample%201_1.mzML
+  path: UNIFI/Reader_UNIFI_Test.data/Sample 1_1.mzML

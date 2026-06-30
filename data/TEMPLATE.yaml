@@ -1,0 +1,32 @@
+# -----------------------------------------------------------------------------
+#  DATASET TEMPLATE -- to add a dataset:
+#    1. copy this file to   data/<tile>/<id>/<id>.yaml   (folder + file named by id)
+#    2. edit the fields below
+#    3. run                 scripts/update.sh
+#  (<tile> is one of: general-ms, ims-examples, imzml-examples, sdrf-examples,
+#   tof-grid-examples, pwiz-examples -- each has a data/<tile>/_tile.yaml)
+# -----------------------------------------------------------------------------
+
+id: PXD000000                       # dataset id = its folder name
+tile: general-ms                    # which tile it belongs to
+title: Vendor Instrument            # short label shown in the catalog
+
+description: >
+  One or two sentences: source . instrument -- modality, format, and a citation.
+
+files:                              # every file to retrieve; URL must DOWNLOAD the file
+  - url: https://ftp.pride.ebi.ac.uk/pride/data/archive/YYYY/MM/PXD000000/run.raw
+    path: run.raw                   # where it lands under the dataset folder
+    bytes: 0                        # optional: size in bytes, verified after download
+  # multi-file unit (e.g. SCIEX): list each part
+  # - {url: https://.../run.wiff,      path: run.wiff}
+  # - {url: https://.../run.wiff.scan, path: run.wiff.scan}
+  # archive that should be unzipped in place:
+  # - {url: https://.../data.zip,      path: data.zip, unpack: zip}
+
+# convert: optional. Omit to convert with defaults (raw/mzML -> mzPeak).
+#   flags: extra mzpeak-convert flags (e.g. --via-msconvert for SCIEX/Agilent/Waters)
+#   input: a specific unit to convert instead of auto-detect
+#   skip:  true to keep the raw as-is and NOT convert
+convert:
+  flags: --via-msconvert

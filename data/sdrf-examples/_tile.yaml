@@ -1,0 +1,8 @@
+slug: sdrf
+title: Study Design Embedding
+icon: 🧬
+accent: '#8250df'
+imaging: false
+order: 4
+blurb: Proteomics &amp; metabolomics studies shipping an SDRF / ISA-Tab sample annotation, kept alongside the original vendor RAW and the mzML → mzPeak conversions.
+provenance: <b>Provenance.</b> HUPO-PSI / bigbio community-curated SDRF annotations over PRIDE (PXD009465 · PXD009909 · PXD011799 · PXD014145 · PXD020187) and MetaboLights (MTBLS1129 SDRF · MTBLS5358 native ISA-Tab) studies — label-free plus TMT 6/10/11-plex isobaric designs. The full chain — SDRF/ISA metadata + vendor RAW + mzML + mzPeak — is stored here; each dataset's <code>urls.txt</code> records the original source.

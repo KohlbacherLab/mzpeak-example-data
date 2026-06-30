@@ -1,0 +1,11 @@
+id: PXD059079
+tile: ims-examples
+title: PXD059079
+description: ''
+files:
+- url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2025/03/PXD059079/TimsTOF_HT_NCI7_Dilution.zip
+  path: TimsTOF_HT_NCI7_Dilution.zip
+  bytes: 18180509414
+- url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2025/03/PXD059079/FAIMS_Ascend_DIA_NCI7_Dilution.zip
+  path: FAIMS_Ascend_DIA_NCI7_Dilution.zip
+  bytes: 1537303300

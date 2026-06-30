@@ -1,0 +1,35 @@
+id: Thermo
+tile: pwiz-examples
+title: Thermo
+description: ProteoWizard <code>vendor_readers</code> · Thermo (.raw) reader-regression files.
+files:
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Thermo/Reader_Thermo_Test.data/090701-LTQVelos-unittest-01-centroid-globalChromatogramsAreMs1Only.mzML
+  path: Thermo/Reader_Thermo_Test.data/090701-LTQVelos-unittest-01-centroid-globalChromatogramsAreMs1Only.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Thermo/Reader_Thermo_Test.data/090701-LTQVelos-unittest-01-centroid.mzML
+  path: Thermo/Reader_Thermo_Test.data/090701-LTQVelos-unittest-01-centroid.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Thermo/Reader_Thermo_Test.data/090701-LTQVelos-unittest-01.mzML
+  path: Thermo/Reader_Thermo_Test.data/090701-LTQVelos-unittest-01.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Thermo/Reader_Thermo_Test.data/BSA-FT-ETD-centroid.mzML
+  path: Thermo/Reader_Thermo_Test.data/BSA-FT-ETD-centroid.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Thermo/Reader_Thermo_Test.data/BSA-FT-ETD.mzML
+  path: Thermo/Reader_Thermo_Test.data/BSA-FT-ETD.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Thermo/Reader_Thermo_Test.data/BSA-FT-HCD-centroid.mzML
+  path: Thermo/Reader_Thermo_Test.data/BSA-FT-HCD-centroid.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Thermo/Reader_Thermo_Test.data/BSA-FT-HCD.mzML
+  path: Thermo/Reader_Thermo_Test.data/BSA-FT-HCD.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Thermo/Reader_Thermo_Test.data/FT-HCD-MSX-centroid.mzML
+  path: Thermo/Reader_Thermo_Test.data/FT-HCD-MSX-centroid.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Thermo/Reader_Thermo_Test.data/FT-HCD-MSX.mzML
+  path: Thermo/Reader_Thermo_Test.data/FT-HCD-MSX.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Thermo/Reader_Thermo_Test.data/IT-HCD-SPS-centroid.mzML
+  path: Thermo/Reader_Thermo_Test.data/IT-HCD-SPS-centroid.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Thermo/Reader_Thermo_Test.data/IT-HCD-SPS.mzML
+  path: Thermo/Reader_Thermo_Test.data/IT-HCD-SPS.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Thermo/Reader_Thermo_Test.data/IsolationMzOffset-ReportedMassOffset-centroid.mzML
+  path: Thermo/Reader_Thermo_Test.data/IsolationMzOffset-ReportedMassOffset-centroid.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Thermo/Reader_Thermo_Test.data/IsolationMzOffset-ReportedMassOffset.mzML
+  path: Thermo/Reader_Thermo_Test.data/IsolationMzOffset-ReportedMassOffset.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Thermo/Reader_Thermo_Test.data/source_cid_test_3scans-centroid.mzML
+  path: Thermo/Reader_Thermo_Test.data/source_cid_test_3scans-centroid.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Thermo/Reader_Thermo_Test.data/source_cid_test_3scans.mzML
+  path: Thermo/Reader_Thermo_Test.data/source_cid_test_3scans.mzML

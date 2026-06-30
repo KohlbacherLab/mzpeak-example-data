@@ -1,0 +1,67 @@
+id: Waters
+tile: pwiz-examples
+title: Waters
+description: ProteoWizard <code>vendor_readers</code> · Waters (.raw / MassLynx) reader-regression files.
+files:
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/091204_NFDM_008.mzML
+  path: Waters/Reader_Waters_Test.data/091204_NFDM_008.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/160109_Mix1_calcurve_070.mzML
+  path: Waters/Reader_Waters_Test.data/160109_Mix1_calcurve_070.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/ATEHLSTLSEK_LM_684.3469-ddaProcessing.mzML
+  path: Waters/Reader_Waters_Test.data/ATEHLSTLSEK_LM_684.3469-ddaProcessing.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/ATEHLSTLSEK_LM_684.3469.mzML
+  path: Waters/Reader_Waters_Test.data/ATEHLSTLSEK_LM_684.3469.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/ATEHLSTLSEK_LM_785.8426.mzML
+  path: Waters/Reader_Waters_Test.data/ATEHLSTLSEK_LM_785.8426.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/ATEHLSTLSEK_profile-centroid.mzML
+  path: Waters/Reader_Waters_Test.data/ATEHLSTLSEK_profile-centroid.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/ATEHLSTLSEK_profile.mzML
+  path: Waters/Reader_Waters_Test.data/ATEHLSTLSEK_profile.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/DDA_IsolationWindow-ddaProcessing.mzML
+  path: Waters/Reader_Waters_Test.data/DDA_IsolationWindow-ddaProcessing.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/DDA_IsolationWindow.mzML
+  path: Waters/Reader_Waters_Test.data/DDA_IsolationWindow.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/HDDDA_Short_noLM-centroid-cwt.mzML
+  path: Waters/Reader_Waters_Test.data/HDDDA_Short_noLM-centroid-cwt.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/HDDDA_Short_noLM-combineIMS-centroid-cwt-ignoreCalibrationScans.mzML
+  path: Waters/Reader_Waters_Test.data/HDDDA_Short_noLM-combineIMS-centroid-cwt-ignoreCalibrationScans.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/HDDDA_Short_noLM-combineIMS-centroid-cwt.mzML
+  path: Waters/Reader_Waters_Test.data/HDDDA_Short_noLM-combineIMS-centroid-cwt.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/HDDDA_Short_noLM-combineIMS-mzMobilityFilter.mzML
+  path: Waters/Reader_Waters_Test.data/HDDDA_Short_noLM-combineIMS-mzMobilityFilter.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/HDDDA_Short_noLM-combineIMS.mzML
+  path: Waters/Reader_Waters_Test.data/HDDDA_Short_noLM-combineIMS.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/HDDDA_Short_noLM-globalChromatogramsAreMs1Only.mzML
+  path: Waters/Reader_Waters_Test.data/HDDDA_Short_noLM-globalChromatogramsAreMs1Only.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/HDDDA_Short_noLM.mzML
+  path: Waters/Reader_Waters_Test.data/HDDDA_Short_noLM.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/HDMRM_Short_noLM-combineIMS-mzMobilityFilter.mzML
+  path: Waters/Reader_Waters_Test.data/HDMRM_Short_noLM-combineIMS-mzMobilityFilter.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/HDMRM_Short_noLM-combineIMS.mzML
+  path: Waters/Reader_Waters_Test.data/HDMRM_Short_noLM-combineIMS.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/HDMRM_Short_noLM-globalChromatogramsAreMs1Only.mzML
+  path: Waters/Reader_Waters_Test.data/HDMRM_Short_noLM-globalChromatogramsAreMs1Only.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/HDMRM_Short_noLM.mzML
+  path: Waters/Reader_Waters_Test.data/HDMRM_Short_noLM.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/HDMSe_Short_noLM-combineIMS-mzMobilityFilter.mzML
+  path: Waters/Reader_Waters_Test.data/HDMSe_Short_noLM-combineIMS-mzMobilityFilter.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/HDMSe_Short_noLM-combineIMS.mzML
+  path: Waters/Reader_Waters_Test.data/HDMSe_Short_noLM-combineIMS.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/HDMSe_Short_noLM.mzML
+  path: Waters/Reader_Waters_Test.data/HDMSe_Short_noLM.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/MSe_Short-globalChromatogramsAreMs1Only.mzML
+  path: Waters/Reader_Waters_Test.data/MSe_Short-globalChromatogramsAreMs1Only.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/MSe_Short.mzML
+  path: Waters/Reader_Waters_Test.data/MSe_Short.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/Minimal_DDA-ddaProcessing.mzML
+  path: Waters/Reader_Waters_Test.data/Minimal_DDA-ddaProcessing.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/Minimal_DDA.mzML
+  path: Waters/Reader_Waters_Test.data/Minimal_DDA.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/QC_LCMS2-2_23_268-1-1.mzML
+  path: Waters/Reader_Waters_Test.data/QC_LCMS2-2_23_268-1-1.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/SONAR_Short-combineIMS-mzMobilityFilter.mzML
+  path: Waters/Reader_Waters_Test.data/SONAR_Short-combineIMS-mzMobilityFilter.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/SONAR_Short-combineIMS.mzML
+  path: Waters/Reader_Waters_Test.data/SONAR_Short-combineIMS.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Waters/Reader_Waters_Test.data/SONAR_Short.mzML
+  path: Waters/Reader_Waters_Test.data/SONAR_Short.mzML

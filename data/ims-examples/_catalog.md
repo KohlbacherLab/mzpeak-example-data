@@ -6,6 +6,7 @@ accent: #0e7490
 imaging: false
 order: 2
 ---
+
 Ion-mobility mass spectrometry — datasets carrying a mobility dimension (drift-tube DTIMS, trapped-ion TIMS/PASEF, traveling-wave TWIMS), converted to mzPeak with the mobility axis preserved per spectrum/peak.
 
 <b>Provenance.</b> Openly published ion-mobility runs spanning the major IMS technologies — Agilent 6560 drift-tube (DTIMS), Bruker timsTOF trapped-ion mobility (PASEF), and additional PRIDE deposits. Each dataset names its accession and source.

@@ -1,0 +1,7 @@
+id: agilent-6490-triplequad
+tile: general-ms
+title: Agilent 6490 triple-quad
+description: PRIDE PXD041762 · Agilent 6490 triple-quad, SRM/dMRM (COVID-19 plasma).
+files:
+- url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2024/01/PXD041762/REC-2349_P2_F1.mzML
+  path: REC-2349_P2_F1.mzML

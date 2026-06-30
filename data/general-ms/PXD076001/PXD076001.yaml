@@ -1,0 +1,8 @@
+id: PXD076001
+tile: general-ms
+title: Thermo Orbitrap Astral
+description: PRIDE / iProX · Thermo Orbitrap Astral — DIA, native vendor raw `.raw`. Broad-vendor demonstrator (raw only).
+files:
+- url: http://download.iprox.org/IPX0016302000/IPX0016302002/Astral-3_24_FPEP250646839-1A.raw
+  path: Astral-3_24_FPEP250646839-1A.raw
+  bytes: 2674608291

@@ -1,0 +1,8 @@
+id: PXD018751
+tile: general-ms
+title: Thermo LCQ Deca XP
+description: PRIDE · Thermo LCQ Deca XP — IEF/SCX/RPLC proteomics, vendor raw `.raw` (zip). Broad-vendor demonstrator (raw only; one representative run).
+files:
+- url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2022/08/PXD018751/XinjiangecotyperootRAW.zip
+  path: XinjiangecotyperootRAW.zip
+  bytes: 415758927

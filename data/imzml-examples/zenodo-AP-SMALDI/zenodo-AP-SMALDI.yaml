@@ -1,0 +1,8 @@
+id: zenodo-AP-SMALDI
+tile: imzml-examples
+title: AP-SMALDI mouse urinary bladder
+description: Zenodo 10084132 · AP-SMALDI mouse urinary bladder (same specimen as PXD001283, re-deposited).
+files:
+- url: https://zenodo.org/api/records/10084132/files/imzML_AP_SMALDI.zip/content
+  path: imzML_AP_SMALDI.zip
+  unpack: zip

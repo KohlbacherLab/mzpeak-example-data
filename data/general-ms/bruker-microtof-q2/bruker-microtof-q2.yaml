@@ -1,0 +1,7 @@
+id: bruker-microtof-q2
+tile: general-ms
+title: Bruker micrOTOF-Q II ESI-QTOF
+description: MetaboLights MTBLS520 · Bruker micrOTOF-Q II ESI-QTOF (bryophyte seasonal metabolomics; Peters et al. 2018).
+files:
+- url: https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS520/FILES/neg_01_Fistax_1-A,2_01_5715.mzML
+  path: neg_01_Fistax_1-A,2_01_5715.mzML

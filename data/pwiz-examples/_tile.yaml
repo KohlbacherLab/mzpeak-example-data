@@ -1,0 +1,8 @@
+slug: pwiz-tests
+title: ProteoWizard test corpus
+icon: 🧪
+accent: '#bc4c00'
+imaging: false
+order: 6
+blurb: The ProteoWizard <code>vendor_readers</code> test set across all vendors — broad mzML → mzPeak conversion coverage (the converter's regression corpus).
+provenance: <b>Provenance.</b> The ProteoWizard <code>vendor_readers</code> conformance corpus (AB SCIEX · Agilent · Bruker · Mobilion · Shimadzu · Thermo · Waters UNIFI · Waters) — small per-vendor reader-regression files redistributed under the ProteoWizard Apache-2.0 license; the converter's broad vendor-coverage net.

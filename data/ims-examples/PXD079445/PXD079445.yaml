@@ -1,0 +1,8 @@
+id: PXD079445
+tile: ims-examples
+title: PXD079445
+description: ''
+files:
+- url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/06/PXD079445/240617_SAR186_A1_EVs.raw
+  path: 240617_SAR186_A1_EVs.raw
+  bytes: 1370476595

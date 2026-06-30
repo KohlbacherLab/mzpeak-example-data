@@ -1,0 +1,8 @@
+id: PXD073126
+tile: general-ms
+title: Waters Synapt XS
+description: PRIDE · Waters Synapt XS — HDDDA ion mobility, vendor raw `.raw`. Broad-vendor demonstrator (raw only).
+files:
+- url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/05/PXD073126/250501_ZMM_KMI_sFtsk_2.raw.zip
+  path: 250501_ZMM_KMI_sFtsk_2.raw.zip
+  bytes: 1201956356

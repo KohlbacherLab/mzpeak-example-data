@@ -1,0 +1,13 @@
+id: PXD001283-HR2MSI-urinary-bladder
+tile: imzml-examples
+title: AP-SMALDI 10 µm mouse urinary bladder
+description: PRIDE PXD001283 · AP-SMALDI 10 µm mouse urinary bladder — the label-free “molecular histology” reference set (Römpp et al. 2010).
+files:
+- url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2014/11/PXD001283/HR2MSImouseurinarybladderS096.imzML
+  path: HR2MSImouseurinarybladderS096.imzML
+- url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2014/11/PXD001283/HR2MSImouseurinarybladderS096-opticalimage.tif
+  path: HR2MSImouseurinarybladderS096-opticalimage.tif
+- url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2014/11/PXD001283/HR2MSImouseurinarybladderS096-results.csv
+  path: HR2MSImouseurinarybladderS096-results.csv
+- url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2014/11/PXD001283/HR2MSImouseurinarybladderS096.ibd
+  path: HR2MSImouseurinarybladderS096.ibd

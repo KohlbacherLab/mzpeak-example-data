@@ -1,0 +1,19 @@
+id: Mobilion
+tile: pwiz-examples
+title: Mobilion SLIM ion-mobility reader files
+description: ProteoWizard <code>vendor_readers</code> · Mobilion SLIM ion-mobility reader files.
+files:
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Mobilion/Reader_Mobilion_Test.data/2024-02-16-16.02.20-CCS%20Calibration_02-combineIMS.mzML
+  path: Mobilion/Reader_Mobilion_Test.data/2024-02-16-16.02.20-CCS Calibration_02-combineIMS.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Mobilion/Reader_Mobilion_Test.data/2024-02-16-16.02.20-CCS%20Calibration_02-ignoreZeros-combineIMS.mzML
+  path: Mobilion/Reader_Mobilion_Test.data/2024-02-16-16.02.20-CCS Calibration_02-ignoreZeros-combineIMS.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Mobilion/Reader_Mobilion_Test.data/2024-02-16-16.02.20-CCS%20Calibration_02-ignoreZeros.mzML
+  path: Mobilion/Reader_Mobilion_Test.data/2024-02-16-16.02.20-CCS Calibration_02-ignoreZeros.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Mobilion/Reader_Mobilion_Test.data/2024-02-16-16.02.20-CCS%20Calibration_02.mzML
+  path: Mobilion/Reader_Mobilion_Test.data/2024-02-16-16.02.20-CCS Calibration_02.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Mobilion/Reader_Mobilion_Test.data/ExampleTuneMix_binned5-centroid-cwt.mzML
+  path: Mobilion/Reader_Mobilion_Test.data/ExampleTuneMix_binned5-centroid-cwt.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Mobilion/Reader_Mobilion_Test.data/ExampleTuneMix_binned5-combineIMS-centroid-cwt.mzML
+  path: Mobilion/Reader_Mobilion_Test.data/ExampleTuneMix_binned5-combineIMS-centroid-cwt.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Mobilion/Reader_Mobilion_Test.data/ExampleTuneMix_binned5.mzML
+  path: Mobilion/Reader_Mobilion_Test.data/ExampleTuneMix_binned5.mzML

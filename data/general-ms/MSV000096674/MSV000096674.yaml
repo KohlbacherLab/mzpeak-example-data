@@ -1,0 +1,8 @@
+id: MSV000096674
+tile: general-ms
+title: Thermo Orbitrap Astral
+description: MassIVE · Thermo Orbitrap Astral — DDA-TMT, native vendor raw `.raw`. Broad-vendor demonstrator (raw only; one representative run).
+files:
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000096674/raw/Astral_TMT/2_StandardFourCell/Eclipse_TMT_12frac/ec04479_qy_4cell_SanJose_A1.raw
+  path: ec04479_qy_4cell_SanJose_A1.raw
+  bytes: 236612224

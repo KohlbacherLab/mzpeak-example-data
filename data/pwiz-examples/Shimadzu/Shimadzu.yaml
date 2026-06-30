@@ -1,0 +1,17 @@
+id: Shimadzu
+tile: pwiz-examples
+title: Shimadzu reader-regression files
+description: ProteoWizard <code>vendor_readers</code> · Shimadzu reader-regression files.
+files:
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Shimadzu/Reader_Shimadzu_Test.data/10nmol_Negative_MS_ID_ON_055-centroid-globalChromatogramsAreMs1Only.mzML
+  path: Shimadzu/Reader_Shimadzu_Test.data/10nmol_Negative_MS_ID_ON_055-centroid-globalChromatogramsAreMs1Only.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Shimadzu/Reader_Shimadzu_Test.data/10nmol_Negative_MS_ID_ON_055-centroid.mzML
+  path: Shimadzu/Reader_Shimadzu_Test.data/10nmol_Negative_MS_ID_ON_055-centroid.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Shimadzu/Reader_Shimadzu_Test.data/10nmol_Negative_MS_ID_ON_055.mzML
+  path: Shimadzu/Reader_Shimadzu_Test.data/10nmol_Negative_MS_ID_ON_055.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Shimadzu/Reader_Shimadzu_Test.data/20140312_%E5%85%ADmix_column_1%20%28scheduled%29%20%E4%B8%80%E4%B8%AA%E8%AF%95-centroid.mzML
+  path: Shimadzu/Reader_Shimadzu_Test.data/20140312_六mix_column_1 (scheduled) 一个试-centroid.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Shimadzu/Reader_Shimadzu_Test.data/20140312_%E5%85%ADmix_column_1%20%28scheduled%29%20%E4%B8%80%E4%B8%AA%E8%AF%95-srmSpectra-centroid.mzML
+  path: Shimadzu/Reader_Shimadzu_Test.data/20140312_六mix_column_1 (scheduled) 一个试-srmSpectra-centroid.mzML
+- url: https://object.storage.eu01.onstackit.cloud/v09/pwiz-examples/Shimadzu/Reader_Shimadzu_Test.data/20140312_%E5%85%ADmix_column_1%20%28scheduled%29%20%E4%B8%80%E4%B8%AA%E8%AF%95.mzML
+  path: Shimadzu/Reader_Shimadzu_Test.data/20140312_六mix_column_1 (scheduled) 一个试.mzML

@@ -1,0 +1,7 @@
+id: shimadzu-lcms-9030-qtof
+tile: general-ms
+title: Shimadzu LCMS-9030 Q-TOF
+description: MetaboLights MTBLS13204 · Shimadzu LCMS-9030 Q-TOF (seaweed metabolomics).
+files:
+- url: https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS13204/FILES/DERIVED_FILES/Blind_P1_pos_012.mzML
+  path: Blind_P1_pos_012.mzML

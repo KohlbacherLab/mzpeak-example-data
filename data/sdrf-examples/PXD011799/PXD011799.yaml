@@ -1,0 +1,7 @@
+id: PXD011799
+tile: sdrf-examples
+title: <b>TMT 10-plex</b> melanoma B cells
+description: PRIDE PXD011799 · <b>TMT 10-plex</b> melanoma B cells (Orbitrap Fusion Lumos; Griss et al. 2019) — the TMT channel-model fixture.
+files:
+- url: https://raw.githubusercontent.com/bigbio/sdrf-annotated-datasets/main/datasets/PXD011799/PXD011799.sdrf.tsv
+  path: PXD011799.sdrf.tsv

@@ -1,0 +1,7 @@
+id: waters-xevo-g2s-qtof
+tile: general-ms
+title: Waters Xevo G2-XS QTof
+description: MetaboLights MTBLS1129 · Waters Xevo G2-XS QTof — label-free metabolomics (colon cancer; Cai et al. 2020); also our SDRF fixture.
+files:
+- url: https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS1129/FILES/QC01.mzML
+  path: QC01.mzML

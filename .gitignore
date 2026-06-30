@@ -55,3 +55,9 @@ node_modules/
 # description -- never the downloaded/converted data (any format, incl .tsv/.csv).
 data/*/*/*
 !data/*/*/*.json
+!data/*/*/*.yaml
+!data/*/*/*.yml
+
+# Python bytecode
+__pycache__/
+*.pyc

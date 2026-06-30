@@ -1,37 +1,19 @@
 #!/usr/bin/env python3
-"""Download a dataset from its <id>.json description.
+"""Download a dataset's files from its descriptor (data/<tile>/<id>/<id>.yaml).
 
-Each dataset is described by one JSON (see data/<tile>/<id>/<id>.json):
-
-    {
-      "id":          "PXD000155",                 # dataset id == its folder name
-      "tile":        "general-ms",                # which tile it belongs to
-      "title":       "Thermo LTQ Velos",          # short label
-      "description": "...",                        # one sentence
-      "files": [                                   # every file to retrieve
-        { "url":   "https://.../run.raw",          #   FTP or HTTP, must download the file
-          "path":  "run.raw",                      #   where it goes under the dataset folder
-          "bytes": 16809984,                       #   optional: verified after download
-          "unpack":"zip" }                         #   optional: unzip in place, then drop the zip
-      ],
-      "convert": { "input": "auto",                # optional: converter hints (not used here)
-                   "flags": "--via-msconvert" }
-    }
-
-This script creates  <repo>/data/<tile>/<id>/  and fetches every file into it.
-It is IDEMPOTENT: a file already present with the right size (or non-empty, when no
-size is given) is skipped, so re-running only fetches what is missing.
+Creates  data/<tile>/<id>/  and fetches every entry in `files` into it. IDEMPOTENT: a file already
+present at the right size (or non-empty, when no size is given) is skipped, so re-running only
+fetches what's missing. Handles FTP/HTTP, MassIVE (no resume), and "unpack: zip".
 
 Usage:
-    scripts/fetch-dataset.py <id>.json [<id>.json ...]   # specific dataset(s)
-    scripts/fetch-dataset.py --all                       # every data/*/*/*.json
-    scripts/fetch-dataset.py --id PXD000155              # find one by id
-Requires: curl (and unzip for "unpack":"zip" entries).
+    scripts/fetch-dataset.py <id>.yaml [...]   # specific descriptor(s)
+    scripts/fetch-dataset.py --all             # every dataset
+    scripts/fetch-dataset.py --id PXD000155
+Requires: curl (and unzip for "unpack: zip" entries).
 """
-import json, os, sys, glob, subprocess, shutil
-
-REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA = os.path.join(REPO, "data")
+import os, sys, subprocess
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import corpus_lib as C
 
 
 def _size(p):
@@ -39,91 +21,54 @@ def _size(p):
 
 
 def _curl(url, target):
-    # MassIVE's download endpoint does not support HTTP range/resume; everything else may resume.
-    resume = [] if "DownloadResultFile" in url else ["-C", "-"]
-    cmd = ["curl", "-fL", "--retry", "5", "--retry-delay", "3", *resume, "-o", target, url]
-    rc = subprocess.run(cmd).returncode
-    # 33/36 = server refused the resume offset but the local file is already complete.
-    if rc in (33, 36) and _size(target) > 0:
+    resume = [] if "DownloadResultFile" in url else ["-C", "-"]   # MassIVE has no range/resume
+    rc = subprocess.run(["curl", "-fL", "--retry", "5", "--retry-delay", "3", *resume,
+                         "-o", target, url]).returncode
+    if rc in (33, 36) and _size(target) > 0:   # resume refused but file already complete
         rc = 0
     return rc
 
 
-def fetch_one(jpath):
-    d = json.load(open(jpath))
-    tile, ident = d["tile"], d["id"]
-    dest = os.path.join(DATA, tile, ident)
+def fetch_one(dpath):
+    d = C.load(dpath)
+    dest = os.path.join(C.DATA, d["tile"], d["id"])
     os.makedirs(dest, exist_ok=True)
-
-    # keep a copy of the description alongside the data, so the folder is self-contained
-    canon = os.path.join(dest, f"{ident}.json")
-    if os.path.abspath(jpath) != os.path.abspath(canon):
-        shutil.copy(jpath, canon)
-
-    files = d.get("files", [])
+    files = d.get("files") or []
     if not files:
-        print(f"[{ident}] description-only (no files listed) — nothing to download")
+        print(f"[{d['id']}] description-only (no files) — nothing to download")
         return 0
-
     got = skipped = failed = 0
     for f in files:
-        url, rel = f["url"], f["path"]
+        url, rel, want, unpack = f["url"], f["path"], f.get("bytes"), f.get("unpack")
         target = os.path.join(dest, rel)
-        want = f.get("bytes")
-        unpack = f.get("unpack")
-        marker = target + ".extracted"          # idempotency marker for unpacked archives
-
-        if unpack:
-            if os.path.exists(marker):
-                skipped += 1
-                continue
-        elif os.path.isfile(target) and (
-            (want is None and _size(target) > 0) or (want is not None and _size(target) == want)
-        ):
-            skipped += 1
-            continue
-
+        if not os.path.abspath(target).startswith(os.path.abspath(dest) + os.sep):
+            print(f"[{d['id']}] unsafe path {rel!r} — skipped"); failed += 1; continue
+        marker = target + ".extracted"
+        if unpack and os.path.exists(marker):
+            skipped += 1; continue
+        if not unpack and os.path.isfile(target) and (
+                (want is None and _size(target) > 0) or (want is not None and _size(target) == want)):
+            skipped += 1; continue
         os.makedirs(os.path.dirname(target) or dest, exist_ok=True)
-        print(f"[{ident}] fetch {rel}")
+        print(f"[{d['id']}] fetch {rel}")
         if _curl(url, target) != 0:
-            print(f"[{ident}] FAIL {rel}")
-            failed += 1
-            if os.path.isfile(target) and _size(target) == 0:
-                os.remove(target)
+            print(f"[{d['id']}] FAIL {rel}"); failed += 1
+            if _size(target) == 0 and os.path.isfile(target): os.remove(target)
             continue
         if want is not None and _size(target) != want:
-            print(f"[{ident}] WARN {rel}: got {_size(target)} bytes, expected {want}")
-
+            print(f"[{d['id']}] WARN {rel}: got {_size(target)} expected {want}")
         if unpack == "zip":
             subprocess.run(["unzip", "-o", "-q", target, "-d", dest])
-            os.remove(target)
-            open(marker, "w").close()
+            os.remove(target); open(marker, "w").close()
         got += 1
-
-    print(f"[{ident}] downloaded={got} skipped={skipped} failed={failed}  ->  {dest}")
+    print(f"[{d['id']}] downloaded={got} skipped={skipped} failed={failed}  ->  {dest}")
     return 1 if failed else 0
-
-
-def collect(args):
-    if "--all" in args:
-        return sorted(glob.glob(os.path.join(DATA, "*", "*", "*.json")))
-    if "--id" in args:
-        wid = args[args.index("--id") + 1]
-        hits = [p for p in glob.glob(os.path.join(DATA, "*", "*", "*.json"))
-                if json.load(open(p)).get("id") == wid]
-        if not hits:
-            sys.exit(f"no dataset json with id {wid}")
-        return hits
-    paths = [a for a in args if a.endswith(".json")]
-    if not paths:
-        sys.exit(__doc__)
-    return paths
 
 
 def main(argv):
     rc = 0
-    for j in collect(argv):
-        rc |= fetch_one(j)
+    for p in C.resolve(argv):
+        rc |= fetch_one(p)
     return rc
 
 

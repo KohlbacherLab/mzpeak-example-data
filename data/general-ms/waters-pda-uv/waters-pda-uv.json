@@ -1,7 +1,0 @@
-{
-  "id": "waters-pda-uv",
-  "tile": "general-ms",
-  "title": "Waters ACQUITY UPLC <b>PDA</b>",
-  "description": "ProteoWizard Waters vendor-reader test data · Waters ACQUITY UPLC <b>PDA</b> — the corpus's <b>UV / photodiode-array exemplar</b>: ProteoWizard read the PDA function from a MassLynx <code>.raw</code> and wrote <code>wavelength array</code> (190–500 nm) + <code>electromagnetic radiation</code> (absorption) spectra. Demonstrates mzPeak's UV <code>wavelength_spectra</code> facet — the rare case of UV spectra carried inside the mzML.",
-  "files": []
-}

@@ -1,0 +1,8 @@
+id: PXD076861
+tile: general-ms
+title: Bruker impact HD
+description: PRIDE · Bruker impact HD — native MS, vendor raw `.d`. Broad-vendor demonstrator (raw only).
+files:
+- url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/04/PXD076861/NreB_PAS_DECONV.d.zip
+  path: NreB_PAS_DECONV.d.zip
+  bytes: 226482825

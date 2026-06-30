@@ -1,0 +1,8 @@
+id: PXD057269
+tile: general-ms
+title: Thermo TSQ Altis
+description: PRIDE · Thermo TSQ Altis — SRM, vendor raw `.raw`. Broad-vendor demonstrator (raw only; one representative run).
+files:
+- url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2025/02/PXD057269/LD401_001fmol_r1.raw
+  path: LD401_001fmol_r1.raw
+  bytes: 117436064

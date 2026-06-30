@@ -1,0 +1,8 @@
+slug: imaging
+title: Imaging MS (MSI)
+icon: 🔬
+accent: '#1a7f37'
+imaging: true
+order: 3
+blurb: Mass-spectrometry imaging — imzML datasets with per-pixel spatial coordinates and embedded optical images, converted to the imaging mzPeak extension.
+provenance: <b>Provenance.</b> PRIDE <b>PXD001283</b> — the AP-SMALDI mouse urinary-bladder reference (Römpp et al. 2010, <i>Angew. Chem.</i>); the Zenodo <b>10084132</b> MSI test suite (DESI colorectal adenoma · LA-ESI <i>Arabidopsis</i> leaf · AP-SMALDI bladder · LTP chilli); Zenodo <b>18187395</b> — glioblastoma MALDI phenomics, the multi-optical case (H&amp;E whole-slide + bright-field per section); and the ms-imaging.org <b>Example 1</b> 3×3-pixel pairs (Schramm et al. 2012). All are openly licensed public deposits.

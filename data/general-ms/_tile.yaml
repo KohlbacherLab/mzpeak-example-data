@@ -1,0 +1,8 @@
+slug: general-ms
+title: General MS Data
+icon: 📈
+accent: '#1558d6'
+imaging: false
+order: 1
+blurb: Non-imaging LC-/GC-MS instrument-vendor examples (Thermo, Bruker, SCIEX, Agilent, Shimadzu, Waters) — published mzML converted to mzPeak.
+provenance: <b>Provenance.</b> Openly published runs from <b>PRIDE</b>, <b>MetaboLights</b>, <b>MassIVE</b> and <b>Zenodo</b> spanning 6 vendors and the major analyzer classes — Orbitrap, Q-TOF / UHR-QTOF, FT-ICR, pure ion trap, triple-quad (SRM/MRM), QqLIT, TIMS &amp; DTIMS ion mobility, DIA, and GC electron-ionization. Each dataset below names its accession and source publication.

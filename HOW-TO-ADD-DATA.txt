@@ -2,170 +2,111 @@
   HOW TO ADD / REMOVE A DATASET            mzpeak-example-data
 ================================================================================
 
-To add a dataset you need three things, all using the SAME short name for it
-(for example PXD012345):
+Everything is driven by small YAML files. To ADD a dataset:
 
-  1. A WORKING DOWNLOAD URL     so the file can be fetched again
-  2. THE FILE IN STORAGE        in the bucket, under  <tile>/<dataset>/
-  3. A SHORT DESCRIPTION        in  data/<tile>/_catalog.md
+  1. Copy the template into a new folder named by the dataset id:
+         cp data/TEMPLATE.yaml  data/<tile>/<id>/<id>.yaml
+  2. Edit that file (id, tile, title, description, the file URLs).
+  3. Run the harness:
+         scripts/update.sh
 
-Then one command publishes everything:   bash scripts/build-corpus-site.sh
+That one command downloads the files, converts them to mzPeak, uploads them to
+the storage bucket, rebuilds the tile pages, and publishes the website.
 
-All paths are relative to the repo root (the folder that holds build_data.sh).
-Clone the repo and it works as-is; nothing points at a personal machine.
+All paths are relative to the repo root (the folder with build_data.sh). The repo
+is self-contained: clone it and it works.
 
   +------------------------------------------------------------------------+
   |  THE URL MUST ACTUALLY WORK                                            |
-  |                                                                        |
-  |  Use a DIRECT link that downloads the file when you open it -- the     |
-  |  public FTP link (e.g. ftp.pride.ebi.ac.uk or ftp.ebi.ac.uk, reached   |
-  |  over http/https), NOT the dataset's web / landing page.               |
-  |                                                                        |
-  |  A landing-page URL, or a dead link, means the dataset can never be    |
-  |  rebuilt. Always test that the URL really downloads (see VERIFY in     |
-  |  step 2) before relying on it.                                         |
+  |  Each file url must be a DIRECT link that downloads the file (a public |
+  |  FTP/HTTP link, e.g. ftp.pride.ebi.ac.uk), NOT a web / landing page.   |
+  |  update.sh checks sizes; a dead or landing-page url means the dataset  |
+  |  cannot be rebuilt.                                                    |
   +------------------------------------------------------------------------+
 
 
 --------------------------------------------------------------------------------
- WHERE THINGS LIVE
+ LAYOUT
 --------------------------------------------------------------------------------
 
-The repo stores only text -- descriptions, lists, and scripts -- never the heavy
-data files. Data is downloaded on demand and uploaded to the storage bucket; the
-website is built from whatever is in that bucket.
+  data/<tile>/_tile.yaml        tile header (name, colour, blurb, provenance)
+  data/<tile>/<id>/<id>.yaml    ONE descriptor per dataset   <-- you edit these
+  data/<tile>/<id>/...          downloaded + converted data  (git-ignored)
+  data/<tile>/_catalog.md       GENERATED from the YAML -- do NOT hand-edit
+  data/TEMPLATE.yaml            copy this to start a new dataset
 
-  WHAT                            WHERE                       KEPT IN GIT?
-  -----------------------------   -------------------------   ----------------
-  Scripts, lists, this guide      scripts/  manifest/         yes
-  Tile + dataset descriptions     data/<tile>/_catalog.md     yes
-  Downloaded + converted files    data/<tile>/<dataset>/      no (ignored by git)
-  Published website + data        in the bucket               no
-
-The corpus is split into 6 fixed groups, called TILES. A folder is a tile only
-if it contains a data/<tile>/_catalog.md file.
-
-  TILE FOLDER         WEB NAME     WHERE ITS DOWNLOAD URLS GO
-  -----------------   ----------   ---------------------------------------------
-  general-ms          general-ms   scripts/fetch-examples.sh  (open formats)
-                                   manifest/general-ms-files.tsv  (vendor files)
-  ims-examples        ims          manifest/ims-files.tsv
-  imzml-examples      imaging      scripts/fetch-examples.sh
-  sdrf-examples       sdrf         scripts/fetch-examples.sh
-  tof-grid-examples   tof-grid     manifest/datasets.tsv
-  pwiz-examples       pwiz-tests   manifest/pwiz-files.txt
-
-A dataset shows on the website because its files are in the bucket under
-<tile>/<dataset>/. Its _catalog.md entry only adds the description text.
-
-Only scripts/build-corpus-site.sh may publish the site. Do not edit it, or the
-two scripts it runs (make-s3-index.py, make-ratio-plots.py).
-
-Uploading needs storage credentials (set once: aws configure --profile stackit).
-Downloading needs none.
+Only the YAML files (and the generated _catalog.md) are committed; the data
+itself is never committed. The 6 tiles: general-ms, ims-examples, imzml-examples,
+sdrf-examples, tof-grid-examples, pwiz-examples.
 
 
 --------------------------------------------------------------------------------
- 1. ADD A DATASET
+ THE DESCRIPTOR  (data/<tile>/<id>/<id>.yaml)
 --------------------------------------------------------------------------------
 
-Use one short name everywhere: the folder data/<tile>/<dataset>/, the bucket
-path, and the "### <dataset>" line in the catalog.
+  id: PXD000155                 # dataset id = its folder name
+  tile: general-ms              # which tile
+  title: Thermo LTQ Velos       # short label
+  description: >                # one or two sentences
+    PRIDE . Thermo LTQ Velos -- GeLC-MS, vendor raw .raw.
+  files:                        # every file to retrieve (direct FTP/HTTP links)
+    - url: https://ftp.pride.ebi.ac.uk/.../run.raw
+      path: run.raw             # where it lands under the folder
+      bytes: 16809984           # optional, verified after download
+  convert:                      # optional; omit to convert with defaults
+    flags: --via-msconvert      #   extra mzpeak-convert flags
+    # input: <unit>             #   convert a specific unit instead of auto-detect
+    # skip: true                #   keep the raw as-is, do not convert
 
-  STEP 1  Put a working download URL where its tile expects it (step 2).
-  STEP 2  Download (and convert, if needed) into  data/<tile>/<dataset>/.
-  STEP 3  Upload it to the bucket:
-              export AWS_PROFILE=stackit
-              EP=https://object.storage.eu01.onstackit.cloud
-              aws --endpoint-url "$EP" s3 cp \
-                  data/<tile>/<dataset>  s3://v09/<tile>/<dataset>  --recursive
-  STEP 4  Describe it in  data/<tile>/_catalog.md  (step 3).
-  STEP 5  Publish:   bash scripts/build-corpus-site.sh
-
-
---------------------------------------------------------------------------------
- 2. THE DOWNLOAD URL  --  WHERE IT GOES, AND HOW TO TEST IT
---------------------------------------------------------------------------------
-
-It must be a direct link that downloads the file (see the box at the top).
-Put it in the source for the tile:
-
-  Open formats (general-ms, imzml-examples, sdrf-examples)
-      scripts/fetch-examples.sh -- add a line in that tile's fetch_* function:
-          dl "https://ftp.pride.ebi.ac.uk/.../run.mzML"  "<dataset>/run.mzML"
-
-  general-ms vendor files       manifest/general-ms-files.tsv  (tab-separated):
-      accession <TAB> source <TAB> instrument <TAB> file <TAB> bytes <TAB> url
-      (join several files of one run with ';')
-
-  ims-examples                  manifest/ims-files.tsv:
-      accession <TAB> source <TAB> instrument <TAB> type <TAB> bytes <TAB> url
-
-  tof-grid-examples             manifest/datasets.tsv:
-      tile <TAB> folder <TAB> accession <TAB> source <TAB> urls <TAB> unpack
-           <TAB> file-to-convert <TAB> options <TAB> notes
-
-  pwiz-examples                 manifest/pwiz-files.txt   (one path per line)
-
-  Note: files held at MassIVE use a special link form --
-      https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV.../<path>&forceDownload=true
-
-VERIFY the URL really downloads before relying on it:
-      bash scripts/fetch-examples.sh <tile>      # open formats
-      bash scripts/fetch-general-ms.sh           # general-ms files
-      bash scripts/fetch-ims.sh                  # ims files
-      ./build_data.sh tof-grid-examples          # tof-grid
-  If a file fails to download, fix the URL -- do not go further.
+  Multi-file unit (e.g. SCIEX .wiff + .wiff.scan): list each file.
+  Zip archive to unpack in place: add  unpack: zip  to that file entry.
 
 
 --------------------------------------------------------------------------------
- 3. THE DESCRIPTION  (data/<tile>/_catalog.md)
+ WHAT update.sh DOES  (and running parts of it)
 --------------------------------------------------------------------------------
 
-The file opens with a header (between the --- lines) describing the TILE, then a
-"## datasets" list with one "### <name>" entry per dataset:
+  scripts/update.sh                              # all datasets
+  scripts/update.sh data/<tile>/<id>/<id>.yaml   # just one
+  scripts/update.sh --id PXD000155
+  scripts/update.sh --dry-run                    # local only, do not touch the bucket
 
-  ---
-  slug: <web name>          used in the page address; keep it unique
-  title: <Tile Title>
-  icon: <emoji>
-  accent: #1558d6           the tile's colour
-  imaging: false            true only for the imaging tile
-  order: 1                  position on the landing page
-  ---
+  Steps:  1 download  2 convert  3 upload  4 rebuild catalogs  5 publish site
+  Skip a step:  --no-convert   --no-upload   --no-publish
+  Every step is idempotent -- re-running only does what is missing.
 
-  <one sentence describing the tile>
+  Config (env): ENDPOINT, BUCKET (v09), AWS_PROFILE (stackit),
+                MZPEAK_CONVERT=/path/to/mzpeak-convert
+  Upload/publish need storage credentials; downloading does not.
+  The YAML tools need PyYAML:  pip install pyyaml
 
-  <b>Provenance.</b> <one sentence: where the data came from>
 
-  ## datasets
+--------------------------------------------------------------------------------
+ ADD A NEW TILE   (rare -- the tiles are fixed)
+--------------------------------------------------------------------------------
 
-  ### <dataset>             must EXACTLY match the bucket folder <tile>/<dataset>/
-  <one sentence: source . instrument -- what it is, plus a citation>
-
-The "### <dataset>" name must match the bucket folder exactly, or the text will
-not attach to the dataset.
+  Copy an existing data/<tile>/_tile.yaml to data/<newtile>/_tile.yaml, set
+  slug/title/icon/accent/imaging/order/blurb/provenance, add datasets as above,
+  then run scripts/update.sh.
 
 
 --------------------------------------------------------------------------------
  REMOVE A DATASET
 --------------------------------------------------------------------------------
 
-  1. Delete from storage:
-         aws --endpoint-url "$EP" s3 rm  s3://v09/<tile>/<dataset>  --recursive
-  2. Delete its "### <dataset>" block from  data/<tile>/_catalog.md
-  3. Delete its URL line/row from the source listed in step 2 above
-  4. (optional)  rm -rf data/<tile>/<dataset>
-  5. Publish:  bash scripts/build-corpus-site.sh   (drops its page automatically)
+  1. rm -rf data/<tile>/<id>                                   # descriptor + local data
+  2. aws --endpoint-url "$EP" s3 rm s3://v09/<tile>/<id> --recursive
+  3. scripts/update.sh --no-convert                            # rebuild + republish (prunes the page)
 
-  To remove a whole tile, also delete  s3://v09/<tile>/_catalog.md.
+  To remove a whole tile, also delete data/<tile>/_tile.yaml and
+  s3://v09/<tile>/_catalog.md.
 
 
 --------------------------------------------------------------------------------
  IN ONE LINE
 --------------------------------------------------------------------------------
 
-  A file in storage makes a dataset appear; its _catalog.md entry describes it;
-  a working download URL keeps it rebuildable; build-corpus-site.sh publishes it.
+  Edit a YAML descriptor, run scripts/update.sh -- it downloads, converts,
+  uploads, regenerates the catalogs, and publishes the site.
 
 ================================================================================
