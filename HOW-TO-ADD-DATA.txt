@@ -2,223 +2,170 @@
   HOW TO ADD / REMOVE A DATASET            mzpeak-example-data
 ================================================================================
 
-Where things live, and the exact edits to add a dataset to a tile, wire up its
-on-demand download, write its description, and remove it again.
+To add a dataset you need three things, all using the SAME short name for it
+(for example PXD012345):
 
-All paths are RELATIVE TO THE REPO ROOT (the directory that holds build_data.sh).
-The repo is self-contained: clone it and everything works -- no machine-specific
-paths required.
+  1. A WORKING DOWNLOAD URL     so the file can be fetched again
+  2. THE FILE IN STORAGE        in the bucket, under  <tile>/<dataset>/
+  3. A SHORT DESCRIPTION        in  data/<tile>/_catalog.md
+
+Then one command publishes everything:   bash scripts/build-corpus-site.sh
+
+All paths are relative to the repo root (the folder that holds build_data.sh).
+Clone the repo and it works as-is; nothing points at a personal machine.
+
+  +------------------------------------------------------------------------+
+  |  THE URL MUST ACTUALLY WORK                                            |
+  |                                                                        |
+  |  Use a DIRECT link that downloads the file when you open it -- the     |
+  |  public FTP link (e.g. ftp.pride.ebi.ac.uk or ftp.ebi.ac.uk, reached   |
+  |  over http/https), NOT the dataset's web / landing page.               |
+  |                                                                        |
+  |  A landing-page URL, or a dead link, means the dataset can never be    |
+  |  rebuilt. Always test that the URL really downloads (see VERIFY in     |
+  |  step 2) before relying on it.                                         |
+  +------------------------------------------------------------------------+
 
 
 --------------------------------------------------------------------------------
- 0. LAYOUT
+ WHERE THINGS LIVE
 --------------------------------------------------------------------------------
 
-This repo is "describe, don't store": it commits descriptions, manifests and
-scripts, never the heavy data. The data is RECONSTRUCTED by the scripts and
-PUBLISHED to an object store.
+The repo stores only text -- descriptions, lists, and scripts -- never the heavy
+data files. Data is downloaded on demand and uploaded to the storage bucket; the
+website is built from whatever is in that bucket.
 
-  WHAT                                 WHERE                       IN GIT?
-  ----------------------------------   -------------------------   ----------------
-  Scripts / manifests / recipes        scripts/  manifest/         yes
-                                       build_data.sh
-  Tile + dataset descriptions          data/<tile>/_catalog.md     yes
-  Downloaded raw + converted .mzpeak   data/<tile>/<dataset>/...   no (gitignored)
-  Published site + data objects        s3://$BUCKET/<tile>/...     no
+  WHAT                            WHERE                       KEPT IN GIT?
+  -----------------------------   -------------------------   ----------------
+  Scripts, lists, this guide      scripts/  manifest/         yes
+  Tile + dataset descriptions     data/<tile>/_catalog.md     yes
+  Downloaded + converted files    data/<tile>/<dataset>/      no (ignored by git)
+  Published website + data        in the bucket               no
 
-.gitignore excludes every data binary (*.raw, *.mzpeak, *.mzML, *.wiff*, *.d/,
-*.ibd, *.zip, ...), so files downloaded or converted under data/<tile>/<dataset>/
-are never committed -- while each tile's _catalog.md IS committed.
+The corpus is split into 6 fixed groups, called TILES. A folder is a tile only
+if it contains a data/<tile>/_catalog.md file.
 
-
-  THE 6 FIXED TILES
-  -----------------
-  A directory is a tile ONLY if it has a data/<tile>/_catalog.md. Tiles are fixed.
-
-  TILE DIR            SLUG         DOWNLOAD MECHANISM
+  TILE FOLDER         WEB NAME     WHERE ITS DOWNLOAD URLS GO
   -----------------   ----------   ---------------------------------------------
-  general-ms          general-ms   open mzML  -> scripts/fetch-examples.sh
-                                   vendor raw -> manifest/general-ms-files.tsv
-                                                 + scripts/fetch-general-ms.sh
-  ims-examples        ims          manifest/ims-files.tsv + scripts/fetch-ims.sh
+  general-ms          general-ms   scripts/fetch-examples.sh  (open formats)
+                                   manifest/general-ms-files.tsv  (vendor files)
+  ims-examples        ims          manifest/ims-files.tsv
   imzml-examples      imaging      scripts/fetch-examples.sh
   sdrf-examples       sdrf         scripts/fetch-examples.sh
   tof-grid-examples   tof-grid     manifest/datasets.tsv
-                                   + build_data.sh (vendor_tile)
-  pwiz-examples       pwiz-tests   scripts/fetch-examples.sh
-                                   + manifest/pwiz-files.txt
+  pwiz-examples       pwiz-tests   manifest/pwiz-files.txt
 
+A dataset shows on the website because its files are in the bucket under
+<tile>/<dataset>/. Its _catalog.md entry only adds the description text.
 
-  HOW THE SITE DECIDES WHAT TO SHOW
-  ---------------------------------
-  scripts/make-s3-index.py builds the site FROM THE LIVE OBJECT-STORE LISTING:
+Only scripts/build-corpus-site.sh may publish the site. Do not edit it, or the
+two scripts it runs (make-s3-index.py, make-ratio-plots.py).
 
-    * A dataset APPEARS on a tile because its files exist under
-      s3://$BUCKET/<tile>/<dataset>/.
-    * The matching "### <dataset>" block in data/<tile>/_catalog.md only supplies
-      its DESCRIPTION. No block => the dataset still shows, just undescribed.
-    * A tile appears ONLY if s3://$BUCKET/<tile>/_catalog.md exists (allowlist gate).
-
-  scripts/build-corpus-site.sh is the ONLY supported way to (re)generate and
-  publish the site. It reads catalogs from CATALOG_ROOT (default: this repo's
-  data/), uploads the _catalog.md markers, lists the bucket, runs make-s3-index.py
-  + make-ratio-plots.py, deploys, and prunes stale pages.
-
-  DO NOT edit build-corpus-site.sh, make-s3-index.py, or make-ratio-plots.py, and
-  never publish the site any other way.
-
-
-  PUBLISHING CONFIG (object store)
-  --------------------------------
-  Publishing needs WRITE credentials. All overridable via env (defaults shown):
-      ENDPOINT      https://object.storage.eu01.onstackit.cloud
-      BUCKET        v09
-      AWS_PROFILE   stackit      (set up once: aws configure --profile stackit)
-  DOWNLOADS need NO credentials (public sources).
+Uploading needs storage credentials (set once: aws configure --profile stackit).
+Downloading needs none.
 
 
 --------------------------------------------------------------------------------
- (a) ADD A DATASET TO A SPECIFIC TILE
+ 1. ADD A DATASET
 --------------------------------------------------------------------------------
 
-The dataset directory name (e.g. PXD012345 or thermo-astral) is used IDENTICALLY
-in three places: the local dir data/<tile>/<dataset>/, the S3 prefix, and the
-"### <dataset>" catalog block. Keep them the same.
+Use one short name everywhere: the folder data/<tile>/<dataset>/, the bucket
+path, and the "### <dataset>" line in the catalog.
 
-  1. Get the bytes onto S3 under s3://$BUCKET/<tile>/<dataset>/...
-     Download/convert locally into data/<tile>/<dataset>/ (see (b)), then push:
-
-         export AWS_PROFILE=stackit
-         EP=https://object.storage.eu01.onstackit.cloud        # or your $ENDPOINT
-         aws --endpoint-url "$EP" s3 cp \
-             data/<tile>/<dataset> s3://v09/<tile>/<dataset> --recursive
-
-     For the open tiles, converted .mzpeak can be pushed with scripts/sync-s3.sh.
-
-  2. Describe it -- see (c).
-
-  3. Publish:
-         bash scripts/build-corpus-site.sh
+  STEP 1  Put a working download URL where its tile expects it (step 2).
+  STEP 2  Download (and convert, if needed) into  data/<tile>/<dataset>/.
+  STEP 3  Upload it to the bucket:
+              export AWS_PROFILE=stackit
+              EP=https://object.storage.eu01.onstackit.cloud
+              aws --endpoint-url "$EP" s3 cp \
+                  data/<tile>/<dataset>  s3://v09/<tile>/<dataset>  --recursive
+  STEP 4  Describe it in  data/<tile>/_catalog.md  (step 3).
+  STEP 5  Publish:   bash scripts/build-corpus-site.sh
 
 
 --------------------------------------------------------------------------------
- (b) WIRE UP ON-DEMAND DOWNLOAD  --  WHERE THE URL GOES
+ 2. THE DOWNLOAD URL  --  WHERE IT GOES, AND HOW TO TEST IT
 --------------------------------------------------------------------------------
 
-Put the URL in the source matching the tile's mechanism (table in section 0).
+It must be a direct link that downloads the file (see the box at the top).
+Put it in the source for the tile:
 
+  Open formats (general-ms, imzml-examples, sdrf-examples)
+      scripts/fetch-examples.sh -- add a line in that tile's fetch_* function:
+          dl "https://ftp.pride.ebi.ac.uk/.../run.mzML"  "<dataset>/run.mzML"
 
-  Open-format example (mzML / imzML / sdrf)  ->  scripts/fetch-examples.sh
-  ------------------------------------------------------------------------
-  Add a "dl" line in that tile's fetch_* function. Path is relative to
-  data/<tile>/ :
+  general-ms vendor files       manifest/general-ms-files.tsv  (tab-separated):
+      accession <TAB> source <TAB> instrument <TAB> file <TAB> bytes <TAB> url
+      (join several files of one run with ';')
 
-      dl "https://.../run.mzML"  "<dataset>/run.mzML"
+  ims-examples                  manifest/ims-files.tsv:
+      accession <TAB> source <TAB> instrument <TAB> type <TAB> bytes <TAB> url
 
-      # MassIVE has no range/resume -- add the 3rd arg:
-      dl "$M?file=f.MSV.../peak/run.mzML&forceDownload=true" \
-         "<dataset>/run.mzML" --no-resume
+  tof-grid-examples             manifest/datasets.tsv:
+      tile <TAB> folder <TAB> accession <TAB> source <TAB> urls <TAB> unpack
+           <TAB> file-to-convert <TAB> options <TAB> notes
 
+  pwiz-examples                 manifest/pwiz-files.txt   (one path per line)
 
-  general-ms vendor raw  ->  manifest/general-ms-files.tsv
-  -------------------------------------------------------
-  Read by scripts/fetch-general-ms.sh into data/general-ms/<accession>/.
-  TAB-separated; ';'-join multi-file units (e.g. .wiff + .wiff.scan):
+  Note: files held at MassIVE use a special link form --
+      https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV.../<path>&forceDownload=true
 
-      accession <TAB> repo <TAB> vendor <TAB> unit <TAB> expected_bytes <TAB> url1;url2
-
-
-  ims-examples raw  ->  manifest/ims-files.tsv
-  -------------------------------------------
-  Read by scripts/fetch-ims.sh into data/ims-examples/<accession>/:
-
-      accession <TAB> repo <TAB> vendor <TAB> im_type <TAB> expected_bytes <TAB> url
-
-
-  tof-grid-examples vendor raw  ->  manifest/datasets.tsv
-  ------------------------------------------------------
-  Read by build_data.sh (vendor_tile) into data/<tile>/<dir>/, then converted:
-
-      tile <TAB> dir <TAB> accession <TAB> repo <TAB> files <TAB> unpack
-           <TAB> convert_input <TAB> flags <TAB> notes
-
-        files          ';'-separated URLs, or "-"  (no stable URL -> the build
-                       prints the dataset page to fetch manually)
-        unpack         zip | none
-        convert_input  path under the dir, or "auto"
-
-
-  pwiz-examples  ->  manifest/pwiz-files.txt
-  -----------------------------------------
-  Add the path (fetched from the public ProteoWizard mirror by fetch-examples.sh).
-
-
-  VERIFY the URL by actually fetching:
-      bash scripts/fetch-examples.sh <tile>     # open-format tiles
-      bash scripts/fetch-general-ms.sh          # general-ms vendor raw
-      bash scripts/fetch-ims.sh                 # ims raw
-      ./build_data.sh tof-grid-examples         # tof-grid (fetch + convert)
-
-  (Keep data elsewhere? Override the dir, e.g. IMS_OUT=... for fetch-ims.sh.)
+VERIFY the URL really downloads before relying on it:
+      bash scripts/fetch-examples.sh <tile>      # open formats
+      bash scripts/fetch-general-ms.sh           # general-ms files
+      bash scripts/fetch-ims.sh                  # ims files
+      ./build_data.sh tof-grid-examples          # tof-grid
+  If a file fails to download, fix the URL -- do not go further.
 
 
 --------------------------------------------------------------------------------
- (c) DESCRIPTIONS  --  DATASET AND TILE (both in data/<tile>/_catalog.md)
+ 3. THE DESCRIPTION  (data/<tile>/_catalog.md)
 --------------------------------------------------------------------------------
+
+The file opens with a header (between the --- lines) describing the TILE, then a
+"## datasets" list with one "### <name>" entry per dataset:
 
   ---
-  slug: <url-slug>            the .html page name; keep unique
+  slug: <web name>          used in the page address; keep it unique
   title: <Tile Title>
-  icon: <emoji>              shown on the card
-  accent: #1558d6            hex; tile + ratio-figure colour
-  imaging: false             true only for the imaging tile
-  order: 1                   sort position on the landing page
+  icon: <emoji>
+  accent: #1558d6           the tile's colour
+  imaging: false            true only for the imaging tile
+  order: 1                  position on the landing page
   ---
 
-  <one-paragraph TILE blurb shown on the card>
+  <one sentence describing the tile>
 
-  <b>Provenance.</b> <one paragraph: archives, accessions, vendor/analyzer span>
+  <b>Provenance.</b> <one sentence: where the data came from>
 
   ## datasets
 
-  ### <dataset>              MUST equal the S3 prefix  s3://$BUCKET/<tile>/<dataset>/
-  <one-paragraph DATASET description: repo . instrument -- modality, format, cite>
+  ### <dataset>             must EXACTLY match the bucket folder <tile>/<dataset>/
+  <one sentence: source . instrument -- what it is, plus a citation>
 
-  - TILE description    = frontmatter + blurb + the "Provenance." paragraph.
-  - DATASET description = a "### <dataset>" heading + the paragraph under it.
-  - The "### <dataset>" name MUST match the S3 prefix exactly, or the description
-    will not attach.
-
-  (A brand-new tile would also need a make-ratio-plots.py ACCENT entry for its
-  figure colour -- but tiles are fixed, so normally you only add datasets.)
+The "### <dataset>" name must match the bucket folder exactly, or the text will
+not attach to the dataset.
 
 
 --------------------------------------------------------------------------------
  REMOVE A DATASET
 --------------------------------------------------------------------------------
 
-  1. S3 data:
-         aws --endpoint-url "$EP" s3 rm s3://v09/<tile>/<dataset> --recursive
-  2. Description:
-         delete the "### <dataset>" block from data/<tile>/_catalog.md
-  3. Download recipe:
-         delete its line/row from the relevant source -- a fetch-examples.sh
-         "dl" line, or a manifest/*-files.tsv / datasets.tsv / pwiz-files.txt row
-  4. Local copies (optional):
-         rm -rf data/<tile>/<dataset>
-  5. Publish:
-         bash scripts/build-corpus-site.sh     (re-lists the bucket, auto-prunes)
+  1. Delete from storage:
+         aws --endpoint-url "$EP" s3 rm  s3://v09/<tile>/<dataset>  --recursive
+  2. Delete its "### <dataset>" block from  data/<tile>/_catalog.md
+  3. Delete its URL line/row from the source listed in step 2 above
+  4. (optional)  rm -rf data/<tile>/<dataset>
+  5. Publish:  bash scripts/build-corpus-site.sh   (drops its page automatically)
 
-  To remove an entire TILE, also delete s3://v09/<tile>/_catalog.md (the builder
-  then drops it from the allowlist).
+  To remove a whole tile, also delete  s3://v09/<tile>/_catalog.md.
 
 
 --------------------------------------------------------------------------------
- ONE-LINE RECAP
+ IN ONE LINE
 --------------------------------------------------------------------------------
 
-  Bytes on S3 make a dataset APPEAR;  data/<tile>/_catalog.md makes it DESCRIBED;
-  the fetch source (fetch-examples.sh / manifest/*.tsv / pwiz-files.txt) makes it
-  REBUILDABLE;  and build-corpus-site.sh is the ONLY thing that PUBLISHES any of it.
+  A file in storage makes a dataset appear; its _catalog.md entry describes it;
+  a working download URL keeps it rebuildable; build-corpus-site.sh publishes it.
 
 ================================================================================
