@@ -37,6 +37,21 @@ def load(path):
     return yaml.safe_load(open(path))
 
 
+def load_dataset(path):
+    """Load a dataset descriptor and make the FOLDER authoritative: id and tile are taken from
+    data/<tile>/<id>/, and any id:/tile: written in the file must match (else a clear error). So
+    copying the template into the right folder is enough -- you can't silently mis-file a dataset."""
+    d = load(path) or {}
+    rel = os.path.relpath(os.path.abspath(path), DATA).split(os.sep)
+    if len(rel) >= 3:                                    # data/<tile>/<id>/<file>
+        for key, val in (("tile", rel[0]), ("id", rel[1])):
+            if d.get(key) not in (None, "", val):
+                sys.exit(f"{path}: '{key}: {d[key]}' does not match its folder '{val}' — "
+                         f"rename the folder/file to the id, or fix the field.")
+            d[key] = val
+    return d
+
+
 def tiles():
     return sorted(os.path.basename(os.path.dirname(p))
                   for p in glob.glob(os.path.join(DATA, "*", "_tile.yaml")))
@@ -60,7 +75,7 @@ def resolve(args):
         return dataset_descriptors()
     if "--id" in args:
         wid = args[args.index("--id") + 1]
-        hits = [p for p in dataset_descriptors() if load(p).get("id") == wid]
+        hits = [p for p in dataset_descriptors() if load_dataset(p).get("id") == wid]
         if not hits:
             sys.exit(f"no dataset descriptor with id {wid}")
         return hits
@@ -69,5 +84,5 @@ def resolve(args):
 
 if __name__ == "__main__":
     for p in resolve(sys.argv[1:]):
-        d = load(p)
+        d = load_dataset(p)
         print(f"{p}\t{d['tile']}\t{d['id']}")

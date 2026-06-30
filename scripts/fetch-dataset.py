@@ -30,7 +30,7 @@ def _curl(url, target):
 
 
 def fetch_one(dpath):
-    d = C.load(dpath)
+    d = C.load_dataset(dpath)
     dest = os.path.join(C.DATA, d["tile"], d["id"])
     os.makedirs(dest, exist_ok=True)
     files = d.get("files") or []

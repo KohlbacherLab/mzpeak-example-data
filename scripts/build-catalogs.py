@@ -31,7 +31,7 @@ def main():
                           open(cat).read().partition("\n## datasets")[2], re.M) if os.path.exists(cat) else []
         ds = {}
         for p in C.dataset_descriptors(tile):
-            d = C.load(p); ds[d["id"]] = d
+            d = C.load_dataset(p); ds[d["id"]] = d
         order = [i for i in prev if i in ds] + sorted(i for i in ds if i not in prev)
 
         blocks = []

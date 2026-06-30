@@ -41,7 +41,7 @@ def find_unit(dd, spec):
 
 
 def convert_one(dpath, conv):
-    d = C.load(dpath)
+    d = C.load_dataset(dpath)
     cv = d.get("convert") or {}
     if cv.get("skip"):
         return 0
