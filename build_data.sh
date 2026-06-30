@@ -20,9 +20,9 @@ set -uo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$ROOT" || exit 1
 
-# Tiles build_data.sh can reconstruct from public repos. raw-replacements (locally-derived
-# subsets) and demo (seeded from the imzml-examples conversion) are documented but not auto-built.
-ALL_TILES="mzML-examples imzml-examples sdrf-examples pwiz-examples raw-bench tof-grid-examples vendor-agilent-sciex vendor-waters vendor-bruker-baf"
+# Tiles build_data.sh can reconstruct from public repos. demo (seeded from the imzml-examples
+# conversion) is documented but not auto-built.
+ALL_TILES="mzML-examples imzml-examples sdrf-examples pwiz-examples tof-grid-examples"
 TILES="${*:-$ALL_TILES}"
 SKIP_FETCH="${SKIP_FETCH:-0}"
 SKIP_CONVERT="${SKIP_CONVERT:-0}"
@@ -132,7 +132,7 @@ vendor_tile(){  # <tile>  — process all manifest rows whose 'tile' matches
   while IFS=$'\t' read -r tile dir accession repo files unpack cinput flags notes; do
     [ "${tile#\#}" != "$tile" ] && continue          # comment
     [ "$tile" = tile ] && continue                    # header
-    # match the tile OR a "tile/subdir" row (e.g. vendor-agilent-sciex/sciex)
+    # match the tile OR a "tile/subdir" row
     case "$tile" in "$want"|"$want"/*) ;; *) continue ;; esac
     local dest="$ROOT/data/$tile/$dir"
     say "$tile/$dir  ($accession, $repo)"
@@ -181,9 +181,9 @@ for tile in $TILES; do
     imzml-examples)  run_fetch "$tile"; convert_glob "$tile" '*.imzML' ;;
     sdrf-examples)   run_fetch "$tile"; convert_glob "$tile" '*.mzML' ;;
     pwiz-examples)   run_fetch "$tile"; convert_glob "$tile" '*.mzML' ;;
-    raw-bench|tof-grid-examples|vendor-agilent-sciex|vendor-waters|vendor-bruker-baf)
+    tof-grid-examples)
       vendor_tile "$tile" ;;
-    raw-replacements|demo)
+    demo)
       say "  '$tile' is documented but not auto-built — see data/$tile/README.md" ;;
     *) say "  unknown tile '$tile' — skipping" ;;
   esac

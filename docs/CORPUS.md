@@ -28,10 +28,8 @@ data** (not publicly downloadable) are flagged explicitly.
   accession is always given alongside.
 - Sizes are **on-disk** (`du -h`) where the data is present locally, otherwise the recorded
   byte-size benchmark. `.d` / `.wiff` / imzML are multi-file units — size is the whole unit.
-- The converter **does not read vendor raw as a conversion input for the size benchmarks** in
-  `raw-examples/` (those are size/compression references only). Native readers (Thermo `.raw`,
-  Bruker TDF/TSF/BAF, SCIEX `.wiff`, Agilent `.d`, Waters `.raw`) are exercised separately by the
-  e2e corpus and the vendor-CI manifest.
+- Native readers (Thermo `.raw`, Bruker TDF/TSF/BAF, SCIEX `.wiff`, Agilent `.d`, Waters `.raw`)
+  are exercised separately by the e2e corpus and the vendor-CI manifest.
 
 ---
 
@@ -123,7 +121,6 @@ data** (not publicly downloadable) are flagged explicitly.
 
 | Instrument / analyzer | Format | Accession | Description | Approx size | Where to obtain |
 |---|---|---|---|--:|---|
-| LCMS-9030 Q-TOF | raw (size ref) | MetaboLights **MTBLS13204** | `raw-examples/shimadzu-lcms9030-MTBLS13204/raw/` — Shimadzu Q-TOF (new-vendor coverage) | 53 MB | MetaboLights: https://www.ebi.ac.uk/metabolights/MTBLS13204 |
 | LCMS-9030 Q-TOF | mzML | MetaboLights **MTBLS13204** | `Blind_P1_pos_012.mzML` — Shimadzu Q-TOF, positive mode | 38 MB | MetaboLights: https://www.ebi.ac.uk/metabolights/MTBLS13204 |
 
 ---
@@ -179,10 +176,7 @@ the project object store (`https://object.storage.eu01.onstackit.cloud/v09/...`,
 
 ### Notes on local layout
 
-- Vendor raw size-benchmark references: `data/raw-examples/` (dir names encode
-  `vendor-instrument-ACCESSION`, e.g. `thermo-ltq-orbitrap-velos-PXD000001`).
 - TOF grid (SWATH/DIA) raw corpus: `data/tof-grid-examples/` (dir names = accession).
-- Native Agilent + SCIEX raw: `data/vendor-agilent-sciex/{agilent,sciex}/ACCESSION/`.
 - mzML instrument sweep: `data/mzML-examples/` (one dir per instrument; per-dir READMEs
   carry exact bytes + URLs).
 - imzML imaging: `data/imzml-examples/` (one dir per source/modality).
@@ -230,7 +224,7 @@ Agilent / Waters / Shimadzu via `--via-msconvert` or the Windows native readers)
 ## Ion Mobility (IMS) tile — `data/ims-examples/` (added 2026-06-28)
 
 A dedicated tile collecting **all ion-mobility examples** (slug `ims`) across every IM technology and
-vendor. Existing IM datasets were **moved here** out of `mzML-examples` / `raw-examples`
+vendor. Existing IM datasets were **moved here** out of `mzML-examples`
 (`bruker-timstof-pro`, `bruker-timstof-MSV000101607`, `agilent-6560-dtims-imqtof`); the ProteoWizard
 vendor-reader IM fixtures stay in `pwiz-examples`. Catalog +
 resolved URLs: [`manifest/ims-demonstrators.tsv`](../manifest/ims-demonstrators.tsv) /
@@ -262,19 +256,10 @@ Metabolomics Workbench — the moved CEMS unit covers it) and **SCIEX SelexION/D
 Verified by **file content**, not path names (see the annotation-issues handoff). Consumers and
 content-based routers should rely on bytes, not the directory's vendor label.
 
-- **`raw-replacements/*-sub__*` are all Thermo.** Every `bruker-*`/`sciex-*`/`waters-*`-named
-  `*-sub__*` dir actually holds **Thermo** data (`.raw` files with the `Finnigan` `01 A1` header;
-  `local.mzML` produced by ThermoRawFileParser). Filenames give the real instrument
-  (`…_Ascend_…`, `…_Elite_…`). `PXD000320` (PNNL `QC_Shew`, a Thermo QC set) is replicated under
-  three different vendor labels. These are **Thermo placeholder substitutes** for the named
-  vendors' unavailable data — treat the *content* as Thermo.
 - **Empty/broken (removed locally; do not re-publish without re-fetch):**
   `tof-grid-examples/MSV000084856/Au010-VOC1-D1.D` — an Agilent `.d` skeleton (subdir tree, **0 data
   files**; `MSProfile.bin` empty/absent — the `.bin` 500'd on download, already noted under "Not
-  obtained"). And `raw-replacements/impact-ii-{inten32,real}-PXD071586` — now hold only a 0-byte
-  `dl.log`. **Not a failed download:** both held a valid ~556 MB `bruker-impact-ii-PXD071586.mzpeak`
-  that **passed validation through 2026-06-24**, then was emptied; the converted artifact was removed
-  (re-fetchable from PRIDE **PXD071586**), not "never completed."
+  obtained").
 - **Wrapper `.d` (label correct):** `…/raw/SBA415_Try.d` has no `analysis.tdf` at its top level —
   the real acquisition `SBA415(1) Try_…_8271.d` is nested one level down. The corpus harness
   (`tools/corpus_full.sh`, commit `0e5af0c`) **descends a single-child wrapper `.d`** and classifies

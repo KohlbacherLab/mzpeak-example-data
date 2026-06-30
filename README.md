@@ -58,7 +58,7 @@ missing `.mzpeak` outputs are (re)built. It locates `mzpeak-convert` via
 ├── docs/
 │   └── CORPUS.md          # the canonical inventory: every dataset, accession + download URL
 ├── manifest/
-│   ├── datasets.tsv       # machine-readable inventory for the vendor-raw tiles (drives build_data.sh)
+│   ├── datasets.tsv       # machine-readable inventory for the tof-grid vendor-raw tile (drives build_data.sh)
 │   ├── general-ms-demonstrators.tsv  # curated General MS broad-vendor showcase (accessions + DOIs)
 │   └── pwiz-files.txt     # list of ProteoWizard test mzML paths (fetched from the public mirror)
 ├── data/                  # MIRRORS the archive hierarchy — README.md per tile, NO binaries
@@ -66,13 +66,7 @@ missing `.mzpeak` outputs are (re)built. It locates `mzpeak-convert` via
 │   ├── imzml-examples/    #   MS-imaging imzML (+ ibd, optical TIFF)
 │   ├── pwiz-examples/     #   ProteoWizard vendor-reader test data
 │   ├── sdrf-examples/     #   SDRF/ISA study-design files
-│   ├── raw-bench/         #   vendor raw size/speed benchmark (raw→mzML→mzPeak)
-│   ├── raw-examples/      #   vendor raw SIZE references only (never converted)
-│   ├── raw-replacements/  #   locally-derived subset raws (documented, not auto-built)
 │   ├── tof-grid-examples/ #   QTOF SWATH/DIA (TOF-grid encoding)
-│   ├── vendor-agilent-sciex/  #   Agilent + SciEX raw (native readers)
-│   ├── vendor-waters/     #   Waters .raw (TWIMS)
-│   ├── vendor-bruker-baf/ #   Bruker BAF .d
 │   └── demo/              #   one showcase .mzpeak for the website/viewer
 └── scripts/
     ├── fetch-examples.sh         # unified downloader: mzML / imzml / sdrf / pwiz (curated, idempotent)
