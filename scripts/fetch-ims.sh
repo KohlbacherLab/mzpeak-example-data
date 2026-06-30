@@ -4,7 +4,7 @@
 set -uo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 MAN="$ROOT/manifest/ims-files.tsv"
-OUT="${IMS_OUT:-$HOME/Claude/mzPeak/data/ims-examples}"
+OUT="${IMS_OUT:-$ROOT/data/ims-examples}"
 say(){ printf '[%s] %s\n' "$(date +%H:%M:%S)" "$*"; }
 fsize(){ [ -f "$1" ] && { stat -f%z "$1" 2>/dev/null || stat -c%s "$1" 2>/dev/null; } || echo 0; }
 ok=0; fail=0; mism=0

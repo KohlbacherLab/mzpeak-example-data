@@ -153,7 +153,7 @@ DATASETS = {
 # imaging/order + a blurb paragraph + a provenance paragraph + a `## datasets` section of `### <name>`
 # descriptions). Build SUBSETS + DATASETS from those markers, REPLACING the literals above (which remain
 # only as a fallback when no catalogs are found). Edit the `_catalog.md` files — never these dicts.
-CATALOG_ROOT = os.environ.get("CATALOG_ROOT", os.path.expanduser("~/Claude/mzPeak/data"))
+CATALOG_ROOT = os.environ.get("CATALOG_ROOT", os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data"))
 
 def _load_catalogs(root):
     subs, dsets = {}, {}

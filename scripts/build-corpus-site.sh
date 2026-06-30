@@ -11,7 +11,7 @@
 #
 #  Usage:  bash scripts/build-corpus-site.sh [--dry-run]
 #  Env:    ENDPOINT, BUCKET=v09, AWS_PROFILE=stackit, OUTDIR=out/site,
-#          CATALOG_ROOT=$HOME/Claude/mzPeak/data   (where the <tile>/_catalog.md live)
+#          CATALOG_ROOT=<repo>/data   (defaults to THIS repo's data/, where the <tile>/_catalog.md live)
 # ════════════════════════════════════════════════════════════════════════════════════════════════
 set -uo pipefail
 cd "$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -19,7 +19,7 @@ EP="${ENDPOINT:-https://object.storage.eu01.onstackit.cloud}"
 B="${BUCKET:-v09}"
 PROFILE="${AWS_PROFILE:-stackit}"
 OUT="${OUTDIR:-out/site}"
-CATALOG_ROOT="${CATALOG_ROOT:-$HOME/Claude/mzPeak/data}"; export CATALOG_ROOT
+CATALOG_ROOT="${CATALOG_ROOT:-$PWD/data}"; export CATALOG_ROOT
 DRY=0; [ "${1:-}" = "--dry-run" ] && DRY=1
 AWS=(aws --profile "$PROFILE" --endpoint-url "$EP")
 say(){ echo "[$(date +%H:%M:%S)] $*"; }
