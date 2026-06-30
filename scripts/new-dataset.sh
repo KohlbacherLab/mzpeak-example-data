@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# new-dataset.sh <tile> <id> — scaffold a dataset descriptor from data/TEMPLATE.yaml.
+# new-dataset.sh <tile> <id> -- scaffold a dataset descriptor from data/TEMPLATE.yaml.
 #
 # Creates  data/<tile>/<id>/<id>.yaml  with id and tile already filled in. Then edit that file
 # (title, description, file urls) and add it:
