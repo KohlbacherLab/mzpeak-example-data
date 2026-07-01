@@ -127,9 +127,6 @@ MassIVE · Thermo Orbitrap Astral — DDA-TMT, native vendor raw `.raw`. Broad-v
 ### PXD018751
 PRIDE · Thermo LCQ Deca XP — IEF/SCX/RPLC proteomics, vendor raw `.raw` (zip). Broad-vendor demonstrator (raw only; one representative run).
 
-### PXD000155
-PRIDE · Thermo LTQ Velos — GeLC-MS, vendor raw `.raw`. Broad-vendor demonstrator (raw only; one representative run).
-
 ### PXD057269
 PRIDE · Thermo TSQ Altis — SRM, vendor raw `.raw`. Broad-vendor demonstrator (raw only; one representative run).
 
