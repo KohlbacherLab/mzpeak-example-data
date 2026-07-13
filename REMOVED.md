@@ -19,3 +19,24 @@ Both the native reader **and** the ProteoWizard/msconvert path (which uses the s
 fail identically, so the file itself is the problem — an old/edge-case 2010 LTQ Velos `.raw` that the
 modern reader rejects. No mzPeak can be produced from it, so the dataset was removed rather than kept
 as an unconvertible raw-only entry.
+
+## tof-grid-examples/PXD041903 — Agilent Q-TOF (removed 2026-07-13)
+
+**Reason: centroid-only at source.** `20190423_Alex7.d` has no profile data (`MSProfile.bin`
+absent / zero-length), so msconvert can only emit **centroid**. The TOF-Grid tile exists for the
+integer flight-time **profile** grid, which a centroid-only run cannot provide — no profile mzPeak
+can be produced for its purpose. Removed rather than kept as a centroid-only raw entry that doesn't
+serve the grid-encoding evaluation.
+
+## tof-grid-examples/PXD059765 — Agilent Q-TOF (removed 2026-07-13)
+
+**Reason: centroid-only at source.** Same as PXD041903 — `CON1_2.d` is centroid-only (no profile
+`MSProfile.bin`), so it yields only a centroid mzML/mzPeak and cannot serve the profile flight-time
+grid the TOF-Grid tile targets. Removed rather than kept as a centroid-only raw entry.
+
+## tof-grid-examples/PXD059108 — Bruker microTOF-Q BAF (removed 2026-07-13)
+
+**Reason: inconvertible on the hosted CI (out-of-memory / disk).** `lysate_000008.d.zip` is a
+**3.87 GB BAF** whose profile mzML deterministically **OOMs / disk-fills the hosted GitHub Actions
+runner** while msconvert writes it (confirmed 2×). It cannot be converted within the hosted-runner
+limits, so no mzPeak could be produced; removed rather than kept as a raw-only entry.
