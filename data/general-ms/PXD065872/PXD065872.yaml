@@ -7,3 +7,7 @@ files:
   path: 241213_Ozaki_Brain_1_SWATH.wiff
 - url: ftp://ftp.jpostdb.org/JPST003923/241213_Ozaki_Brain_1_SWATH.wiff.scan
   path: 241213_Ozaki_Brain_1_SWATH.wiff.scan
+
+convert:
+  input: auto
+  flags: --zstd-level 12   # native SCIEX (Clearcore2) — 2.5x faster + 29% smaller than --via-msconvert (no 66 GB mzML)

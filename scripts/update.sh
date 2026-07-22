@@ -51,10 +51,11 @@ if [ "$UPLOAD" = 1 ]; then
   for k in "${!IDS[@]}"; do
     d="data/${TILES[$k]}/${IDS[$k]}"
     # only upload data (raw + .mzpeak), never the descriptor or extract markers
-    if find "$d" -type f ! -name '*.yaml' ! -name '*.yml' ! -name '*.json' ! -name '*.extracted' | grep -q .; then
-      aws --profile "$PROFILE" --endpoint-url "$EP" s3 cp "$d" "s3://$B/${TILES[$k]}/${IDS[$k]}" \
-        --recursive --exclude '*.yaml' --exclude '*.yml' --exclude '*.json' --exclude '*.extracted' \
-        --only-show-errors && say "  uploaded ${IDS[$k]}" || say "  UPLOAD FAIL ${IDS[$k]}"
+    if find "$d" -type f ! -name '*.yaml' ! -name '*.yml' ! -name '*.json' ! -name '*.extracted' ! -name '*.sig' | grep -q .; then
+      # sync --size-only: (re)upload a file only when its SIZE differs from the bucket copy
+      aws --profile "$PROFILE" --endpoint-url "$EP" s3 sync "$d" "s3://$B/${TILES[$k]}/${IDS[$k]}" \
+        --size-only --exclude '*.yaml' --exclude '*.yml' --exclude '*.json' --exclude '*.extracted' --exclude '*.sig' \
+        --only-show-errors && say "  synced ${IDS[$k]}" || say "  UPLOAD FAIL ${IDS[$k]}"
     fi
   done
 else say "3/5 upload skipped"; fi

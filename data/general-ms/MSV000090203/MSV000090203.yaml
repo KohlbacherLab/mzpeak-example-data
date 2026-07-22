@@ -108,3 +108,9 @@ files:
 - url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000090203/raw/Firemaster_Lipidomics/FM_01_Pos.d/desktop.ini
   path: FM_01_Pos.d/desktop.ini
   bytes: 80
+convert:
+  input: auto
+  # --agilent-grid (pure-Rust MSProfile.bin lane) is the intended ~0.14x path but currently
+  # fails on this .d: "MSScan.xsd missing ScanRecordType / SpectrumParamsType". Until that parser
+  # bug is fixed, reproduce via the msconvert profile mzML -> flight-time grid recovery lane.
+  flags: --via-msconvert --tof-grid auto

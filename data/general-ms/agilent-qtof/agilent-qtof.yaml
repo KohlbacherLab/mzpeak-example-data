@@ -1,7 +1,12 @@
 id: agilent-qtof
 tile: general-ms
-title: Agilent 6490 triple-quad dMRM standard mix
-description: 'Zenodo 18502866 · Agilent 6490 triple-quad dMRM standard mix (chromatogram-only). <i>Note: directory name is legacy; the instrument is a QqQ, not a Q-TOF.</i>'
+title: Agilent LC-QTOF
+description: MetaboLights MTBLS14741 · Agilent LC-QTOF — C18 isoflavone, native vendor `.d` (replaces Zenodo 18502866, a mislabeled QqQ chromatogram-only mzML with no raw).
 files:
-- url: https://zenodo.org/api/records/18502866/files/MRM-standmix-5.mzML/content
-  path: MRM-standmix-5.mzML
+- url: https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS14741/FILES/RAW_FILES/240319-LL-LeeMaire_c18-isoflavone-pos-S25.d.zip
+  path: 240319-LL-LeeMaire_c18-isoflavone-pos-S25.d.zip
+  bytes: 210936045
+  unpack: zip
+convert:
+  input: 240319-LL-LeeMaire_c18-isoflavone-pos-S25.d   # start from vendor RAW; Agilent .d via msconvert (box)
+  flags: --via-msconvert --tof-grid auto --zstd-level 12   # compactify the integer flight-time grid msconvert discards (f64 m/z -> tof_index + {c0,c1})

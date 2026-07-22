@@ -40,3 +40,15 @@ grid the TOF-Grid tile targets. Removed rather than kept as a centroid-only raw 
 **3.87 GB BAF** whose profile mzML deterministically **OOMs / disk-fills the hosted GitHub Actions
 runner** while msconvert writes it (confirmed 2×). It cannot be converted within the hosted-runner
 limits, so no mzPeak could be produced; removed rather than kept as a raw-only entry.
+
+## general-ms/PXD044023 — Bruker amaZon ETD (removed 2026-07-14)
+
+**Reason: inconvertible — both native and msconvert fail.** `37090_B9-2_20140710003.d` (Bruker
+amaZon ETD ion trap, ~80 MB `.d.zip`) cannot be read by the native Bruker BAF reader (`libbaf2sql_c`
+returns exit 1) **nor** by ProteoWizard/msconvert (also exit 1, no mzML written) — both attempts run
+on the Windows box (converter 0.4.9), including the automatic native→msconvert fallback. The amaZon
+is an older ion-trap instrument whose `.d` payload is not a BAF variant either reader accepts, so no
+mzPeak can be produced. By contrast the Bruker **impact HD** BAF (PXD076861) reads natively fine — so
+this is specific to the amaZon/ion-trap format, not Bruker BAF in general. Removed rather than kept as
+an unconvertible raw-only entry. (Re-evaluate if the box converter is upgraded past 0.4.9 — newer
+native BAF readers may support it.)

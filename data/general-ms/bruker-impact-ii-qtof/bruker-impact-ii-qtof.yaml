@@ -1,7 +1,12 @@
 id: bruker-impact-ii-qtof
 tile: general-ms
 title: Bruker impact II UHR-QTOF
-description: MetaboLights MTBLS12824 · Bruker impact II UHR-QTOF.
+description: MetaboLights MTBLS14574 · Bruker impact II UHR-QTOF — native vendor `.d` (BAF) (replaces MTBLS12824, which deposited no raw).
 files:
-- url: https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS12824/FILES/21P0055_Tissue_Georges_NEG_N_01_17471.mzML
-  path: 21P0055_Tissue_Georges_NEG_N_01_17471.mzML
+- url: https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS14574/FILES/Chardonnay_neg_FM_1-1_01_20254.d.zip
+  path: Chardonnay_neg_FM_1-1_01_20254.d.zip
+  bytes: 604198300
+  unpack: zip
+convert:
+  input: FM_1-1_01_20254.d   # start from vendor RAW; Bruker .d (BAF) via msconvert (box)
+  flags: --via-msconvert

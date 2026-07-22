@@ -5,3 +5,8 @@ description: MetaboLights MTBLS3512 · Thermo LTQ FT Ultra — FT-ICR (marine di
 files:
 - url: https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS3512/FILES/mtab_BIOS_CRAM1620_1_072617_34.mzML
   path: mtab_BIOS_CRAM1620_1_072617_34.mzML
+- url: https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS3512/FILES/mtab_BIOS_CRAM1620_1_072617_34.RAW
+  path: mtab_BIOS_CRAM1620_1_072617_34.RAW
+  bytes: 231884992
+convert:
+  input: mtab_BIOS_CRAM1620_1_072617_34.RAW   # start from vendor RAW (Thermo native reader; needs .NET/box)

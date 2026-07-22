@@ -1,7 +1,13 @@
 id: sciex-qtrap-6500
 tile: general-ms
 title: SCIEX QTRAP 6500
-description: PRIDE PXD066465 · SCIEX QTRAP 6500 — scout-triggered MRM (host-cell proteins).
+description: MetaboLights MTBLS14853 · SCIEX QTRAP 6500 — native vendor `.wiff` (replaces PXD066465, which deposited no raw).
 files:
-- url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/02/PXD066465/Drug_substance_3_scheduled_MRM.mzML
-  path: Drug_substance_3_scheduled_MRM.mzML
+- url: https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS14853/FILES/RAW_FILES/En_PPY.wiff
+  path: En_PPY.wiff
+  bytes: 28483584
+- url: https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS14853/FILES/RAW_FILES/En_PPY.wiff.scan
+  path: En_PPY.wiff.scan
+  bytes: 2475148
+convert:
+  input: En_PPY.wiff          # start from vendor RAW (native SCIEX reader on the box)

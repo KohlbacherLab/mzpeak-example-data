@@ -6,3 +6,7 @@ files:
 - url: https://zenodo.org/api/records/10084132/files/imzML_LA-ESI.zip/content
   path: imzML_LA-ESI.zip
   unpack: zip
+convert:
+  # embed the pre-ablation optical image (its name doesn't match the <stem>-opticalimage auto-pattern).
+  # --image resolves relative to cwd (repo root when run via update.sh / convert-dataset.py).
+  flags: --image data/imzml-examples/zenodo-LA-ESI/imzML_LA-ESI/180817_Thaliana_leaf_bottom_1_0840_preabl_polX30.tif

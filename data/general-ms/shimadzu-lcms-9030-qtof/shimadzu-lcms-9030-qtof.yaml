@@ -5,3 +5,9 @@ description: MetaboLights MTBLS13204 · Shimadzu LCMS-9030 Q-TOF (seaweed metabo
 files:
 - url: https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS13204/FILES/DERIVED_FILES/Blind_P1_pos_012.mzML
   path: Blind_P1_pos_012.mzML
+- url: https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS13204/FILES/RAW_FILES/Blind_P1_pos_012.lcd
+  path: Blind_P1_pos_012.lcd
+  bytes: 55492608
+convert:
+  input: Blind_P1_pos_012.lcd   # start from vendor RAW; Shimadzu .lcd only via ProteoWizard msconvert (Windows/box)
+  flags: --via-msconvert

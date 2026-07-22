@@ -14,7 +14,7 @@ Non-imaging LC-/GC-MS instrument-vendor examples (Thermo, Bruker, SCIEX, Agilent
 ## datasets
 
 ### agilent-6490-triplequad
-PRIDE PXD041762 · Agilent 6490 triple-quad, SRM/dMRM (COVID-19 plasma).
+MetaboLights MTBLS648 · Agilent 6490 triple-quad — native vendor `.d` (replaces PXD041762, which deposited no raw).
 
 ### agilent-6560-dtims-imqtof
 Zenodo 18481720 · Agilent 6560 IM-QTOF — drift-tube ion mobility (DTIMS), CE-MS standard mix.
@@ -23,19 +23,19 @@ Zenodo 18481720 · Agilent 6560 IM-QTOF — drift-tube ion mobility (DTIMS), CE-
 MetaboLights MTBLS11550 · Agilent 8890 GC / 7000D — electron-ionization GC-MS.
 
 ### agilent-qtof
-Zenodo 18502866 · Agilent 6490 triple-quad dMRM standard mix (chromatogram-only). <i>Note: directory name is legacy; the instrument is a QqQ, not a Q-TOF.</i>
+MetaboLights MTBLS14741 · Agilent LC-QTOF — C18 isoflavone, native vendor `.d` (replaces Zenodo 18502866, a mislabeled QqQ chromatogram-only mzML with no raw).
 
 ### bruker-impact-ii-qtof
-MetaboLights MTBLS12824 · Bruker impact II UHR-QTOF.
+MetaboLights MTBLS14574 · Bruker impact II UHR-QTOF — native vendor `.d` (BAF) (replaces MTBLS12824, which deposited no raw).
 
 ### bruker-microtof-q2
 MetaboLights MTBLS520 · Bruker micrOTOF-Q II ESI-QTOF (bryophyte seasonal metabolomics; Peters et al. 2018).
 
 ### bruker-timstof-pro
-MassIVE MSV000101607 · Bruker timsTOF Pro — PASEF / TIMS ion mobility.
+MassIVE MSV000101607 · Bruker timsTOF Pro 2 — TIMS-PASEF proteomics (SBA415); native TDF .d.
 
 ### sciex-qtrap-6500
-PRIDE PXD066465 · SCIEX QTRAP 6500 — scout-triggered MRM (host-cell proteins).
+MetaboLights MTBLS14853 · SCIEX QTRAP 6500 — native vendor `.wiff` (replaces PXD066465, which deposited no raw).
 
 ### sciex-tripletof-6600
 Zenodo 17416537 · SCIEX TripleTOF 6600 — DIA / SWATH.
@@ -68,7 +68,7 @@ PRIDE PXD059878 · Thermo LTQ XL — pure linear ion trap (PC4 acetylation; Agra
 MassIVE MSV000100943 · Thermo Orbitrap Astral — high-throughput DIA plasma proteomics (Coon lab 2025).
 
 ### thermo-qexactive-plus
-Zenodo 17549994 · Thermo Q Exactive Plus (IBDMDB teaching re-deposit).
+MetaboLights MTBLS14885 · Thermo Q Exactive Plus — native vendor `.raw` (replaces Zenodo 17549994, an mzML-only re-deposit with no raw).
 
 ### waters-xevo-g2s-qtof
 MetaboLights MTBLS1129 · Waters Xevo G2-XS QTof — label-free metabolomics (colon cancer; Cai et al. 2020); also our SDRF fixture.

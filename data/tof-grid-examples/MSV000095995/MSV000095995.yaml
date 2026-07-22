@@ -11,4 +11,4 @@ files:
   path: 20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.wiff2
 convert:
   input: auto
-  flags: --via-msconvert
+  # native SCIEX reader (box vendor glue): true flight-time grid from vendor calibration, lossless.

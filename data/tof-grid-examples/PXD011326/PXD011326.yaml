@@ -9,4 +9,4 @@ files:
   path: VD_170826_SWATH_6600_PD_01.wiff.scan
 convert:
   input: VD_170826_SWATH_6600_PD_01.wiff
-  flags: --via-msconvert
+  # native SCIEX reader (box vendor glue): true flight-time grid from vendor calibration, lossless.

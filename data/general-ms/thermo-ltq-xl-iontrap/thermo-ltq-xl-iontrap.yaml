@@ -5,3 +5,8 @@ description: PRIDE PXD059878 · Thermo LTQ XL — pure linear ion trap (PC4 acet
 files:
 - url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2025/10/PXD059878/2013_30_Amrutha_050713_1.mzML
   path: 2013_30_Amrutha_050713_1.mzML
+- url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2025/10/PXD059878/2013_30_Amrutha_050713_1.raw
+  path: 2013_30_Amrutha_050713_1.raw
+  bytes: 73054467
+convert:
+  input: 2013_30_Amrutha_050713_1.raw   # start from vendor RAW (Thermo native reader; needs .NET/box)

@@ -6,3 +6,6 @@ files:
 - url: https://zenodo.org/api/records/18187395/files/24_Test_P15_r2.zip/content
   path: 24_Test_P15_r2.zip
   unpack: zip
+convert:
+  # multi-optical demonstrator: embed BOTH the H&E whole-slide (.svs, ~173 MB) and the bright-field (.tif, ~28 MB).
+  flags: --image data/imzml-examples/zenodo-18187395-GBM-multimodal/HE-XML/P1_patientset2_102524_104850_aperioID1010549.svs --image data/imzml-examples/zenodo-18187395-GBM-multimodal/Optical/Patientset2_Rep2_0001.tif

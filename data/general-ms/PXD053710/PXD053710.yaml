@@ -7,3 +7,7 @@ files:
   path: 230120-Exposome_A10-526-C_EX_1ul_zSWATH_37m_r01.wiff
 - url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/06/PXD053710/230120-Exposome_A10-526-C_EX_1ul_zSWATH_37m_r01.wiff.scan
   path: 230120-Exposome_A10-526-C_EX_1ul_zSWATH_37m_r01.wiff.scan
+
+convert:
+  input: auto
+  flags: --via-msconvert --tof-grid auto --zstd-level 12

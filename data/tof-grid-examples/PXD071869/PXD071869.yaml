@@ -11,4 +11,4 @@ files:
   path: 08_SWATH_1E_1H.wiff2
 convert:
   input: 08_SWATH_1E_1H.wiff
-  flags: --via-msconvert
+  # native SCIEX reader (box vendor glue): true flight-time grid from vendor calibration, lossless.

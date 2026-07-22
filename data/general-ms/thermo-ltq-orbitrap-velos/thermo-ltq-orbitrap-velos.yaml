@@ -5,3 +5,8 @@ description: PRIDE PXD000001 · Thermo LTQ Orbitrap Velos — TMT “Erwinia” 
 files:
 - url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2012/03/PXD000001/TMT_Erwinia_1uLSike_Top10HCD_isol2_45stepped_60min_01-20141210.mzML
   path: TMT_Erwinia_1uLSike_Top10HCD_isol2_45stepped_60min_01-20141210.mzML
+- url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2012/03/PXD000001/TMT_Erwinia_1uLSike_Top10HCD_isol2_45stepped_60min_01.raw
+  path: TMT_Erwinia_1uLSike_Top10HCD_isol2_45stepped_60min_01.raw
+  bytes: 220475548
+convert:
+  input: TMT_Erwinia_1uLSike_Top10HCD_isol2_45stepped_60min_01.raw   # start from vendor RAW (Thermo native reader; needs .NET/box)

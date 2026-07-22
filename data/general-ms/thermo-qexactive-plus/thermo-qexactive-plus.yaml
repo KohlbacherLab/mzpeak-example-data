@@ -1,7 +1,10 @@
 id: thermo-qexactive-plus
 tile: general-ms
 title: Thermo Q Exactive Plus
-description: Zenodo 17549994 · Thermo Q Exactive Plus (IBDMDB teaching re-deposit).
+description: MetaboLights MTBLS14885 · Thermo Q Exactive Plus — native vendor `.raw` (replaces Zenodo 17549994, an mzML-only re-deposit with no raw).
 files:
-- url: https://zenodo.org/api/records/17549994/files/160920_SM-AKTWT_509.mzML/content
-  path: 160920_SM-AKTWT_509.mzML
+- url: https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS14885/FILES/NEG_Hg22CP_GPSC_1.raw
+  path: NEG_Hg22CP_GPSC_1.raw
+  bytes: 126838749
+convert:
+  input: NEG_Hg22CP_GPSC_1.raw   # start from vendor RAW (Thermo native reader; needs .NET/box)

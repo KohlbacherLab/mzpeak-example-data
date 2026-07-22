@@ -5,3 +5,14 @@ description: MassIVE MSV000095995 · SCIEX ZenoTOF 7600 — EAD / Zeno top-down 
 files:
 - url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?file=f.MSV000095995/ccms_peak/20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.mzML&forceDownload=true
   path: 20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.mzML
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000095995/raw/20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.wiff
+  path: 20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.wiff
+  bytes: 2168320
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000095995/raw/20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.wiff.scan
+  path: 20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.wiff.scan
+  bytes: 72347631
+- url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000095995/raw/20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.wiff2
+  path: 20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.wiff2
+  bytes: 2494464
+convert:
+  input: 20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.wiff   # start from vendor RAW (native SCIEX reader on the box)

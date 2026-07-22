@@ -9,4 +9,5 @@ files:
   path: Sample002.wiff.scan
 convert:
   input: auto
-  flags: --via-msconvert
+  # native SCIEX reader (box vendor glue): reads the true flight-time grid from the vendor
+  # calibration LOSSLESSLY (strategy B) — no msconvert, no bounded-lossy --tof-grid reconstruction.

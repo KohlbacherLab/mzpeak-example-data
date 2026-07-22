@@ -6,3 +6,7 @@ files:
 - url: https://zenodo.org/api/records/10084132/files/imzML_LTP.zip/content
   path: imzML_LTP.zip
   unpack: zip
+convert:
+  # embed the optical image of the chilli sample (name doesn't match the auto-discovery pattern).
+  # --image resolves relative to cwd (repo root when run via update.sh / convert-dataset.py).
+  flags: --image data/imzml-examples/zenodo-LTP/imzML_LTP/CHJ2.png

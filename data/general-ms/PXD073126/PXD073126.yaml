@@ -5,4 +5,9 @@ description: PRIDE · Waters Synapt XS — HDDDA ion mobility, vendor raw `.raw`
 files:
 - url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/05/PXD073126/250501_ZMM_KMI_sFtsk_2.raw.zip
   path: 250501_ZMM_KMI_sFtsk_2.raw.zip
+  unpack: zip
   bytes: 1201956356
+
+convert:
+  input: auto
+  flags: --via-msconvert --tof-grid auto --zstd-level 12

@@ -6,3 +6,7 @@ files:
 - url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/06/PXD079300/25NP03340023_RD8_1_27806.d.zip
   path: 25NP03340023_RD8_1_27806.d.zip
   bytes: 2610407992
+  unpack: zip
+convert:
+  input: auto   # single timsTOF .d in the zip (native TDF reader)
+  flags: --zstd-level 12   # TDF: archive layout + ims-compact + per-scan tof-delta (all default) at max practical zstd

@@ -6,3 +6,7 @@ files:
 - url: https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS812/FILES/20181203_Capan2_1.zip
   path: 20181203_Capan2_1.zip
   unpack: zip
+
+convert:
+  input: auto
+  flags: --zstd-level 12   # native Waters MassLynx — 5.8x smaller than --via-msconvert (163 vs 946 MB)

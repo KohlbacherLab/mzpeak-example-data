@@ -5,4 +5,9 @@ description: PRIDE · Bruker impact HD — native MS, vendor raw `.d`. Broad-ven
 files:
 - url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/04/PXD076861/NreB_PAS_DECONV.d.zip
   path: NreB_PAS_DECONV.d.zip
+  unpack: zip
   bytes: 226482825
+
+convert:
+  input: auto
+  flags: --zstd-level 12

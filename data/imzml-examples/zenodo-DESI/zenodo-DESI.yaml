@@ -6,3 +6,8 @@ files:
 - url: https://zenodo.org/api/records/10084132/files/imzML_DESI.zip/content
   path: imzML_DESI.zip
   unpack: zip
+convert:
+  # pin the representative section (7 in the zip) and embed its optical .jpg. The .jpg name doesn't
+  # match the auto-discovery pattern and its path has spaces/commas -> quoted so shlex keeps it one arg.
+  input: 'imzML_DESI/ColAd_Individual/120TopL, 90TopR, 110BottomL, 100BottomR/120TopL, 90TopR, 110BottomL, 100BottomR-centroid.imzML'
+  flags: '--image "data/imzml-examples/zenodo-DESI/imzML_DESI/ColAd_Individual/120TopL, 90TopR, 110BottomL, 100BottomR/90,100,110,120.jpg"'
