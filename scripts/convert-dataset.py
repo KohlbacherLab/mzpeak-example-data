@@ -45,10 +45,13 @@ def _bench(row):                                         # append one wall-clock
         f.write("\t".join(str(x) for x in row) + "\n")
 
 
-def _sig(cv):
-    """Signature of the conversion RECIPE (input + flags + skip + any convert.* key).
-    Changing conversion params changes this; editing title/description/urls does not."""
-    return hashlib.sha256(json.dumps(cv, sort_keys=True).encode()).hexdigest()[:16]
+def _sig(cv, cver=""):
+    """Signature of the conversion RECIPE: params (input + flags + skip + any convert.* key)
+    AND the converter version. Changing conversion params OR upgrading mzpeak-convert changes
+    this, so a converter upgrade reconverts make-style; editing title/description/urls does not."""
+    return hashlib.sha256(
+        json.dumps({"cv": cv, "converter": cver}, sort_keys=True).encode()
+    ).hexdigest()[:16]
 
 
 def converter():
@@ -83,15 +86,18 @@ def convert_one(dpath, conv):
     if not unit:
         return 0                                         # nothing convertible here
     out = os.path.splitext(unit)[0] + ".mzpeak"
-    sigf, sig = out + ".sig", _sig(cv)
-    if os.path.exists(out):
+    sigf, sig = out + ".sig", _sig(cv, _cver(conv))
+    # MZPC_RECONVERT_ALL=1 forces a full rebuild (e.g. after a converter upgrade, to also pick up
+    # legacy .mzpeak files that carry no stamp and would otherwise just be adopted).
+    force = os.environ.get("MZPC_RECONVERT_ALL") == "1"
+    if os.path.exists(out) and not force:
         old = open(sigf).read().strip() if os.path.exists(sigf) else None
         if old == sig:
-            print(f"[{d['id']}] have {os.path.basename(out)} (params unchanged, skip)"); return 0
+            print(f"[{d['id']}] have {os.path.basename(out)} (params+converter unchanged, skip)"); return 0
         if old is None:                                  # legacy .mzpeak with no stamp: adopt, don't mass-reconvert
             open(sigf, "w").write(sig)
             print(f"[{d['id']}] have {os.path.basename(out)} (stamped existing, skip)"); return 0
-        print(f"[{d['id']}] params changed ({old}->{sig}) — reconverting")
+        print(f"[{d['id']}] recipe/converter changed ({old}->{sig}) — reconverting")
     if not conv:
         print(f"[{d['id']}] mzpeak-convert not found — set $MZPEAK_CONVERT; skipping"); return 0
     flags = shlex.split(cv.get("flags") or "")   # shlex: quoted paths with spaces stay one arg
