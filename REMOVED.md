@@ -4,6 +4,35 @@ Datasets that were removed from the corpus, with the reason. Removing a dataset 
 descriptor is deleted from `data/<tile>/<id>/`, its data is purged from `s3://v09/<tile>/<id>/`,
 and it is dropped from the tile on the next `build-corpus-site.sh` rebuild.
 
+## sdrf-examples/*/mzml — orphaned SDRF demonstrator archives (removed 2026-07-28)
+
+**Reason: no source, unreadable format.** Twelve `.mzpeak` files (~4.8 GB) under
+`sdrf-examples/{PXD009909,PXD011799,PXD014145,PXD020187}/mzml/` had no local source and could not be
+rebuilt. Their own provenance records why:
+
+```
+software           : 0.4.5
+conversion options : /private/tmp/.../scratchpad/sdrf-reconvert/70JG_01.mzML
+                     -o data/sdrf-examples/PXD009909/mzml/70JG_01.mzpeak --sdrf ...
+```
+
+They were produced by converter **v0.4.5** from mzML staged in a **scratch directory that has since
+been cleaned**, and the dataset descriptors declare only the `.sdrf.tsv` — the mzML was never a
+corpus file. So no raw unit maps to them: they are output without input. Being pre-0.7.0 packed
+archives they are also unreadable by the current converter, so they no longer served the SDRF tile.
+
+The descriptors and `.sdrf.tsv` files are **kept**. To restore the demonstrators, re-download the
+runs from PRIDE for each accession and convert with `--sdrf <accession>.sdrf.tsv`.
+
+## ims-examples/bruker-timstof-MSV000101607 — duplicate archive (removed 2026-07-28)
+
+**Reason: superseded duplicate.** `Blank(1) Try_Slot1-1_1_8270.mzpeak` (280 MB) sat at the tile root
+while the same acquisition also had an archive inside `Blank_Try.d/`. The outer one dated from when
+the harness addressed the wrapper directory as the unit; discovery now descends into wrapper `.d`
+directories, so the output moved beside the real acquisition. The surviving archive was verified
+complete against the TDF (41,175 spectra = `Frames` row count) before the old one was deleted; the
+old one was pre-0.7.0 packed and unreadable by the current converter.
+
 ## general-ms/MTBLS432 — Shimadzu LCMS (removed 2026-07-28)
 
 **Reason: unsupported `.lcd` variant.** `6-wk_HZ_CC_male_37_74__30min_pos-neg_100.lcd`
