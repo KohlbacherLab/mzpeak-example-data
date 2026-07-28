@@ -4,6 +4,22 @@ Datasets that were removed from the corpus, with the reason. Removing a dataset 
 descriptor is deleted from `data/<tile>/<id>/`, its data is purged from `s3://v09/<tile>/<id>/`,
 and it is dropped from the tile on the next `build-corpus-site.sh` rebuild.
 
+## general-ms/MTBLS432 — Shimadzu LCMS (removed 2026-07-28)
+
+**Reason: unsupported `.lcd` variant.** `6-wk_HZ_CC_male_37_74__30min_pos-neg_100.lcd`
+(7,389,184 bytes, intact) is rejected independently by **both** readers on the Windows box:
+
+```
+native  : resolving glue export Open: Unknown error code: 0x8000211D
+msconvert: [ShimadzuReader::ctor] LoadData error: E_UNSUPPORTEDFILE
+```
+
+ProteoWizard's own `ShimadzuReader` reporting `E_UNSUPPORTEDFILE` is the decisive part — the
+installed LabSolutions runtime does not recognise this `.lcd` variant, so the failure is a
+vendor-library coverage gap rather than anything in the converter. No mzPeak can be produced from
+it, so the dataset is removed rather than kept as a permanently unconvertible entry. If a newer
+LabSolutions runtime is ever installed on the box, this one is worth re-testing.
+
 ## general-ms/PXD000155 — Thermo LTQ Velos (removed 2026-07-01)
 
 **Reason: inconvertible `.raw`.** The single file `20100625_mAbBBA1b_JAA_51.raw`
