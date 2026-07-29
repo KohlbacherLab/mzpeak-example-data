@@ -91,9 +91,6 @@ PRIDE / jPOST · SCIEX TripleTOF 6600 — SWATH/DIA, vendor raw `.wiff`. Broad-v
 ### PXD053710
 PRIDE · SCIEX ZenoTOF 7600 — Zeno-SWATH exposome, vendor raw `.wiff`. Broad-vendor demonstrator (raw only).
 
-### MTBLS432
-MetaboLights · Shimadzu LCMS-IT-TOF — metabolome, native vendor raw `.lcd`. Broad-vendor demonstrator (raw only).
-
 ### PXD076001
 PRIDE / iProX · Thermo Orbitrap Astral — DIA, native vendor raw `.raw`. Broad-vendor demonstrator (raw only).
 
