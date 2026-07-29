@@ -167,3 +167,8 @@ files:
 - url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000101607/raw/Blank_Try.d/Blank%281%29%20Try_Slot1-1_1_8270.d/desktop.ini
   path: Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d/desktop.ini
   bytes: 140
+convert:
+  # The archive's outer `Blank_Try.d` is a WRAPPER dir with no analysis.tdf; the real timsTOF unit is
+  # nested one level down. Pin it — auto-detect (and the box archive picker) grab the outer dir and fail.
+  input: 'Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d'
+  flags: --zstd-level 12   # native TDF reader (Mac-capable; does NOT need the box)

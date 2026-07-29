@@ -129,6 +129,3 @@ PRIDE · Thermo LCQ Deca XP — IEF/SCX/RPLC proteomics, vendor raw `.raw` (zip)
 
 ### PXD057269
 PRIDE · Thermo TSQ Altis — SRM, vendor raw `.raw`. Broad-vendor demonstrator (raw only; one representative run).
-
-### PXD044023
-PRIDE · Bruker amaZon ETD — GeLC-MS, vendor raw `.d` (zip). Broad-vendor demonstrator (raw only; one representative run).
