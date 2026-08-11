@@ -6,3 +6,11 @@ files:
 - url: https://raw.githubusercontent.com/bigbio/sdrf-annotated-datasets/main/datasets/PXD009465/PXD009465.sdrf.tsv
   path: PXD009465.sdrf.tsv
   bytes: 42428
+convert:
+  # SDRF-EMBEDDED demonstrator: the run is converted from mzML with `--sdrf`, which stores the
+  # study's SDRF TSV verbatim inside the archive as `sample_metadata/sdrf.tsv`, with
+  # `metadata.study` + `metadata.sample_metadata` back-references. So the mzPeak carries its own
+  # sample metadata — instrument, labelling, organism, factor values — with no external lookup.
+  # `--sdrf` accepts mzML/imzML input only, so this is built from the mzml/ source, not raw/.
+  input: mzml/t04176_EH_Malaria_WT_PK7_KO_Phos_SCX2.mzML
+  flags: --zstd-level 12 --sdrf PXD009465.sdrf.tsv

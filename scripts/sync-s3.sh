@@ -8,7 +8,8 @@
 #   bash scripts/sync-s3.sh --dry-run    # plan only, transfer/deploy nothing
 #
 # Env (defaults): ENDPOINT, BUCKET=v09, AWS_PROFILE=stackit.
-# Only the four published tiles are uploaded; vendor-raw/benchmark tiles stay local.
+# All five published tiles are uploaded; pwiz-examples and the vendor-raw/benchmark tiles
+# stay local.
 set -uo pipefail
 cd "$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
@@ -17,7 +18,10 @@ B="${BUCKET:-v09}"
 PROFILE="${AWS_PROFILE:-stackit}"
 DRYRUN="${DRYRUN:-0}"; [ "${1:-}" = "--dry-run" ] && DRYRUN=1
 AWS=(aws --profile "$PROFILE" --endpoint-url "$EP")
-TILES=(imzml-examples general-ms pwiz-examples sdrf-examples)
+# Tiles uploaded to the bucket. pwiz-examples is deliberately EXCLUDED: it is the ProteoWizard
+# vendor_readers conformance corpus (many small per-vendor reader-regression archives, kept LOCAL
+# only as the converter's broad-format net). It is not published to S3.
+TILES=(imzml-examples general-ms sdrf-examples ims-examples tof-grid-examples)
 say(){ echo "[$(date +%H:%M:%S)] $*"; }
 
 command -v aws >/dev/null || { echo "ERROR: aws CLI not found (brew install awscli)" >&2; exit 1; }

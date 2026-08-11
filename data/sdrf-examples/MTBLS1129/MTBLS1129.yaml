@@ -5,3 +5,11 @@ description: MetaboLights MTBLS1129 · <b>label-free</b> metabolomics (Waters Xe
 files:
 - url: https://raw.githubusercontent.com/bigbio/proteomics-sample-metadata/master/annotated-projects/MTBLS1129/MTBLS1129.sdrf.tsv
   path: MTBLS1129.sdrf.tsv
+convert:
+  # SDRF-EMBEDDED demonstrator: the run is converted from mzML with `--sdrf`, which stores the
+  # study's SDRF TSV verbatim inside the archive as `sample_metadata/sdrf.tsv`, with
+  # `metadata.study` + `metadata.sample_metadata` back-references. So the mzPeak carries its own
+  # sample metadata — instrument, labelling, organism, factor values — with no external lookup.
+  # `--sdrf` accepts mzML/imzML input only, so this is built from the mzml/ source, not raw/.
+  input: mzml/menLCCstage2_295.mzML
+  flags: --zstd-level 12 --sdrf MTBLS1129.sdrf.tsv
