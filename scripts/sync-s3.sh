@@ -30,8 +30,13 @@ dry=(); [ "$DRYRUN" = 1 ] && dry=(--dryrun)
 for t in "${TILES[@]}"; do
   [ -d "data/$t" ] || { say "skip $t (not built locally)"; continue; }
   say "sync $t -> s3://$B/$t  (only *.mzpeak, idempotent)"
+  # --size-only: compare SIZE, not mtime. Without it `aws s3 sync` re-uploads every archive whose
+  # local mtime is newer than the bucket copy — and a corpus reconvert refreshes every mtime, so a
+  # no-op sync re-sent all 62 archives (39 GB) of byte-identical data, taking an hour and giving a
+  # network blip an hour-long window to kill the run before the site rebuild. update.sh:56 already
+  # syncs this way. An archive that changes content always changes size here (zstd frame + index).
   "${AWS[@]}" s3 sync "data/$t" "s3://$B/$t" \
-    --exclude '*' --include '*.mzpeak' ${dry[@]+"${dry[@]}"} --only-show-errors \
+    --size-only --exclude '*' --include '*.mzpeak' ${dry[@]+"${dry[@]}"} --only-show-errors \
     && say "  $t synced" || { say "  $t sync FAILED"; exit 1; }
 done
 
