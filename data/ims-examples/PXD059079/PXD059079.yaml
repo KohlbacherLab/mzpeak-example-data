@@ -1,7 +1,7 @@
 id: PXD059079
 tile: ims-examples
-title: PXD059079
-description: ''
+title: 'timsTOF HT + FAIMS-Ascend · single-cell DIA'
+description: 'Bruker <b>timsTOF HT</b> (TIMS/PASEF) with a companion Orbitrap Ascend <b>FAIMS</b> run — <b>single-cell</b> DIA proteomics of drug-resistant prostate-cancer cells (<i>Homo sapiens</i>). 19.7 GB of deposited raw; one representative timsTOF run of 27 is published as mzPeak. PRIDE PXD059079.'
 files:
 - url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2025/03/PXD059079/TimsTOF_HT_NCI7_Dilution.zip
   path: TimsTOF_HT_NCI7_Dilution.zip

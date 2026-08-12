@@ -1,7 +1,7 @@
 id: PXD079300
 tile: ims-examples
-title: PXD079300
-description: ''
+title: 'timsTOF Pro · seminal-plasma extracellular vesicles'
+description: 'Bruker <b>timsTOF Pro</b> (TIMS/PASEF) — DIA and DDA proteomics of boar (<i>Sus scrofa domesticus</i>) seminal-plasma <b>extracellular vesicles</b>. 2.6 GB raw → 2.7 GB mzPeak. PRIDE PXD079300.'
 files:
 - url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/06/PXD079300/25NP03340023_RD8_1_27806.d.zip
   path: 25NP03340023_RD8_1_27806.d.zip

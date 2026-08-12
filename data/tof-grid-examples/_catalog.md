@@ -14,16 +14,16 @@ Time-of-flight <b>profile</b> runs (SCIEX SWATH/DIA, Bruker microTOF, Agilent QT
 ## datasets
 
 ### MSV000090684
-SCIEX TripleTOF 6600 BioID-SWATH (~5.4 GB)
+SCIEX <b>TripleTOF 6600</b> — SWATH/DIA <b>BioID</b> proximity-labelling map of nuclear bodies in human cells (Dyakov et al. 2023); one run of a 334-sample deposit. 1.1 GB <code>.wiff</code> → 0.74 GB mzPeak (66%). Filename records the instrument (<code>TOF6600</code>). MassIVE MSV000090684.
 
 ### MSV000093587
-TripleTOF SWATH
+SCIEX QTOF (model not stated in the deposit) — SWATH/DIA lung proteome of CD-1 mouse offspring after developmental <b>PFAS</b> exposure (PFOS/PFOA/PFHxS mixture). 1.1 GB <code>.wiff</code> → 0.75 GB mzPeak (68%). MassIVE MSV000093587.
 
 ### MSV000095995
-SCIEX ZenoTOF 7600 top-down RNase B, MRM-HR (.wiff+.wiff.scan+.wiff2 from raw/); native SCIEX reader produces the uniform-m/z TOF grid
+SCIEX <b>ZenoTOF 7600</b> — <b>top-down</b> proteomics platform with electron-activated dissociation (EAD), reduced RNase B measured in MRM-HR. 0.08 GB <code>.wiff</code>+<code>.wiff.scan</code>+<code>.wiff2</code> → 0.05 GB mzPeak (65%); the native SCIEX reader recovers the uniform-<i>m/z</i> flight-time grid. MassIVE MSV000095995.
 
 ### PXD011326
-SCIEX TripleTOF 6600 SWATH (two-file)
+SCIEX <b>TripleTOF 6600</b> — SWATH/DIA proteomics of an <b>iPSC model of early-onset Parkinson's disease</b> (<i>Homo sapiens</i>). 1.75 GB <code>.wiff</code>+<code>.wiff.scan</code> → 1.09 GB mzPeak (62%). Filename records the instrument (<code>SWATH_6600</code>). PRIDE PXD011326.
 
 ### PXD071869
-SCIEX TripleTOF 6600 dual-window SWATH (wiff+scan+wiff2)
+SCIEX <b>ZenoTOF 7600</b> — SWATH/DIA benchmarking of biomanufacturing pipelines in <i>Halomonas bluephagenesis</i> and <i>E. coli</i>; the study compares five DIA platforms and this is its SCIEX arm. 2.41 GB <code>.wiff</code>+<code>.wiff.scan</code>+<code>.wiff2</code> → 1.95 GB mzPeak (81%). PRIDE PXD071869.

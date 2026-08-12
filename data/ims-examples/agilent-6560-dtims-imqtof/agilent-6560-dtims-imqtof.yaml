@@ -1,7 +1,7 @@
 id: agilent-6560-dtims-imqtof
 tile: ims-examples
 title: Agilent 6560 IM-QTOF
-description: Zenodo 18481720 · Agilent 6560 IM-QTOF — drift-tube ion mobility (DTIMS), CE-MS standard mix.
+description: 'Agilent 6560 IM-QTOF — <b>drift-tube</b> ion mobility (DTIMS) of a CE-MS standard mix; the tile''s DTIMS reference, 0.3 MB mzPeak. Zenodo 18481720.'
 files:
 - url: https://zenodo.org/api/records/18481720/files/CEMS_10ppm.mzML/content
   path: CEMS_10ppm.mzML

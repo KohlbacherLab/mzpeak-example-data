@@ -1,7 +1,7 @@
 id: MSV000095995
 tile: tof-grid-examples
 title: SCIEX ZenoTOF 7600 top-down RNase B
-description: SCIEX ZenoTOF 7600 top-down RNase B, MRM-HR (.wiff+.wiff.scan+.wiff2 from raw/); native SCIEX reader produces the uniform-m/z TOF grid
+description: 'SCIEX <b>ZenoTOF 7600</b> — <b>top-down</b> proteomics platform with electron-activated dissociation (EAD), reduced RNase B measured in MRM-HR. 0.08 GB <code>.wiff</code>+<code>.wiff.scan</code>+<code>.wiff2</code> → 0.05 GB mzPeak (65%); the native SCIEX reader recovers the uniform-<i>m/z</i> flight-time grid. MassIVE MSV000095995.'
 files:
 - url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000095995/raw/20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.wiff
   path: 20240826_RNAseB_Reduced_50ngul_1ul_MRM_03.wiff

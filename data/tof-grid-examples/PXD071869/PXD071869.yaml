@@ -1,7 +1,7 @@
 id: PXD071869
 tile: tof-grid-examples
 title: SCIEX TripleTOF 6600 dual-window SWATH
-description: SCIEX TripleTOF 6600 dual-window SWATH (wiff+scan+wiff2)
+description: 'SCIEX <b>ZenoTOF 7600</b> — SWATH/DIA benchmarking of biomanufacturing pipelines in <i>Halomonas bluephagenesis</i> and <i>E. coli</i>; the study compares five DIA platforms and this is its SCIEX arm. 2.41 GB <code>.wiff</code>+<code>.wiff.scan</code>+<code>.wiff2</code> → 1.95 GB mzPeak (81%). PRIDE PXD071869.'
 files:
 - url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/01/PXD071869/08_SWATH_1E_1H.wiff
   path: 08_SWATH_1E_1H.wiff

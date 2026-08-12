@@ -1,7 +1,7 @@
 id: PXD079445
 tile: ims-examples
-title: PXD079445
-description: ''
+title: 'Orbitrap Exploris 480 + FAIMS · sarcoma EV DIA'
+description: 'Thermo Orbitrap Exploris 480 with a <b>FAIMS</b> interface (compensation-voltage stepping) — DIA proteomics of <b>extracellular vesicles</b> from primary-tumour, recurrence and metastasis sarcoma patient-derived cultures (<i>Homo sapiens</i>). 1.4 GB raw → 0.5 GB mzPeak. PRIDE PXD079445.'
 files:
 - url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/06/PXD079445/240617_SAR186_A1_EVs.raw
   path: 240617_SAR186_A1_EVs.raw

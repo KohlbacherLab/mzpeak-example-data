@@ -1,7 +1,7 @@
 id: PXD052561
 tile: ims-examples
-title: PXD052561
-description: ''
+title: 'Waters Cyclic IMS · top-down snake-venom proteoforms'
+description: 'Waters SELECT SERIES <b>Cyclic IMS</b> (+ Xevo G2-XS ToF) — <b>top-down</b> proteoform analysis of forest cobra (<i>Naja melanoleuca</i>) venom with ECD/CID fragmentation. 0.6 GB vendor <code>.raw</code>; cyclic ion mobility. PRIDE PXD052561.'
 files:
 - url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2024/09/PXD052561/20231129_NM4_Xevo_MSe.raw.zip
   path: 20231129_NM4_Xevo_MSe.raw.zip

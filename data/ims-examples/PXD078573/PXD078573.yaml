@@ -1,7 +1,7 @@
 id: PXD078573
 tile: ims-examples
-title: PXD078573
-description: ''
+title: 'timsTOF SCP · cross-linking MS (U1 snRNP–Pol II)'
+description: 'Bruker <b>timsTOF SCP</b> (TIMS/PASEF) — <b>chemical cross-linking MS</b> (XL-MS) resolving the U1 snRNP–RNA-polymerase-II interaction via Prp40 in <i>Saccharomyces cerevisiae</i>. 1.5 GB raw → 1.6 GB mzPeak. PRIDE PXD078573.'
 files:
 - url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/05/PXD078573/20250305_AI_Rui_Xlink_F19_Slot1-28_1_9629.d.zip
   path: 20250305_AI_Rui_Xlink_F19_Slot1-28_1_9629.d.zip

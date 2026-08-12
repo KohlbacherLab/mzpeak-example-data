@@ -1,7 +1,7 @@
 id: PXD079072
 tile: ims-examples
-title: PXD079072
-description: ''
+title: 'Orbitrap Fusion Lumos + FAIMS · histone ubiquitylation'
+description: 'Thermo Orbitrap Fusion Lumos with a <b>FAIMS</b> interface — field-asymmetric ion mobility, bottom-up LC-MS/MS of hemimethylated-CG-guided histone ubiquitylation in <i>Xenopus laevis</i>. 1.3 GB raw → 0.7 GB mzPeak. PRIDE PXD079072.'
 files:
 - url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/05/PXD079072/Xinyi3.raw
   path: Xinyi3.raw

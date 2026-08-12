@@ -1,7 +1,7 @@
 id: MSV000093587
 tile: tof-grid-examples
 title: TripleTOF SWATH
-description: TripleTOF SWATH
+description: 'SCIEX QTOF (model not stated in the deposit) — SWATH/DIA lung proteome of CD-1 mouse offspring after developmental <b>PFAS</b> exposure (PFOS/PFOA/PFHxS mixture). 1.1 GB <code>.wiff</code> → 0.75 GB mzPeak (68%). MassIVE MSV000093587.'
 files:
 - url: https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000093587/raw/Sample002.wiff
   path: Sample002.wiff

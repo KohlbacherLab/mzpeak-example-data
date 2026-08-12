@@ -1,7 +1,7 @@
 id: PXD011326
 tile: tof-grid-examples
 title: SCIEX TripleTOF 6600 SWATH
-description: SCIEX TripleTOF 6600 SWATH (two-file)
+description: 'SCIEX <b>TripleTOF 6600</b> — SWATH/DIA proteomics of an <b>iPSC model of early-onset Parkinson''s disease</b> (<i>Homo sapiens</i>). 1.75 GB <code>.wiff</code>+<code>.wiff.scan</code> → 1.09 GB mzPeak (62%). Filename records the instrument (<code>SWATH_6600</code>). PRIDE PXD011326.'
 files:
 - url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2019/12/PXD011326/VD_170826_SWATH_6600_PD_01.wiff
   path: VD_170826_SWATH_6600_PD_01.wiff

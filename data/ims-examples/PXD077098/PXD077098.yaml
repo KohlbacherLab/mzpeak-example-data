@@ -1,7 +1,7 @@
 id: PXD077098
 tile: ims-examples
-title: PXD077098
-description: ''
+title: 'Waters Synapt (TWIMS) · maize seed-microbiome DIA'
+description: 'Waters <b>Synapt</b> — travelling-wave ion mobility (TWIMS), DIA proteomics of the maize (<i>Zea mays</i>) seed-borne microbiome under DNA hypomethylation. 10.4 GB vendor <code>.raw</code>. PRIDE PXD077098.'
 files:
 - url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/05/PXD077098/2024_08_15_Clicia_Milho_A1_B.raw.zip
   path: 2024_08_15_Clicia_Milho_A1_B.raw.zip

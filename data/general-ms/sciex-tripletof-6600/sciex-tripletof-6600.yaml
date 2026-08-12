@@ -1,7 +1,7 @@
 id: sciex-tripletof-6600
 tile: general-ms
 title: SCIEX TripleTOF 6600
-description: Zenodo 17416537 · SCIEX TripleTOF 6600 — DIA / SWATH.
+description: 'SCIEX <b>TripleTOF 6600</b> — DIA/SWATH acquisition; broad-vendor demonstrator for the SCIEX QTOF family, converted through the native Clearcore2 reader. Zenodo 17416537.'
 files:
 - url: https://zenodo.org/api/records/17416537/files/12_80.mzML/content
   path: 12_80.mzML

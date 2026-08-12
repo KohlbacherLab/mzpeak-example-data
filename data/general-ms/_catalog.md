@@ -38,7 +38,7 @@ MassIVE MSV000101607 · Bruker timsTOF Pro 2 — TIMS-PASEF proteomics (SBA415);
 MetaboLights MTBLS14853 · SCIEX QTRAP 6500 — native vendor `.wiff` (replaces PXD066465, which deposited no raw).
 
 ### sciex-tripletof-6600
-Zenodo 17416537 · SCIEX TripleTOF 6600 — DIA / SWATH.
+SCIEX <b>TripleTOF 6600</b> — DIA/SWATH acquisition; broad-vendor demonstrator for the SCIEX QTOF family, converted through the native Clearcore2 reader. Zenodo 17416537.
 
 ### sciex-zenotof-7600
 MassIVE MSV000095995 · SCIEX ZenoTOF 7600 — EAD / Zeno top-down (Searfoss et al. 2025).
