@@ -41,7 +41,7 @@ SCIEX <b>TripleTOF 6600</b> — DIA/SWATH acquisition; broad-vendor demonstrator
 MetaboLights MTBLS13204 · Shimadzu LCMS-9030 Q-TOF (seaweed metabolomics).
 
 ### waters-pda-uv
-ProteoWizard Waters vendor-reader test data · Waters ACQUITY UPLC <b>PDA</b> — the corpus's <b>UV / photodiode-array exemplar</b>: ProteoWizard read the PDA function from a MassLynx <code>.raw</code> and wrote <code>wavelength array</code> (190–500 nm) + <code>electromagnetic radiation</code> (absorption) spectra. Demonstrates mzPeak's UV <code>wavelength_spectra</code> facet — the rare case of UV spectra carried inside the mzML.
+ProteoWizard Waters vendor-reader test data · Waters ACQUITY UPLC <b>PDA</b> — the corpus's <b>UV / photodiode-array exemplar</b>: ProteoWizard read the PDA function from a MassLynx <code>.raw</code> and wrote <code>wavelength array</code> (210–400 nm) + <code>electromagnetic radiation</code> (absorption) spectra. Demonstrates mzPeak's UV <code>wavelength_spectra</code> facet — the rare case of UV spectra carried inside the mzML.
 
 ### waters-synapt-g2si-hdmse
 MetaboLights MTBLS812 · Waters SYNAPT G2-Si HDMS — <b>HDMSe traveling-wave ion mobility</b> (TWIMS); LC-IMS-MS metabolomics of pancreatic-cancer cell lines (Drabik et al.). Per-spectrum drift time (MS:1002476) — the corpus's Waters ion-mobility exemplar, alongside Agilent DTIMS and Bruker timsTOF PASEF.
