@@ -165,3 +165,20 @@ the corpus statistics.
 The ion-mobility copy is kept: the Agilent 6560 is a **drift-tube** IM-QTOF and this is the tile's
 only DTIMS reference. Agilent stays covered in general-ms by `agilent-qtof`,
 `agilent-6490-triplequad`, `agilent-8890-gc-ei` and MTBLS11742.
+
+## general-ms/* — undescribed bucket orphans (purged 2026-08-12)
+
+**Reason: data in the bucket with no descriptor.** The corpus is descriptor-driven — the site, the
+catalogs and `ratios.tsv` are all generated from the bucket, so any prefix without a matching
+`data/<tile>/<id>/<id>.yaml` renders as a dataset row with no description and inflates the corpus
+statistics. Four such prefixes were purged (23.4 GB):
+
+* `MSV000084273` (0.56 GB) and `MTBLS432` (0.01 GB) — both retired earlier (see entries above), but
+  only the descriptors were deleted; the bucket prefixes were left behind and kept appearing.
+* `thermo-orbitrap-astral-PXD049028` (22.4 GB: 22.1 GB `.raw` + 235 MB `.mzML`) — an Astral DIA run
+  of HAP1 cells uploaded during the compression-benchmark work and never described. The corpus keeps
+  its described Astral example, `thermo-orbitrap-astral` (MassIVE MSV000100943, Coon-lab plasma DIA).
+* `thermo-qexactive-plus-PXD077619` (0.48 GB) — never described, no tracked descriptor in git.
+
+Retiring a dataset means deleting the descriptor **and** purging `s3://v09/<tile>/<id>/`; doing only
+the first leaves exactly this kind of ghost row.
