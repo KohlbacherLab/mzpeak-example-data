@@ -106,9 +106,6 @@ PRIDE · Waters Synapt XS — HDDDA ion mobility, vendor raw `.raw`. Broad-vendo
 ### MSV000090203
 MassIVE · Agilent 6560 Q-TOF — lipidomics, native vendor raw `.d` (MassHunter). Broad-vendor demonstrator (raw only; one representative run).
 
-### MSV000084273
-MassIVE · Bruker micrOTOF II — secreted-proteins metabolomics, native vendor raw `.d` (BAF). Broad-vendor demonstrator (raw only; one representative run).
-
 ### MSV000099123
 MassIVE · Bruker timsTOF Pro 2 — proteomics, native vendor raw `.d` (PASEF TDF). Broad-vendor demonstrator (raw only; one representative run).
 

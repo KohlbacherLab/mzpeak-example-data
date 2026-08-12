@@ -33,6 +33,29 @@ directories, so the output moved beside the real acquisition. The surviving arch
 complete against the TDF (41,175 spectra = `Frames` row count) before the old one was deleted; the
 old one was pre-0.7.0 packed and unreadable by the current converter.
 
+## general-ms/MSV000084273 — Bruker micrOTOF II (removed 2026-08-12)
+
+**Reason: incomplete upstream deposit — `analysis.baf_xtr` is missing.** The single unit
+`DK-100119 BD_1079-C_Hil_RB2_01_12082.d` (533 MB) carries `analysis.baf` but not the
+`analysis.baf_xtr` index that Bruker's `baf2sql` requires to build its SQLite cache. Both readers on
+the Windows box fail on it for the same underlying reason:
+
+```
+native   : baf2sql_get_sqlite_cache_filename_v2 failed: boost::filesystem::file_size:
+           Das System kann die angegebene Datei nicht finden: "...\analysis.baf_xtr"
+msconvert: msconvert failed (exit 1)
+```
+
+The file is not merely missing locally: the dataset's own descriptor listed all nine files MassIVE
+publishes for this acquisition, and `analysis.baf_xtr` is not among them — so re-downloading cannot
+fix it. This is the same class as the `MTBLS432` vendor-library gap and the truncated imzML `.ibd`:
+no mzPeak can be produced, so the dataset is removed rather than kept as a permanently
+unconvertible entry.
+
+Bruker BAF coverage in the corpus is unaffected — `general-ms/bruker-impact-ii-qtof/` still provides
+a BAF demonstrator. Source URLs, if this is ever worth retrying with a complete deposit:
+`https://massive.ucsd.edu/ProteoSAFe/DownloadResultFile?forceDownload=true&file=f.MSV000084273/raw/DK-100119%20BD_1079-C_Hil_RB2_01_12082.d/…`
+
 ## general-ms/MTBLS432 — Shimadzu LCMS (removed 2026-07-28)
 
 **Reason: unsupported `.lcd` variant.** `6-wk_HZ_CC_male_37_74__30min_pos-neg_100.lcd`

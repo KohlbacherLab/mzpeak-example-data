@@ -202,7 +202,6 @@ Agilent / Waters / Shimadzu via `--via-msconvert` or the Windows native readers)
 | Agilent | 6490 Triple Quadrupole LC/MS | **MTBLS243** | MetaboLights | dMRM | --via-msconvert (.d) | [doi:10.1155/2015/543541](https://doi.org/10.1155/2015/543541) |
 | Agilent | 6560 Q-TOF LC/MS | **MSV000090203** | MassIVE | lipidomics | --via-msconvert (.d) | [doi:10.1159/000526959](https://doi.org/10.1159/000526959) |
 | Bruker | impact HD | **PXD076861** | PRIDE | native MS | --via-msconvert (.d) | [doi:10.1038/s41467-026-73842-2](https://doi.org/10.1038/s41467-026-73842-2) |
-| Bruker | micrOTOF II | **MSV000084273** | MassIVE | secreted proteins | --via-msconvert (.d) | [doi:10.1016/j.jhep.2020.11.018](https://doi.org/10.1016/j.jhep.2020.11.018) |
 | Bruker | timsTOF Pro 2 | **MSV000099123** | MassIVE | proteomics | native .d TDF | [doi:10.1158/1541-7786.MCR-25-1153](https://doi.org/10.1158/1541-7786.MCR-25-1153) |
 | Bruker | timsTOF Pro 2 | **MSV000092457** | MassIVE | metabolome | native .d TDF | [doi:10.1021/acs.jproteome.3c00224](https://doi.org/10.1021/acs.jproteome.3c00224) |
 | SCIEX | QTRAP 6500+ | **PXD022801** | PRIDE | metabolome | --via-msconvert (.wiff) | [doi:10.1021/acs.jproteome.0c00786](https://doi.org/10.1021/acs.jproteome.0c00786) |
