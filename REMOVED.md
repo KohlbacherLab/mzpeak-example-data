@@ -120,3 +120,48 @@ mzPeak can be produced. By contrast the Bruker **impact HD** BAF (PXD076861) rea
 this is specific to the amaZon/ion-trap format, not Bruker BAF in general. Removed rather than kept as
 an unconvertible raw-only entry. (Re-evaluate if the box converter is upgraded past 0.4.9 — newer
 native BAF readers may support it.)
+
+## ims-examples/bruker-timstof-pro — duplicate id, duplicate deposit (removed 2026-08-12)
+
+**Reason: same `id` as general-ms/bruker-timstof-pro, and the same source deposit.** Two datasets
+carried the id `bruker-timstof-pro`, one in `general-ms` and one in `ims-examples`. Ids key the data
+path, the bucket prefix and the catalog entry, so a duplicate id is a structural fault, not a
+cosmetic one. Both cited MassIVE **MSV000101607** (*ZooMS analysis of Phasianidae remains from the
+Namjeon shell midden* — timsTOF Pro paleoproteomics) and both declared the same URL
+(`f.MSV000101607/peak/SBA415.mzML`), yet held different archives: `SBA415.mzpeak` (742 MB) here
+versus `SBA415(1) Try_Slot1-2_1_8271.mzpeak` (2.15 GB) in general-ms.
+
+The general-ms entry is kept as the Bruker timsTOF vendor-coverage demonstrator. The ion-mobility
+tile loses nothing: it still holds four richer TIMS studies (PXD059079 single-cell DIA, PXD076703
+FLAG co-IP, PXD078573 cross-linking, PXD079300 extracellular vesicles) plus FAIMS, cyclic-IMS,
+TWIMS and DTIMS examples.
+
+## ims-examples/bruker-timstof-MSV000101607 — blank run (removed 2026-08-12)
+
+**Reason: it is a blank.** The archive was built from `Blank_Try.d/Blank(1) Try_Slot1-1_1_8270.d` —
+an instrument blank with no sample, from the same MSV000101607 deposit as the entry above. It was
+verified complete (41,175 spectra = TDF frames) but a blank demonstrates nothing about ion mobility
+that a real acquisition does not demonstrate better, and it was the third entry drawn from one
+deposit. Removed in favour of the four sample-bearing TIMS studies in the tile.
+
+## general-ms/sciex-zenotof-7600 — same acquisition as tof-grid-examples/MSV000095995 (removed 2026-08-12)
+
+**Reason: the same run in two tiles.** Both entries published
+`20240826_RNAseB_Reduced_50ngul_1ul_MRM_03` from MassIVE **MSV000095995** (*Establishing a Top-Down
+Proteomics Platform on a Time-of-Flight Instrument with Electron-Activated Dissociation*), so one
+acquisition was counted twice in the corpus statistics and the compression figures.
+
+The TOF-Grid copy is kept: that tile exists for the integer flight-time grid, and this run is its
+ZenoTOF reference where the native SCIEX reader recovers the uniform-*m/z* lattice. SCIEX remains
+covered in general-ms by `sciex-qtrap-6500` and `sciex-tripletof-6600`.
+
+## general-ms/agilent-6560-dtims-imqtof — duplicate id, same run as the ims copy (removed 2026-08-12)
+
+**Reason: identical dataset in two tiles.** `general-ms` and `ims-examples` both carried the id
+`agilent-6560-dtims-imqtof` publishing the same file (`CEMS_10ppm.mzML` from Zenodo 18481720, a
+CE-MS standard mix) and byte-identical 326,308-byte archives — a duplicate id and a double count in
+the corpus statistics.
+
+The ion-mobility copy is kept: the Agilent 6560 is a **drift-tube** IM-QTOF and this is the tile's
+only DTIMS reference. Agilent stays covered in general-ms by `agilent-qtof`,
+`agilent-6490-triplequad`, `agilent-8890-gc-ei` and MTBLS11742.

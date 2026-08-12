@@ -16,12 +16,6 @@ Ion-mobility mass spectrometry — datasets carrying a mobility dimension (drift
 ### agilent-6560-dtims-imqtof
 Agilent 6560 IM-QTOF — <b>drift-tube</b> ion mobility (DTIMS) of a CE-MS standard mix; the tile's DTIMS reference, 0.3 MB mzPeak. Zenodo 18481720.
 
-### bruker-timstof-pro
-MassIVE MSV000101607 · Bruker timsTOF Pro — PASEF / TIMS ion mobility.
-
-### bruker-timstof-MSV000101607
-MassIVE MSV000101607 · Bruker timsTOF Pro — PASEF / TIMS ion mobility (trapped-ion mobility frames).
-
 ### PXD052561
 Waters SELECT SERIES <b>Cyclic IMS</b> (+ Xevo G2-XS ToF) — <b>top-down</b> proteoform analysis of forest cobra (<i>Naja melanoleuca</i>) venom with ECD/CID fragmentation. 0.6 GB vendor <code>.raw</code>; cyclic ion mobility. PRIDE PXD052561.
 

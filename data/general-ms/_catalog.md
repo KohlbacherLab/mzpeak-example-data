@@ -16,9 +16,6 @@ Non-imaging LC-/GC-MS instrument-vendor examples (Thermo, Bruker, SCIEX, Agilent
 ### agilent-6490-triplequad
 MetaboLights MTBLS648 · Agilent 6490 triple-quad — native vendor `.d` (replaces PXD041762, which deposited no raw).
 
-### agilent-6560-dtims-imqtof
-Zenodo 18481720 · Agilent 6560 IM-QTOF — drift-tube ion mobility (DTIMS), CE-MS standard mix.
-
 ### agilent-8890-gc-ei
 MetaboLights MTBLS11550 · Agilent 8890 GC / 7000D — electron-ionization GC-MS.
 
@@ -39,9 +36,6 @@ MetaboLights MTBLS14853 · SCIEX QTRAP 6500 — native vendor `.wiff` (replaces 
 
 ### sciex-tripletof-6600
 SCIEX <b>TripleTOF 6600</b> — DIA/SWATH acquisition; broad-vendor demonstrator for the SCIEX QTOF family, converted through the native Clearcore2 reader. Zenodo 17416537.
-
-### sciex-zenotof-7600
-MassIVE MSV000095995 · SCIEX ZenoTOF 7600 — EAD / Zeno top-down (Searfoss et al. 2025).
 
 ### shimadzu-lcms-9030-qtof
 MetaboLights MTBLS13204 · Shimadzu LCMS-9030 Q-TOF (seaweed metabolomics).
