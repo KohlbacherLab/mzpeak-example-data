@@ -1,8 +1,13 @@
 id: PXD077098
 tile: ims-examples
 title: 'Waters Synapt (TWIMS) · maize seed-microbiome DIA'
-description: 'Waters <b>Synapt</b> — travelling-wave ion mobility (TWIMS), DIA proteomics of the maize (<i>Zea mays</i>) seed-borne microbiome under DNA hypomethylation. 10.4 GB vendor <code>.raw</code>. PRIDE PXD077098.'
+description: 'Waters <b>Synapt</b> — travelling-wave ion mobility (TWIMS), DIA proteomics of the maize (<i>Zea mays</i>) seed-borne microbiome under DNA hypomethylation. 15.4 GB vendor <code>.raw</code> → 2.0 GB mzPeak (13%), the corpus''s strongest compression on a profile TWIMS run. PRIDE PXD077098.'
 files:
 - url: https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/05/PXD077098/2024_08_15_Clicia_Milho_A1_B.raw.zip
   path: 2024_08_15_Clicia_Milho_A1_B.raw.zip
   bytes: 10424803454
+convert:
+  # Waters .raw inside a zip; the native MassLynx reader handles it on the box (msconvert is
+  # fallback-only). Profile TWIMS/cyclic data — this is why the tile keeps the vendor raw.
+  input: auto
+  flags: --zstd-level 12
