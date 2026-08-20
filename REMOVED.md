@@ -72,6 +72,25 @@ vendor-library coverage gap rather than anything in the converter. No mzPeak can
 it, so the dataset is removed rather than kept as a permanently unconvertible entry. If a newer
 LabSolutions runtime is ever installed on the box, this one is worth re-testing.
 
+**Retested 2026-08-20 at mzpeak-convert 0.7.8 — removal upheld.** The `native` line above was a
+MISDIAGNOSIS: `0x8000211D` was `AmbiguousMatchException` from an overloaded export in our own glue,
+which hit *every* `.lcd` regardless of content, so the native lane had never actually reached this
+file. That bug is fixed in v0.7.8 and the native lane is now verified working on other Shimadzu data
+(LCMS-9030, 2,101 spectra, m/z matching msconvert). Re-downloaded from MetaboLights
+(7,389,184 bytes, byte-identical to the size recorded above) and retested:
+
+```
+native   : LoadData error: E_UNSUPPORTEDFILE
+msconvert: [ShimadzuReader::ctor] LoadData error: E_UNSUPPORTEDFILE
+```
+
+Both lanes call the same vendor `LoadData`, and both reject it. Two further `.lcd` files from the
+same study (`..._1_63__30min_pos-neg_26.lcd`, `..._3_64__30min_pos-neg_76.lcd`) fail identically, so
+this is a study-wide format variant the installed LabSolutions runtime cannot read, not one bad file.
+The `.lcd` files are still published under `FILES/` (the study's file API omits that subtree), so the
+data is re-fetchable if a newer runtime ever lands. Note the study also ships ANDI-MS `.CDF` siblings
+per run, which this converter does not read.
+
 ## general-ms/PXD000155 — Thermo LTQ Velos (removed 2026-07-01)
 
 **Reason: inconvertible `.raw`.** The single file `20100625_mAbBBA1b_JAA_51.raw`
