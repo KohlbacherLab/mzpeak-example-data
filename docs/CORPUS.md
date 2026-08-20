@@ -208,7 +208,6 @@ Agilent / Waters / Shimadzu via `--via-msconvert` or the Windows native readers)
 | SCIEX | TripleTOF 6600 | **PXD065872** | PRIDE | SWATH | --via-msconvert (.wiff) | [doi:10.1016/j.bbagen.2026.130953](https://doi.org/10.1016/j.bbagen.2026.130953) |
 | SCIEX | ZenoTOF 7600 | **PXD053710** | PRIDE | zSWATH | --via-msconvert (.wiff) | [doi:10.1111/pai.70224](https://doi.org/10.1111/pai.70224) |
 | Shimadzu | LCMS-9030 | **MTBLS5861** | MetaboLights | lipidomics | --via-msconvert (.lcd) | [doi:10.1038/s42004-022-00778-1](https://doi.org/10.1038/s42004-022-00778-1) |
-| Shimadzu | LCMS-IT-TOF | **MTBLS432** | MetaboLights | metabolome | --via-msconvert (.lcd) | [doi:10.1038/s41598-017-08732-1](https://doi.org/10.1038/s41598-017-08732-1) |
 | Thermo | Astral | **PXD054015** | PRIDE | DIA | native .raw (.NET) | [doi:10.1021/acs.jproteome.4c00384](https://doi.org/10.1021/acs.jproteome.4c00384) |
 | Thermo | Astral | **PXD076001** | PRIDE | DIA | native .raw (.NET) | [doi:10.1016/j.cell.2026.04.034](https://doi.org/10.1016/j.cell.2026.04.034) |
 | Thermo | Astral | **MSV000096674** | MassIVE | DDA-TMT | native .raw (.NET) | [doi:10.1016/j.mcpro.2025.100968](https://doi.org/10.1016/j.mcpro.2025.100968) |
