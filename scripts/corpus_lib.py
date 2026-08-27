@@ -57,6 +57,43 @@ def tiles():
                   for p in glob.glob(os.path.join(DATA, "*", "_tile.yaml")))
 
 
+# ── local path -> S3 mapping ────────────────────────────────────────────────────────────────────
+# ONE definition of where a corpus file lands in the bucket. All three publishers agree on the
+# prefix transform -- data/<tile>/<id>/<rel> -> <tile>/<id>/<rel> -- and differ only in WHICH files
+# they upload (sync-s3.sh: *.mzpeak in 5 tiles; update.sh: everything bar *.yaml/*.yml/*.json/
+# *.extracted/*.sig; build-corpus-site.sh: _catalog.md for all 6). Keep the transform here so a TOC,
+# a conversion target and a sync can never disagree about an object's address.
+DEFAULT_BUCKET = os.environ.get("BUCKET", "v09")
+DEFAULT_ENDPOINT = os.environ.get("ENDPOINT", "https://object.storage.eu01.onstackit.cloud")
+
+
+def s3_key(path):
+    """data/<tile>/<id>/<rel> -> '<tile>/<id>/<rel>' (POSIX separators, no bucket)."""
+    rel = os.path.relpath(os.path.abspath(path), DATA)
+    if rel.startswith(os.pardir):
+        raise ValueError("%s is outside %s" % (path, DATA))
+    return rel.replace(os.sep, "/")
+
+
+def s3_uri(path, bucket=None):
+    return "s3://%s/%s" % (bucket or DEFAULT_BUCKET, s3_key(path))
+
+
+def public_url(path, endpoint=None, bucket=None):
+    """Browsable https URL. Percent-encoded: corpus paths contain spaces and parentheses."""
+    try:
+        from urllib.parse import quote
+    except ImportError:                     # py2 safety net; the harness is py3 everywhere
+        from urllib import quote
+    ep = (endpoint or DEFAULT_ENDPOINT).rstrip("/")
+    return "%s/%s/%s" % (ep, bucket or DEFAULT_BUCKET, quote(s3_key(path)))
+
+
+def local_path(key):
+    """Inverse of s3_key: '<tile>/<id>/<rel>' -> absolute local path under DATA."""
+    return os.path.join(DATA, *key.split("/"))
+
+
 def tile_descriptor(tile):
     return os.path.join(DATA, tile, "_tile.yaml")
 
