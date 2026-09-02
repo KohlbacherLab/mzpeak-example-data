@@ -7,10 +7,14 @@ files:
   path: HEK_PosOAD1.lcd
   bytes: 63188992
 convert:
-  # Pins the recipe the PUBLISHED archive was actually built with (msconvert + TOF-grid; sourceFile
-  # carries a real path, MS:1000569 SHA-1 and pwiz 3.0.22187). Without this block the harness would
-  # rebuild it through the native lane — a different product (~1.5 M vs 11.1 M centroid peaks),
-  # and one with no mzML oracle to verify against. Verified by internal consistency only: every
-  # native centroid lands on a profile maximum (95.9 %); no cross-lane value comparison is meaningful.
+  # NATIVE lane (Shimadzu.LabSolutions.IO via the converter's own glue, Windows/box), like the
+  # Blind set. Re-pinned on 2026-09-03 (decision: descriptor matches the artifact): the corpus
+  # archive is the v0.9.6 native build — per-spectrum sqrt-grid profile facet + exact Int64 lattice
+  # centroids (mz_calibration), vendor m/z to the last f64 digit, MS:1000569 SHA-1 of the .lcd. The
+  # earlier msconvert + TOF-grid recipe (pwiz 3.0.22187, ~11.1 M centroid peaks vs ~1.5 M native) is
+  # a different product; this .lcd stores profile signal, and for such files the native lane is
+  # proven bit-exact against LabSolutions' own export on the Blind set. No external oracle exists for
+  # this run; it is verified by internal consistency (every centroid on a profile maximum) and by
+  # the validator.
   input: HEK_PosOAD1.lcd
-  flags: --no-vendor --via-msconvert --tof-grid auto
+  flags: ''
