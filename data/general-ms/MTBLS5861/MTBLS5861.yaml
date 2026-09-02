@@ -6,3 +6,11 @@ files:
 - url: https://ftp.ebi.ac.uk/pub/databases/metabolights/studies/public/MTBLS5861/FILES/RAW_FILES/HEK%20cell/OAD-Pos/HEK_PosOAD1.lcd
   path: HEK_PosOAD1.lcd
   bytes: 63188992
+convert:
+  # Pins the recipe the PUBLISHED archive was actually built with (msconvert + TOF-grid; sourceFile
+  # carries a real path, MS:1000569 SHA-1 and pwiz 3.0.22187). Without this block the harness would
+  # rebuild it through the native lane — a different product (~1.5 M vs 11.1 M centroid peaks),
+  # and one with no mzML oracle to verify against. Verified by internal consistency only: every
+  # native centroid lands on a profile maximum (95.9 %); no cross-lane value comparison is meaningful.
+  input: HEK_PosOAD1.lcd
+  flags: --no-vendor --via-msconvert --tof-grid auto

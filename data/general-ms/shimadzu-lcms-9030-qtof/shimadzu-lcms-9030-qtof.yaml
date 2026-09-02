@@ -9,5 +9,11 @@ files:
   path: Blind_P1_pos_012.lcd
   bytes: 55492608
 convert:
-  input: Blind_P1_pos_012.lcd   # start from vendor RAW; Shimadzu .lcd only via ProteoWizard msconvert (Windows/box)
-  flags: --via-msconvert
+  # NATIVE lane (Shimadzu.LabSolutions.IO via the converter's own glue, Windows/box). This is what
+  # the published archive has always been — the descriptor used to claim `--via-msconvert`, but the
+  # artifact's facets are the native build's. Kept native deliberately: the .lcd stores profile
+  # signal, and for such files the native lane is proven bit-exact against the DERIVED mzML
+  # (tools/compare_lcd_native_mzml.py: 13,200/13,200 spectra, all 216,742 centroid intensities).
+  # The mzML stays in `files` as that oracle, not as the conversion input.
+  input: Blind_P1_pos_012.lcd
+  flags: ''
